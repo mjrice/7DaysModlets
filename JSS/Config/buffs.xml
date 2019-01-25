@@ -1,0 +1,139 @@
+<configs>
+
+<append xpath="/buffs">
+	<buff name="readABook"  description_key="readabook"  tooltip_key="buffGodModeTooltip"  />
+</append>
+
+<!-- MODTAG Nerf the reload movement penalty -->
+<remove xpath="/buffs/buff[@name='buffReloadMovementPenalty']"/>
+
+<append xpath="/buffs">
+	<buff name="buffReloadMovementPenalty" name_key="Reloading" icon="ui_game_symbol_pack_mule" icon_color="255,128,0" hidden="true">>
+		<stack_type value="ignore"/>
+		<damage_type value="stun"/>
+		<duration value="7"/>
+		<effect_group>
+			<triggered_effect trigger="onReloadStop" action="RemoveBuff" buff="buffReloadMovementPenalty"/>
+		</effect_group>
+		<!-- was: (0) .5 (1) .4 (2) .3 (3) .2 (4) .1 -->
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkRunAndGun" operation="Equals" value="0"/>
+				<passive_effect name="WalkSpeed"    operation="perc_subtract" value=".4"/>
+				<passive_effect name="RunSpeed"     operation="perc_subtract" value=".4"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value=".4"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkRunAndGun" operation="Equals" value="1"/>
+				<passive_effect name="WalkSpeed"    operation="perc_subtract" value=".3"/>
+				<passive_effect name="RunSpeed"     operation="perc_subtract" value=".3"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value=".3"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkRunAndGun" operation="Equals" value="2"/>
+				<passive_effect name="WalkSpeed"    operation="perc_subtract" value=".2"/>
+				<passive_effect name="RunSpeed"     operation="perc_subtract" value=".2"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value=".2"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkRunAndGun" operation="Equals" value="3"/>
+				<passive_effect name="WalkSpeed"    operation="perc_subtract" value=".1"/>
+				<passive_effect name="RunSpeed"     operation="perc_subtract" value=".1"/>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value=".1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffHerbalEffect" description="Herbal tea warms you up and may heal you" tags="drug" icon="ui_game_symbol_pills" hidden="true">
+		<damage_type value="Disease"/>
+		<stack_type value="ignore"/>
+		<update_rate value="5"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="buffIllDysentery0"/>
+			<requirement name="NotHasBuff" buff="buffIllDysentery1"/>
+			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning0"/>
+			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffHerbalEffect"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="10"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllDysentery0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffIllFoodPoisoning0"/>
+		</effect_group>
+	</buff>			
+	
+	<buff name="buffWarmFood" description="Warmth from food eaten" icon="ui_game_symbol_hot" tags="drug">
+		<stack_type value="duration"/>
+		<duration value="180"/>
+		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffColdFood" description="Warmth from food eaten" icon="ui_game_symbol_cold" tags="drug">
+		<stack_type value="duration"/>
+		<duration value="180"/>
+		<effect_group>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="10"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffHerbalSmoothie" description="herbal smoothie boosts your stamina" icon="ui_game_symbol_perk" tags="drug">
+	<stack_type value="duration"/>
+		<duration value="180"/>
+		<effect_group>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.25">
+				<requirement name="NotHasBuff" buff="buffHealWaterMax"/>
+			</passive_effect>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.1">
+				<requirement name="HasBuff" buff="buffHealWaterMax"/>
+			</passive_effect>
+		</effect_group>
+	</buff>
+
+	<buff name="buffZombieCream" tags="drug" icon="ui_game_symbol_stealth">
+		<stack_type value="duration"/>
+		<duration value="180"/>
+		<effect_group>
+			<passive_effect name="LightMultiplier" operation="perc_subtract" value="0.9999" />
+			<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.9999"/>
+		</effect_group>
+	</buff>
+
+	</append>
+
+<!-- MODTAG Physician perk still provides healing bonus but not recipe unlocks -->	
+<remove xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='medicPerkIncrease']"/>
+<append xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group">
+	<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="LT" value="1"/>
+	</triggered_effect>
+
+	<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1.05">
+				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+	</triggered_effect>
+
+	<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1.10">
+				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+	</triggered_effect>
+	
+	<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1.25">
+				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+	</triggered_effect>
+	
+	<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1.5">
+				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+	</triggered_effect>
+	
+	<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="2">
+				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="5"/>
+	</triggered_effect>
+</append>
+	
+</configs>
+	

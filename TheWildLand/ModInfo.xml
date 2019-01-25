@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="TheWildLand" />
+		<Description value="Random World generation mod+" />
+		<Author value="mjrice" />
+		<Version value="3.1" />
+		<Website value="" />
+	</ModInfo>
+</xml>

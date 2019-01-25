@@ -1,0 +1,28 @@
+
+<configs>
+
+<!--  meleeToolHammerOfGodAdmin,toolCookingGrill,toolCookingPot,Cookbook: Grilled Meat,Cookbook: Boiled Meat,Adventure Book,Gunny's Guide: Hunting Rifles-->
+
+<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,medicalFirstAidBandage,foodCanChili,keystoneBlock,meleeToolTorch,Starter Class Paper</set>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,Starter Class Paper</set>
+<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,Starter Class Paper</set>
+
+<!-- MODTAG replace the generic meat harvested from animals to the animal meats -->
+<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat']/@name">Raw Pork</set>
+<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat']/@name">Raw Chicken</set>
+<set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat']/@name">Rabbit Meat</set>
+<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat']/@name">Bear Meat</set>
+<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat']/@name">Wolf Meat</set>
+<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat']/@name">Wolf Meat</set>
+<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat']/@name">Raw Venison</set>
+<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat']/@name">Raw Venison</set>
+<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='foodRawMeat']/@name">Raw Pork</set>
+<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat']/@name">Snake Meat</set>
+
+<!-- MODTAG add testosterone extract to dire wolf drop -->
+<append xpath="/entity_classes/entity_class[@name='animalDireWolf']">
+	<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
+</append>
+
+</configs>
+

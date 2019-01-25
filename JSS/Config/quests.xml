@@ -1,0 +1,259 @@
+<!--
+
+Notes about quests 
+
+	Objective types: 
+			type              | example 
+			===============================================================================
+			FetchKeep         | type="FetchKeep" id="resourceCropCottonPlant" value="20" phase="1"
+			FetchFromContainer|
+            Craft             |
+			BlockPlace        |
+			Wear              |
+			Goto              |
+			ZombieKill        |
+			InteractWithNPC   |
+			RandomGoto        |
+			AnimalKill        |
+			TreasureChest     |
+			RandomPOIGoto     |
+			ClearSleepers     |
+			POIStayWithin     |
+			ReturnToNPC       |
+				
+	Reward types:
+			type              | example 
+			===============================================================================
+			Exp               | type="Exp" value="1000"
+			Quest             | type="Quest" id="quest_id" 
+			SkillPoints       | type="SkillPoints" value="4" 
+			LootItem          | type="LootItem" id="questMelee,questRanged" value="1" ischosen="true" isfixed="true" 
+			Item              | type="Item" id="casinoCoin" value="200-500" 
+			===============================================================================
+-->
+
+<configs>
+
+<!-- second starter quest - given by the trader but after the bedroll quest line -->
+<!-- Earn an additional 5 skill points by completing 
+		Starter quest: bedroll, axe, plant fiber clothes, club, wood frames, campfire 
+		This quest line is about foraging, hunting, and crafting basic food items
+-->
+<!--
+<append xpath="/quests/quest_list[@id='trader_quests']">	
+		<quest id="quest_AdvancedSurvival1" />
+</append>
+-->
+
+<insertBefore xpath="/quests/quest_list[@id='trader_quests']">		
+
+	<quest id="quest_FirstAid">
+		<property name="group_name"   value="First Aid Training" />
+		<property name="name"         value="First Aid" /> <!-- this should appear in the trader quest list but it does not -->
+		<property name="subtitle"     value="Foraging" />
+		<property name="description"  value="Learn the basics of first aid." />
+		<property name="icon"         value="ui_game_symbol_survival" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty"   value="easy"/>
+		<property name="difficulty_tier" value="1" />
+		<property name="offer"        value="offer" />
+		<property name="shareable"    value="false" />
+
+		<action type="TrackQuest" />
+
+		<objective type="FetchKeep" id="resourceCropCottonPlant"      value="10" phase="1" /> 
+		<objective type="FetchKeep" id="resourceCropAloeLeaf"         value="10" phase="1" /> 
+		<objective type="Craft" 	id="medicalBandage" 			  value="5" phase="1" />
+
+		<reward type="Exp" value="1000" />
+		<!-- <reward type="Quest" id="quest_AdvancedSurvival2" /> -->
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</quest>
+
+	<!-- advanced survival 1 : foraging -->
+	<quest id="quest_AdvancedSurvival1">
+		<property name="group_name"   value="Advanced Survival Training" />
+		<!-- <property name="name_key"     value="Advanced Survival" /> -->
+		<property name="name"         value="Advanced Survival" /> 
+		<property name="subtitle"     value="Foraging" />
+		<property name="description"  value="Learn the basics of hunting and foraging.  Start by finding some basic food and herbal ingredients you will need to survive.  Some plants only grow in certain areas, so you may have to travel a ways to find everything." />
+		<property name="icon"         value="ui_game_symbol_survival" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty"   value="easy"/>
+		<property name="difficulty_tier" value="1" />
+		<property name="offer"        value="Hi Stranger, from the looks of you, you could use some survival pointers.  Enclosed are some tips on how to get by in the apocalypse I have picked up along the way.  And remember, whatever happens, just survive, somehow.  Good luck, ~Enid" />
+		<property name="shareable"    value="false" />
+
+		<action type="TrackQuest" />
+
+		<objective type="FetchKeep" id="resourceCropChrysanthemumPlant" value="10" phase="1" />
+		<objective type="FetchKeep" id="resourceCropGoldenrodPlant"     value="10" phase="1" />
+		<objective type="FetchKeep" id="foodCropYuccaFruit"             value="10" phase="1" />
+		<objective type="FetchKeep" id="foodCropBlueberries"            value="10" phase="1" />
+		<objective type="FetchKeep" id="foodCropCorn"                   value="5" phase="1" />
+		<objective type="FetchKeep" id="foodCropPotato"                 value="5" phase="1" />
+
+		<reward type="Exp" value="1200" />
+		<reward type="Quest" id="quest_AdvancedSurvival2" />
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</quest>
+
+	<!-- hunting -->
+	<quest id="quest_AdvancedSurvival2">
+		<property name="group_name"  value="Advanced Survival Training" />
+		<property name="name"        value="Hunting" />
+		<property name="subtitle"        value="Acquire some meat and eggs" />
+		<property name="subtitle_key"    value="Find some meat" />
+		<property name="description_key" value="You'll never survive without some protein!  Many animals can be hunted for meat, and birds nests can provide you with eggs.  Hunt down a boar to get some pork." />
+		<property name="icon"            value="ui_game_symbol_survival" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_BasicSurvival_offer" />
+		<property name="shareable" value="false" />
+
+		<objective type="FetchKeep" id="Raw Pork" value="10" phase="1" />
+		<objective type="FetchKeep" id="foodEgg" value="3" phase="1" />
+
+		<reward type="Exp" value="1500" />
+		<reward type="Quest" id="quest_AdvancedSurvival3" />
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</quest>
+
+	<!-- find a cooking pot and some murky water -->
+	<quest id="quest_AdvancedSurvival3">
+		<property name="group_name"      value="Advanced Survival Training" />
+		<property name="name"            value="Cooking supplies" />
+		<property name="subtitle"        value="Find a cooking pot and water" />
+		<property name="subtitle"        value="Cooking wares" />
+		<property name="description"     value="Find the basics for cooking yourself some meals and making potable water.  Try looking in kitchens or restaurants for supplies.  Water can be scarce but locate somewhere you can fill up your bottles." />
+		<property name="icon"            value="ui_game_symbol_tool" />
+		<property name="category_key"    value="quest" />
+		<property name="offer_key"       value="quest_BasicSurvival_offer" />
+		<property name="shareable"       value="false" />
+
+		<objective type="FetchKeep" id="toolCookingPot" value="1" phase="1" />
+		<objective type="FetchKeep" id="drinkJarRiverWater" value="4" phase="1" />
+
+		<reward type="Exp" value="1500" />
+		<reward type="Quest" id="quest_AdvancedSurvival4" />
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</quest>
+
+	<!--  craft some food items -->
+	<quest id="quest_AdvancedSurvival4">
+		<property name="group_name"      value="Advanced Survival Training" />
+		<property name="name"            value="Let's get Cooking" />
+		<property name="subtitle"        value="Prepare some food" />
+		<property name="description"     value="Well done!  Make some meals using the campfire and the supplies you have foraged.  Keep the campfire open while crafting these items to complete the quest." />
+		<property name="icon"            value="ui_game_symbol_spatula" />
+		<property name="category_key"    value="quest" />
+		<property name="difficulty"      value="easy" />
+		<property name="shareable"       value="false" />
+
+		<objective type="Craft" id="drinkJarBoiledWater" value="1" phase="1" />
+		<objective type="Craft" id="foodCharredMeat"     value="2" phase="1" />
+		<objective type="Craft" id="foodEggBoiled"       value="1" phase="1" />		
+		<objective type="Craft" id="foodBakedPotato"     value="1" phase="1" />		
+		<objective type="Craft" id="foodCornOnTheCob"    value="1" phase="1" />		
+		
+		<reward type="Exp" value="2000" />		
+		<reward type="SkillPoints" value="2" chainreward="true" />
+	</quest>
+
+</insertBefore>	
+
+<!-- experimental trader quest-->
+<insertBefore xpath="/quests/quest_list[@id='trader_quests']">		
+
+	<quest id="tier1_gofetch">
+		<property name="name"              value="Coffee Run" />
+		<property name="subtitle"          value="I need some coffee" />
+		<property name="description"       value="Could you find me some fresh coffee beans?" />
+		<property name="icon"              value="ui_game_symbol_quest" />
+		<property name="repeatable"        value="true" />
+		<property name="category"          value="quest" />
+		<property name="offer"             value="My supplies are running low.  If you can help me out you'll have my gratitude and a nice reward." />
+		<property name="difficulty"        value="easy" />
+		<property name="difficulty_tier"   value="1" />
+		<property name="statement"         value="here is my statement" />
+		<property name="response"          value="here is my response" />
+		<property name="login_rally_reset" value="true" />
+		<property name="completiontype"    value="TurnIn" />
+		<property name="completion"        value="completion" />
+
+		<objective type="FetchKeep" id="resourceCropCoffeeBeans" value="20" phase="1">
+			<property name="quest_item_ID" value="1" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="1000" />
+		<reward type="Item" id="casinoCoin" value="200-300" />
+
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="1" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="1" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="1" />
+
+	</quest>
+
+	<quest id="quest_starter">
+		<property name="name" 			   value="starter"/>
+		<property name="icon"              value="ui_game_symbol_quest" />
+		<property name="repeatable"        value="true" />
+		<property name="category"          value="quest" />
+		<objective type="FetchKeep"        id="resourceYuccaFibers" value="1" phase="1"/>
+		<reward type="Item" id="Starter Class Paper" value="1" />
+	</quest>
+	
+</insertBefore>
+<!--
+<append xpath="/quests/quest_list[@id='trader_quests']">	
+		<quest id="tier1_gofetch" />
+</append>
+-->
+
+<!-- replace basic survival quest's steps 5 and 6 with a single step that does both and gives more xp reward -->
+<remove xpath="/quests/quest[@id='quest_BasicSurvival5']"/>
+<remove xpath="/quests/quest[@id='quest_BasicSurvival6']"/>
+
+<insertBefore xpath="/quests/quest[@id='quest_BasicSurvival7']">
+	<!-- Basic Survival 5 - Craft a Wooden Club and bow and arrows /> -->
+	<quest id="quest_BasicSurvival5">
+		<property name="group_name_key" value="quest_BasicSurvival" />
+		<property name="name" value="Basic Survival" />
+		<property name="subtitle_key" value="Make weapons" />
+		<property name="description" value="Gather wood, stone, plant fibers and feathers found in bird nests on the ground. \n\nOnce you have the ingredients, access the Basics category of the Crafting window. Craft a Club, Wooden Bow, and Arrows." />
+		<property name="icon" value="ui_game_symbol_club" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy" />
+		<property name="shareable" value="false" />
+
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1" />
+		<objective type="FetchKeep" id="resourceFeather" value="2" phase="1"/>
+		<objective type="FetchKeep" id="resourceRockSmall" value="2" phase="1" />
+		<objective type="FetchKeep" id="resourceWood" value="16" phase="1" />
+		<objective type="Craft" id="meleeClubWood" value="1" phase="2" />
+		<objective type="Craft" id="gunWoodenBow" value="1" phase="2" />
+		<objective type="Craft" id="ammoArrowStone" value="2" phase="2" />
+
+		<reward type="Exp" value="500" />
+		<reward type="Quest" id="quest_BasicSurvival7" />
+	</quest>
+	
+</insertBefore>
+
+<append xpath="/quests/quest[@id='quest_BasicSurvival8']">
+		<reward type="Item" id="Note from Enid" stage="aftercomplete">
+			<property name="chainquest" value="false" />
+		</reward>
+</append>
+
+</configs>

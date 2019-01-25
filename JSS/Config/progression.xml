@@ -1,0 +1,98 @@
+<configs>
+<!-- MODTAG Remove master chef perks -->
+<remove xpath="/progression/perks/perk[@name='perkMasterChef']"/>
+
+<!-- MODTAG Replace Run and Gun perk -->
+<remove xpath="/progression/perks/perk[@name='perkRunAndGun']"/>
+<insertAfter xpath="/progression/perks/perk[@name='perkHeadshot']">
+<perk name="perkRunAndGun" parent="skillMarksmanship" max_level="4" name_key="perkRunAndGunName" desc_key="perkRunandGunDesc" icon="ui_game_symbol_run_and_gun">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
+
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="ranged"/>
+			<requirement name="HoldingItemHasTags" tags="shotgun" invert="true"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-0.20,-.50" level="1,4"/>
+			<effect_description level="1" desc_base="Hip fire accuracy is improved by 20%. Movement penalty when reloading is reduced 25%."/>
+			<effect_description level="2" desc_base="Hip fire accuracy is improved by 30%. Movement penalty when reloading is reduced 50%."/>
+			<effect_description level="3" desc_base="Hip fire accuracy is improved by 40%. Movement penalty when reloading is reduced 75%."/>
+			<effect_description level="4" desc_base="Hip fire accuracy is improved by 50%. No movement penalty when reloading."/>
+		</effect_group>
+	</perk>
+</insertAfter>
+	
+<!-- MODTAG Replace Physician perks by removing the recipe unlocks and just making it straight buff -->
+<remove xpath="/progression/perks/perk[@name='perkPhysician']"/>
+<insertAfter xpath="/progression/perks/perk[@name='perkYeahScience']">
+<perk name="perkPhysician" parent="skillCraftsmanship" name_key="perkPhysicianName" desc_key="perkPhysicianDesc" icon="ui_game_symbol_medical">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" desc_key="reqIntellectLevel04"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="9" desc_key="reqIntellectLevel09"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+
+		<effect_group>
+			<!-- see <buff name="buffPerkAbilityUpdate"> for cvar based ability changes -->
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" target="self" buff="buffPerkAbilityUpdate"/>
+
+			<effect_description level="1" desc_base="All healing you perform is 5% more effective."/>
+			<effect_description level="2" desc_base="All healing you perform is 15% more effective."/>
+			<effect_description level="3" desc_base="All healing you perform is 25% more effective."/>
+			<effect_description level="4" desc_base="All healing you perform is 50% more effective."/>
+			<effect_description level="5" desc_base="All healing is now twice as effective. When healing others you receive the same benefits."/>
+		</effect_group>
+</perk>
+</insertAfter>
+
+<!-- MODTAG Replace hammer forge perks, leather armor unlocked with level 1, player level gates reduced for levels 1 and 2 -->
+<remove xpath="/progression/perks/perk[@name='perkHammerForge']"/>
+<insertBefore xpath="/progression/perks/perk[@name='perkGreaseMonkey']">
+	<perk name="perkHammerForge" parent="skillCraftsmanship" max_level="4" name_key="perkHammerForgeName" desc_key="perkHammerForgeDesc" icon="ui_game_symbol_forge">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" text="Level 4, INT 2"/>
+								<requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" text="Level 8, INT 4"/>
+								<requirement name="PlayerLevel" operation="GTE" value="8" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06-35"/>
+								<requirement name="PlayerLevel" operation="GTE" value="35" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08-70"/>
+								<requirement name="PlayerLevel" operation="GTE" value="70" desc_key="reqAttributeLevelDummy"/></level_requirements>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1,5" tags="forge,toolAnvil,armorLeatherBoots,armorLeatherGloves,armorLeatherHood,armorLeatherChest,armorLeatherPants"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5" tags="armorIronBoots,armorIronChest,armorIronGloves,armorIronHelmet,armorIronLegs"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5" tags="toolForgeCrucible,resourceArrowHeadSteelAP,resourceForgedSteel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5" tags="armorMilitaryHelmet,armorMilitaryVest,armorMilitaryGloves,armorMilitaryLegs,armorMilitaryBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelHelmet,armorSteelLegs"/>
+			
+			<effect_description level="1" desc_base="You can craft a forge, forged iron, and leather armor"/>
+			<effect_description level="2" desc_base="You can craft iron armor"/>
+			<effect_description level="3" desc_base="You can make forged steel"/>
+			<effect_description level="4" desc_base="You can make military armor"/>			
+		</effect_group>
+	</perk>
+</insertBefore>
+
+<!-- MODTAG replace Living off the land perk, reduced to 4 levels (new level 1 is same as old level 2 etc) -->
+<remove xpath="/progression/perks/perk[@name='perkLivingOffTheLand']"/>
+<insertBefore xpath="/progression/perks/perk[@name='perkPainTolerance']">
+	<perk name="perkLivingOffTheLand" parent="skillSurvival" max_level="4" name_key="perkLivingOffTheLandName" desc_key="perkLivingOffTheLandDesc" icon="ui_game_symbol_tree">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="HarvestCount" operation="perc_add" value="2,8" level="2,4" tags="cropHarvest"/>
+			<passive_effect name="HarvestCount" operation="perc_add" value="0,0" level="1,4" tags="wildCropsHarvest"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4" tags="plantedGraceCorn1"/>
+
+			<effect_description level="1" desc_key="perkLivingOffTheLandRank2Desc" />
+			<effect_description level="2" desc_key="perkLivingOffTheLandRank3Desc" />
+			<effect_description level="3" desc_key="perkLivingOffTheLandRank4Desc" />
+			<effect_description level="4" desc_key="perkLivingOffTheLandRank5Desc" />			
+		</effect_group>
+	</perk>
+</insertBefore>
+	
+</configs>

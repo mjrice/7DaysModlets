@@ -1,0 +1,14 @@
+<configs>
+
+<!-- add strawberries to pine forest decorations -->
+<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@prob='0.12']/decorations">
+	<decoration type="block" blockname="plantedStrawberry3Harvest"  prob="0.01"/>
+</append>
+
+<!-- add munitions box container to under water biome -->
+<append xpath="/worldgeneration/biomes/biome[@name='water']/decorations">
+	<decoration type="block" blockname="cntMunitionsBox" prob=".0005" rotatemax="3"/>
+</append>
+
+</configs>
+			

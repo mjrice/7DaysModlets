@@ -1,0 +1,134 @@
+
+<configs>
+
+<!-- remove perk magazines from trader inventory -->
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='books']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='perkMagazines']"/>
+<!-- remove the generic meat food items from trader inventory -->
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']/item[@name='foodBoiledMeat']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']/item[@name='foodGrilledMeat']"/>
+
+<set xpath="/traders/trader_info[@id='1']/@min_inventory">75</set>
+<set xpath="/traders/trader_info[@id='1']/@max_inventory">100</set>
+
+<!--
+<append xpath="/traders/trader_info[@id='1']">
+			<item group="traderAlways" count="10,40" />
+</append>
+-->
+
+<!-- add the new meat food items to the trader inventory -->
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']">
+			<item name="Grilled Pork"     count="1,4"/>
+			<item name="Grilled Chicken"  count="1,4"/>
+			<item name="Grilled Rabbit"   count="1,4"/>
+			<item name="Grilled Snake"    count="1,4"/>
+			<item name="Grilled Bear"     count="1,4"/>
+			<item name="Grilled Wolf"     count="1,4"/>
+			<item name="Grilled Venison"  count="1,4"/>
+			<item name="Stewed Pork"      count="1,4"/>
+			<item name="Stewed Chicken"   count="1,4"/>
+			<item name="Stewed Rabbit"    count="1,4"/>
+			<item name="Stewed Snake"     count="1,4"/>
+			<item name="Stewed Bear"      count="1,4"/>
+			<item name="Stewed Wolf"      count="1,4"/>
+			<item name="Stewed Venison"   count="1,4"/>
+			<item name="Fried Pork"       count="1,4"/>
+			<item name="Fried Chicken"    count="1,4"/>
+			<item name="Fried Rabbit"     count="1,4"/>
+			<item name="Fried Snake"      count="1,4"/>
+			<item name="Fried Bear"       count="1,4"/>
+			<item name="Fried Wolf"       count="1,4"/>
+			<item name="Fried Venison"    count="1,4"/>
+</append>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+	<item group="perkMagazines" /> <!-- aka cookbooks and weapons books -->
+	<item group="commonBooks" />
+</append>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='commonBooks']">
+    <item name="Medical Journal: First Aid Bandage"/>
+	<item name="Cookbook: Stewed Meat"         />
+	<item name="Cookbook: Grilled Meat"        />
+	<item name="Cookbook: Tea and Coffee"      />
+	<item name="Gunny's Guide: Compound Bows"  />
+	<item name="Gunny's Guide: Crossbows"      />
+	<item name="Gunny's Guide: Pistols"        />
+	<item name="Gunny's Guide: Shotguns"       />
+	<item name="Gunny's Guide: Iron Clubs"     />
+	<item name="Gunny's Guide: Hunting Knives" />
+	<item name="Gunny's Guide: Machetes"       />
+	<item name="Toolmaking Today: Iron Tools"  />
+	<item name="Toolmaking Today: Hammers"     />
+	<item name="Toolmaking Today: Wrench"      />
+</append>
+
+<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+<!-- i am calling this group perkMagazines instead of something logical like lootRecipes because perkMagazines is referred to in lots of different places and i just want to replace those -->
+<trader_item_group name="perkMagazines">
+	<item name="Cookbook: Bacon and Eggs"      />
+	<item name="Cookbook: Stewed Meat"         />
+	<item name="Cookbook: Grilled Meat"        />
+	<item name="Cookbook: Fried Meat"          />
+	<item name="Cookbook: Cornbread"           />
+	<item name="Cookbook: Tea and Coffee"      />
+	<item name="Cookbook: Juice Smoothies"     />
+	<item name="Cookbook: Blueberry Pie"       />
+	<item name="Cookbook: Steak And Potato"    />
+	<item name="Cookbook: Meat Stew"           />
+	<item name="Cookbook: Vegetable Stew"      />
+	<item name="Cookbook: Chili Dog"           />
+	<item name="Cookbook: Grandpas Moonshine"  />
+	<item name="Cookbook: All About Seeds"     />
+	<item name="Cookbook: Chili"               />
+	<item name="Gunny's Guide: Iron Clubs"     />
+	<item name="Gunny's Guide: Hunting Knives" />
+	<item name="Gunny's Guide: Machetes"       />
+	<item name="Gunny's Guide: Compound Bows"  />
+	<item name="Gunny's Guide: Crossbows"      />
+	<item name="Gunny's Guide: Pistols"        />
+	<item name="Gunny's Guide: Shotguns"       />	
+	<item name="Gunny's Guide: Blunderbuss"    />
+	<item name="Toolmaking Today: Iron Tools"  />
+	<item name="Toolmaking Today: Hammers"     />
+	<item name="Toolmaking Today: Steel Tools" />
+	<item name="Toolmaking Today: Chainsaws"   />
+	<item name="Toolmaking Today: Augers"      />
+	<item name="Toolmaking Today: Workbench"   />
+	<item name="Toolmaking Today: Cement Mixer"/>
+	<item name="Toolmaking Today: Tablesaw"    />
+</trader_item_group>
+
+<trader_item_group name="books" >
+		<item group="questChallenge" prob="0.2"/>
+		<item group="rareBooks"      prob="0.3"/>
+		<item group="commonBooks"/>
+		<item group="perkMagazines"/>		
+</trader_item_group>
+</insertBefore>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']">
+    <item name="Medical Journal: First Aid Kit"    />
+	<item name="Medical Journal: Antibiotics"      />
+	<item name="Medical Journal: Steroids"         />
+	<item name="Medical Journal: Recog"            />
+	<item name="Medical Journal: FortBites"        />
+	<item name="Cookbook: Steak And Potato"        />
+	<item name="Cookbook: Blueberry Pie"           />
+	<item name="Cookbook: Meat Stew"               />
+	<item name="Cookbook: Vegetable Stew"          />
+	<item name="Cookbook: Sham Chowder"            />
+	<item name="Cookbook: Hobo Stew"               />
+	<item name="Gunny's Guide: 44 Magnum"          />
+	<item name="Gunny's Guide: AK-47"              />
+	<item name="Gunny's Guide: SMG"                />
+	<item name="Gunny's Guide: MR-10"              />
+	<item name="Gunny's Guide: Rocket Launcher"    />
+	<item name="Toolmaking Today: Chainsaws"       />
+	<item name="Toolmaking Today: Augers"          />
+	<item name="Medical Journal: Zombie Cream"     />
+	<item name="Medical Journal: Chemistry Station"/>
+</append>
+
+</configs>
