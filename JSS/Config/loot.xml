@@ -50,6 +50,13 @@
 	<item name="Gunny's Guide: Rocket Launcher" prob="1" />
 </lootgroup>
 
+<lootgroup name="Armorer">
+	<item name="The Armorer: Leather"  prob="70" />
+	<item name="The Armorer: Iron"     prob="25" />
+	<item name="The Armorer: Steel"    prob="4"  />
+	<item name="The Armorer: Military" prob="1"  />
+</lootgroup>
+
 <lootgroup name="coldfood">
 	<item name="foodEgg" count="1,2"/>
 	<item name="foodBlueberryPie"/>
@@ -177,11 +184,11 @@
 		<item group="cookingMagazines" prob="16" />
       	<item group="encyclopedias"    prob="15" />
 		<item group="ToolmakingToday"  prob="14" />
-		<item group="medicalJournals"  prob="14" />
-		<item group="GunnysGuides"     prob="11" />
-		<item group="commonBooks"      prob="7"  /> <!-- these are schematics -->
+		<item group="medicalJournals"  prob="12" />
+		<item group="GunnysGuides"     prob="10" />
+		<item group="Armorer"          prob="8"  />
+		<item group="commonBooks"      prob="2"  /> <!-- these are schematics -->
 		<item group="rareBooks"        prob="1"  /> <!-- these are also schematics -->
-	
 </lootgroup>
 
 </insertBefore>
@@ -211,6 +218,7 @@
 <!-- MODTAG add Gunny's Guides to shotgun messiah crates -->
 <append xpath="/lootcontainers/lootcontainer[@id='50']">
 	<item group="GunnysGuides"/>
+    <item group="Armorer"/>
 </append>
 
 <!-- MODTAG add toolmaking today books to working stiffs crates -->

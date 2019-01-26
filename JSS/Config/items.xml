@@ -1992,12 +1992,35 @@
 <item name="Toolmaking Today: Wrench" >
 	<property name="Extends" value="magazineToolsBase"/>
 	<property name="EconomicValue"    value="500"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolWrench	" operation="Equals" value="0"/></property>
+	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolWrench" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolWrench	" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolWrench" operation="set" value="1"/>
 	</effect_group>
 </item>
 
+<item name="Toolmaking Today: Forges" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="forge" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="forge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolAnvil" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="Toolmaking Today: Crucible" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="toolForgeCrucible" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolForgeCrucible" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceForgedSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceArrowHeadSteelAP" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltSteelAP" operation="set" value="1"/>
+	</effect_group>
+</item>
+	
+	
 <!-- WEAPONS -->
 <item name="magazineWeaponsBase">
 	<property name="DescriptionKey"   value="journal_desc"/>
@@ -2197,8 +2220,88 @@
 	</effect_group>
 </item>
 
+<!-- Armor books -->
+<item name="magazineArmorBase">
+	<property name="CustomIcon"       value="BookIconMaster"/>	
+	<property name="CreativeMode"     value="None"/>
+	<property name="HoldType"         value="21"/>
+	<property name="Meshfile"         value="Items/Misc/bookPrefab"/>
+	<property name="DropMeshfile"     value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"         value="Mpaper"/>
+	<property name="Stacknumber"      value="50"/> 
+	<property name="EconomicValue"    value="500"/>
+	<property name="SellableToTrader" value="true"/>
+	<property class="Action0">
+		<property name="Class"                    value="Eat"/> <!-- Eat, UseOther, doesn't work: LearnRecipe? -->
+		<property name="Consume"                  value="true"/> 
+		<property name="Delay"                    value="1.0"/>
+		<property name="Use_time"                 value="..."/>
+		<property name="ActionExp"                value="1000" />
+		<property name="ActionExpBonusMultiplier" value="2"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
+		<property name="Sound_start"              value="recipe_unlocked"/>
+	</property> 
+	<property name="FuelValue"        value="2"/>
+	<property name="Weight"           value="2"/>
+	<property name="Group"            value="Books"/>
+</item>
+
+<item name="The Armorer: Leather" >
+	<property name="Extends" value="magazineArmorBase"/>
+	<property name="EconomicValue"    value="400"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="armorLeatherBoots" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherHood" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherPants" operation="set" value="1"/>		
+	</effect_group>
+</item>
+
+<item name="The Armorer: Iron" >
+	<property name="Extends" value="magazineArmorBase"/>
+	<property name="EconomicValue"    value="900"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="armorIronBoots" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronHelmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronLegs" operation="set" value="1"/>		
+	</effect_group>
+</item>
+
+<item name="The Armorer: Steel" >
+	<property name="Extends" value="magazineArmorBase"/>
+	<property name="EconomicValue"    value="1500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="armorSteelBoots" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelHelmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelLegs" operation="set" value="1"/>		
+	</effect_group>
+</item>
+
+<item name="The Armorer: Military" >
+	<property name="Extends" value="magazineArmorBase"/>
+	<property name="EconomicValue"    value="2200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="armorMilitaryHelmet" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryHelmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryVest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryLegs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryBoots" operation="set" value="1"/>		
+	</effect_group>
+</item>
+
 <!-- other skill books 
-armorMiningHelmet
+	armorMiningHelmet
+	ammoCrossbowBoltExploding
+	ammoDartSteel
+	ammoArrowFlaming
  -->
 
 <!-- ============== -->

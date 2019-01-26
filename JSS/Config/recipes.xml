@@ -156,7 +156,17 @@
 <remove xpath="/recipes/recipe[@name='drugHerbalAntibiotics'][@craft_area='chemistryStation']"/>
 <remove xpath="/recipes/recipe[@name='medicalSnowberryExtract']"/>
 <remove xpath="/recipes/recipe[@name='medicalAloeCream']"/>
+
+<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltSteelAP']"/>
+
 <insertBefore xpath="/recipes/recipe[@name='medicalBandage']">
+
+	<recipe name="ammoCrossbowBoltSteelAP" count="1" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+	</recipe>
+
 	<recipe name="medicalAloeCream" count="1" tags="learnable">
 		<ingredient name="resourceCropAloeLeaf" count="4"/>
 	</recipe>
