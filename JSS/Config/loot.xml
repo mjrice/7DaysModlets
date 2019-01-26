@@ -33,19 +33,31 @@
 	<item name="Toolmaking Today: Cement Mixer" prob="1" />
 </lootgroup>
 
+<lootgroup name="WeaponsBooksLootGroupLevel1">
+	<item name="Gunny's Guide: Iron Clubs"      />
+	<item name="Gunny's Guide: Hunting Knives"  />
+	<item name="Gunny's Guide: Compound Bows"   />
+</lootgroup>
+
+<lootgroup name="WeaponsBooksLootGroupLevel2">
+	<item name="Gunny's Guide: Machetes"        />
+	<item name="Gunny's Guide: Crossbows"       />
+	<item name="Gunny's Guide: Pistols"         />
+	<item name="Gunny's Guide: Hunting Rifles"  />
+</lootgroup>
+
+<lootgroup name="WeaponsBooksLootGroupLevel3">
+	<item name="Gunny's Guide: Blunderbuss"     />
+	<item name="Gunny's Guide: Shotguns"        />
+	<item name="Gunny's Guide: 44 Magnum"       />
+	<item name="Gunny's Guide: AK-47"           />
+	<item name="Gunny's Guide: SMG"             />
+</lootgroup>
+
 <lootgroup name="GunnysGuides">
-	<item name="Gunny's Guide: Iron Clubs"      prob="21" />
-	<item name="Gunny's Guide: Hunting Knives"  prob="20"/>
-	<item name="Gunny's Guide: Machetes"        prob="12" />
-	<item name="Gunny's Guide: Compound Bows"   prob="12" />
-	<item name="Gunny's Guide: Crossbows"       prob="9" />
-	<item name="Gunny's Guide: Pistols"         prob="7" />
-	<item name="Gunny's Guide: Hunting Rifles"  prob="5" />
-	<item name="Gunny's Guide: Blunderbuss"     prob="2"/>
-	<item name="Gunny's Guide: Shotguns"        prob="2" />
-	<item name="Gunny's Guide: 44 Magnum"       prob="7" />
-	<item name="Gunny's Guide: AK-47"           prob="1" />
-	<item name="Gunny's Guide: SMG"             prob="1" />
+    <item group="WeaponsLootGroupLevel1"        prob="53">
+    <item group="WeaponsLootGroupLevel2"        prob="33">
+    <item group="WeaponsLootGroupLevel3"        prob="13">
 	<item name="Gunny's Guide: MR-10"           prob="1" />
 	<item name="Gunny's Guide: Rocket Launcher" prob="1" />
 </lootgroup>
@@ -125,12 +137,37 @@
 	<item name="Medical Journal: Chemistry Station"   prob = "1" />
 </lootgroup>
 
-<lootgroup name="questTier1ClearSkillRewards">
+<!-- trader quest reward groups -->
+<lootgroup name="questTier1SkillRewards">
 	<item name="Medical Journal: First Aid Bandage" max_count="1"  />
 	<item name="The Armorer: Leather"               max_count="1"  />
-	<item name="Gunny's Guide: Iron Clubs"          max_count="1"  />
+	<item group="WeaponsLootGroupLevel1"            max_count="1"  />
 	<item name="Gunny's Guide: Hunting Knives"      max_count="1"  />
+	<item group="magazineCookingLevel1Recipes"      max_count="1"  />
 </lootgroup>
+
+<lootgroup name="questTier2SkillRewards">
+	<item name="Medical Journal: First Aid Kit"  max_count="1" />
+	<item name="The Armorer: Iron"               max_count="1" />
+	<item group="WeaponsLootGroupLevel2"         max_count="1" />
+	<item group="magazineCookingLevel2Recipes"   max_count="1" />
+</lootgroup>
+
+<lootgroup name="questTier3SkillRewards">
+	<item name="Medical Journal: Steroids"      max_count="1" />
+	<item name="The Armorer: Steel"             max_count="1" />
+	<item group="WeaponsLootGroupLevel3"         max_count="1" />
+	<item group="magazineCookingLevel3Recipes" max_count="1"  />
+</lootgroup>
+
+<lootgroup name="questTier4SkillRewards">
+	<item name="Medical Journal: FortBites"     max_count="1" />
+	<item name="The Armorer: Military"          max_count="1" />
+	<item name="Gunny's Guide: MR-10"           prob="1" />
+	<item name="Gunny's Guide: Rocket Launcher" prob="1" />
+	<item group="magazineCookingLevel4Recipes" max_count="1"  />
+</lootgroup>
+
 
 <!-- ======================================================================= -->
 <!-- Novels don't "do" anything, but they are valuable to traders 

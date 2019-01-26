@@ -1816,7 +1816,8 @@
 <item name="Medical Journal: First Aid Bandage">
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="mecialFirstAidBandage" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream,medicalFirstAidBandage" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidBandage" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream" operation="set" value="1"/></effect_group>
 </item>
 <item name="Medical Journal: First Aid Kit">
 	<property name="Extends" value="magazineMedicalJournal"/>
