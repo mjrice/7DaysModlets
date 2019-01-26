@@ -256,4 +256,62 @@ Notes about quests
 		</reward>
 </append>
 
+<!-- MODTAG trader quest rewards are geared toward skill books -->
+<remove xpath="/quests/quest[@id='tier1_clear']"/>
+<insertBefore xpath="/quests/quest_list[@id='trader_quests']">
+	<quest id="tier1_clear">
+		<property name="name_key" value="quest_tier1_clear" />
+		<property name="subtitle_key" value="quest_clear_subtitle" />
+		<property name="description_key" value="quest_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_tier1_clear_offer" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="1" />
+		<property name="statement_key" value="quest_clear_statement" />
+		<property name="response_key" value="quest_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="5000" />
+		<reward type="Item" id="casinoCoin" value="300-750" />
+
+		<reward type="LootItem" id="questTier1ClearSkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTier1ClearSkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTier1ClearSkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools"                  ischosen="true" isfixed="true" value="2" />
+		<reward type="LootItem" id="questArmor,questMedical"     ischosen="true" value="2" />
+		<reward type="LootItem" id="questAmmo"                   ischosen="true" value="2" />
+		<reward type="LootItem" id="questMelee,questRanged"      ischosen="true" value="2" />				
+	</quest>	
+</insertBefore>
+
 </configs>

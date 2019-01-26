@@ -125,6 +125,13 @@
 	<item name="Medical Journal: Chemistry Station"   prob = "1" />
 </lootgroup>
 
+<lootgroup name="questTier1ClearSkillRewards">
+	<item name="Medical Journal: First Aid Bandage" max_count="1"  />
+	<item name="The Armorer: Leather"               max_count="1"  />
+	<item name="Gunny's Guide: Iron Clubs"          max_count="1"  />
+	<item name="Gunny's Guide: Hunting Knives"      max_count="1"  />
+</lootgroup>
+
 <!-- ======================================================================= -->
 <!-- Novels don't "do" anything, but they are valuable to traders 
      so they are worthwhile to collect.  There are different types but books 

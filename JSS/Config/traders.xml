@@ -42,11 +42,6 @@
 			<item name="Fried Venison"    count="1,4"/>
 </append>
 
-<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
-	<item group="perkMagazines" /> <!-- aka cookbooks and weapons books -->
-	<item group="commonBooks" />
-</append>
-
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='commonBooks']">
     <item name="Medical Journal: First Aid Bandage"/>
 	<item name="Cookbook: Stewed Meat"         />
@@ -62,6 +57,9 @@
 	<item name="Toolmaking Today: Iron Tools"  />
 	<item name="Toolmaking Today: Hammers"     />
 	<item name="Toolmaking Today: Wrench"      />
+	<item name="The Armorer: Leather"   />
+	<item name="The Armorer: Iron"      />
+	<item name="The Armorer: Steel"     />
 </append>
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
@@ -79,9 +77,12 @@
 	<item name="Cookbook: Meat Stew"           />
 	<item name="Cookbook: Vegetable Stew"      />
 	<item name="Cookbook: Chili Dog"           />
-	<item name="Cookbook: Grandpas Moonshine"  />
 	<item name="Cookbook: All About Seeds"     />
 	<item name="Cookbook: Chili"               />
+	<item name="Cookbook: Steak And Potato"        />
+	<item name="Cookbook: Blueberry Pie"           />
+	<item name="Cookbook: Meat Stew"               />
+	<item name="Cookbook: Vegetable Stew"          />
 	<item name="Gunny's Guide: Iron Clubs"     />
 	<item name="Gunny's Guide: Hunting Knives" />
 	<item name="Gunny's Guide: Machetes"       />
@@ -108,18 +109,19 @@
 </trader_item_group>
 </insertBefore>
 
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+	<item group="books" />
+</append>
+
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']">
     <item name="Medical Journal: First Aid Kit"    />
 	<item name="Medical Journal: Antibiotics"      />
 	<item name="Medical Journal: Steroids"         />
 	<item name="Medical Journal: Recog"            />
 	<item name="Medical Journal: FortBites"        />
-	<item name="Cookbook: Steak And Potato"        />
-	<item name="Cookbook: Blueberry Pie"           />
-	<item name="Cookbook: Meat Stew"               />
-	<item name="Cookbook: Vegetable Stew"          />
 	<item name="Cookbook: Sham Chowder"            />
 	<item name="Cookbook: Hobo Stew"               />
+	<item name="Cookbook: Grandpas Moonshine"  />
 	<item name="Gunny's Guide: 44 Magnum"          />
 	<item name="Gunny's Guide: AK-47"              />
 	<item name="Gunny's Guide: SMG"                />
@@ -129,6 +131,7 @@
 	<item name="Toolmaking Today: Augers"          />
 	<item name="Medical Journal: Zombie Cream"     />
 	<item name="Medical Journal: Chemistry Station"/>
+	<item name="The Armorer: Military"             />
 </append>
 
 </configs>
