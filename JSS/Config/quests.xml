@@ -257,25 +257,975 @@ Notes about quests
 </append>
 
 <!-- MODTAG trader quest rewards are geared toward skill books -->
-<append xpath="/quests/quest[@id='tier1_clear']">          <reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier1_fetch']">          <reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier1_buried_supplies']"><reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
+<!-- i would rather just tweak the loot rewards instead of removing and readding the entire quests but I cant seem to get it to work otherwise.  (my new loots is never offered) -->
 
-<append xpath="/quests/quest[@id='tier2_clear']">          <reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier2_fetch']">          <reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier2_hidden_cache']">   <reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier2_fetch_clear']">    <reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
+<remove xpath="/quests/quest[@id='tier1_clear']"/>
+<remove xpath="/quests/quest[@id='tier1_fetch']"/>
+<remove xpath="/quests/quest[@id='tier1_buried_supplies']"/>
+<remove xpath="/quests/quest[@id='tier2_clear']"/>          
+<remove xpath="/quests/quest[@id='tier2_fetch']"/>          
+<remove xpath="/quests/quest[@id='tier2_hidden_cache']"/>   
+<remove xpath="/quests/quest[@id='tier2_fetch_clear']"/>    
+<remove xpath="/quests/quest[@id='tier3_clear']"/>          
+<remove xpath="/quests/quest[@id='tier3_fetch']"/>          
+<remove xpath="/quests/quest[@id='tier3_hidden_cache']"/>   
+<remove xpath="/quests/quest[@id='tier3_fetch_clear']"/>    
+<remove xpath="/quests/quest[@id='tier3_hidden_clear']"/>   
+<remove xpath="/quests/quest[@id='tier4_clear']"/>          
+<remove xpath="/quests/quest[@id='tier4_fetch']"/>          
+<remove xpath="/quests/quest[@id='tier4_hidden_cache']"/>   
+<remove xpath="/quests/quest[@id='tier4_fetch_clear']"/>    
+<remove xpath="/quests/quest[@id='tier4_hidden_clear']"/>   
 
-<append xpath="/quests/quest[@id='tier3_clear']">          <reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier3_fetch']">          <reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier3_hidden_cache']">   <reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier3_fetch_clear']">    <reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier3_hidden_clear']">   <reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
+<insertBefore xpath="/quests/quest_list[@id='trader_quests']">
+	<quest id="tier1_clear">
+		<property name="name_key" value="quest_tier1_clear" />
+		<property name="subtitle_key" value="quest_clear_subtitle" />
+		<property name="description_key" value="quest_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_tier1_clear_offer" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="1" />
+		<property name="statement_key" value="quest_clear_statement" />
+		<property name="response_key" value="quest_clear_response" />
+		<property name="login_rally_reset" value="true" />
 
-<append xpath="/quests/quest[@id='tier4_clear']">          <reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier4_fetch']">          <reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier4_hidden_cache']">   <reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier4_fetch_clear']">    <reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
-<append xpath="/quests/quest[@id='tier4_hidden_clear']">   <reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" /></append>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_clear_completion" />
+
+		<objective type="RandomPOIGoto">			<property name="phase" value="1" />		</objective>
+		<objective type="RallyPoint">			<property name="phase" value="2" />		</objective>
+		<objective type="ClearSleepers">			<property name="phase" value="3" />		</objective>
+		<objective type="POIStayWithin">			<property name="phase" value="3" />			<property name="radius" value="25" />		</objective>
+		<objective type="ReturnToNPC">			<property name="phase" value="4" />		</objective>
+		<objective type="InteractWithNPC">			<property name="phase" value="4" />		</objective>
+		
+		<reward type="Exp" value="5000" />
+		<reward type="Item" id="casinoCoin" value="300-750" />
+
+		<reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true"  value="2" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true"  value="2" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="2" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="2" />
+	</quest>
+
+	<quest id="tier2_clear">
+		<property name="name_key" value="quest_tier2_clear" />
+		<property name="subtitle_key" value="quest_clear_subtitle" />
+		<property name="description_key" value="quest_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_tier2_clear_offer" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="2" />
+		<property name="statement_key" value="quest_clear_statement" />
+		<property name="response_key" value="quest_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="7500" />
+		<reward type="Item" id="casinoCoin" value="750-1125" />
+
+		<reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="3" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="3" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="3" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="3" />
+	</quest>
+
+	<quest id="tier3_clear">
+		<property name="name_key" value="quest_tier3_clear" />
+		<property name="subtitle_key" value="quest_clear_subtitle" />
+		<property name="description_key" value="quest_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_tier3_clear_offer" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="3" />
+		<property name="statement_key" value="quest_clear_statement" />
+		<property name="response_key" value="quest_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_clear_completion" />
+
+		<objective type="RandomPOIGoto">			<property name="phase" value="1" />		</objective>
+		<objective type="RallyPoint">			<property name="phase" value="2" />		</objective>
+		<objective type="ClearSleepers">			<property name="phase" value="3" />		</objective>
+		<objective type="POIStayWithin">			<property name="phase" value="3" />			<property name="radius" value="25" />		</objective>
+		<objective type="ReturnToNPC">			<property name="phase" value="4" />		</objective>
+		<objective type="InteractWithNPC">			<property name="phase" value="4" />		</objective>
+
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="casinoCoin" value="1125-1500" />
+
+		<reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="4" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="4" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="4" />
+	</quest>
+
+	<quest id="tier4_clear">
+		<property name="name_key" value="quest_tier4_clear" />
+		<property name="subtitle_key" value="quest_clear_subtitle" />
+		<property name="description_key" value="quest_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_tier4_clear_offer" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="4" />
+		<property name="statement_key" value="quest_clear_statement" />
+		<property name="response_key" value="quest_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="12500" />
+		<reward type="Item" id="casinoCoin" value="1500-1875" />
+
+		<reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="5" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="5" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="5" />
+	</quest>
+
+
+	<quest id="tier1_fetch">
+		<property name="name_key" value="quest_tier1_fetch" />
+		<property name="subtitle_key" value="quest_fetch_subtitle" />
+		<property name="description_key" value="quest_fetch_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="1" />
+		<property name="offer_key" value="quest_tier1_fetch_offer" />
+		<property name="statement_key" value="quest_fetch_statement" />
+		<property name="response_key" value="quest_fetch_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="5000" />
+		<reward type="Item" id="casinoCoin" value="375-750" />
+
+		<reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="2" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" value="2" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="2" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="2" />
+	</quest>
+
+	<quest id="tier2_fetch">
+		<property name="name_key" value="quest_tier2_fetch" />
+		<property name="subtitle_key" value="quest_fetch_subtitle" />
+		<property name="description_key" value="quest_fetch_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="2" />
+		<property name="offer_key" value="quest_tier2_fetch_offer" />
+		<property name="statement_key" value="quest_fetch_statement" />
+		<property name="response_key" value="quest_fetch_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="7500" />
+		<reward type="Item" id="casinoCoin" value="750-1125" />
+
+		<reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="3" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="3" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="3" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="3" />
+
+	</quest>
+
+	<quest id="tier3_fetch">
+		<property name="name_key" value="quest_tier3_fetch" />
+		<property name="subtitle_key" value="quest_fetch_subtitle" />
+		<property name="description_key" value="quest_fetch_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="3" />
+		<property name="offer_key" value="quest_tier3_fetch_offer" />
+		<property name="statement_key" value="quest_fetch_statement" />
+		<property name="response_key" value="quest_fetch_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="casinoCoin" value="1175-1500" />
+
+		<reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="4" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="4" />
+
+	</quest>
+
+	<quest id="tier4_fetch">
+		<property name="name_key" value="quest_tier4_fetch" />
+		<property name="subtitle_key" value="quest_fetch_subtitle" />
+		<property name="description_key" value="quest_fetch_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="4" />
+		<property name="offer_key" value="quest_tier4_fetch_offer" />
+		<property name="statement_key" value="quest_fetch_statement" />
+		<property name="response_key" value="quest_fetch_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="12500" />
+		<reward type="Item" id="casinoCoin" value="1500-1875" />
+
+		<reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="5" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="5" />
+	</quest>
+
+
+	<quest id="tier2_hidden_cache">
+		<property name="name_key" value="quest_tier2_hidden_cache" />
+		<property name="subtitle_key" value="quest_hidden_cache_subtitle" />
+		<property name="description_key" value="quest_hidden_cache_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="2" />
+		<property name="offer_key" value="quest_tier2_hidden_cache_offer" />
+		<property name="statement_key" value="quest_hidden_cache_statement" />
+		<property name="response_key" value="quest_hidden_cache_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_hidden_cache_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="2" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+			<property name="fetch_mode" value="Hidden" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="casinoCoin" value="1225-1500" />
+
+		<reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="3" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="3" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="3" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="3" />
+	</quest>
+
+	<quest id="tier3_hidden_cache">
+		<property name="name_key" value="quest_tier3_hidden_cache" />
+		<property name="subtitle_key" value="quest_hidden_cache_subtitle" />
+		<property name="description_key" value="quest_hidden_cache_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="3" />
+		<property name="offer_key" value="quest_tier3_hidden_cache_offer" />
+		<property name="statement_key" value="quest_hidden_cache_statement" />
+		<property name="response_key" value="quest_hidden_cache_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_hidden_cache_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="2" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+			<property name="fetch_mode" value="Hidden" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="12500" />
+		<reward type="Item" id="casinoCoin" value="1500-1875" />
+
+		<reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="4" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="4" />
+	</quest>
+
+	<quest id="tier4_hidden_cache">
+		<property name="name_key" value="quest_tier4_hidden_cache" />
+		<property name="subtitle_key" value="quest_hidden_cache_subtitle" />
+		<property name="description_key" value="quest_hidden_cache_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="4" />
+		<property name="offer_key" value="quest_tier4_hidden_cache_offer" />
+		<property name="statement_key" value="quest_hidden_cache_statement" />
+		<property name="response_key" value="quest_hidden_cache_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_hidden_cache_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="2" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+			<property name="fetch_mode" value="Hidden" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="15000" />
+		<reward type="Item" id="casinoCoin" value="1875-2250" />
+
+		<reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTools" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" value="5" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="5" />
+	</quest>
+
+	
+
+	<quest id="tier2_fetch_clear">
+		<property name="name_key" value="quest_tier2_fetch_clear" />
+		<property name="subtitle_key" value="quest_fetch_clear_subtitle" />
+		<property name="description_key" value="quest_fetch_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="2" />
+		<property name="offer_key" value="quest_tier2_fetch_clear_offer" />
+		<property name="statement_key" value="quest_fetch_clear_statement" />
+		<property name="response_key" value="quest_fetch_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="10000" />
+		<reward type="Item" id="casinoCoin" value="1225-1500" />
+
+		<reward type="LootItem" id="questTier2SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="3" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="3" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="3" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="3" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="3" />
+
+	</quest>
+
+	<quest id="tier3_fetch_clear">
+		<property name="name_key" value="quest_tier3_fetch_clear" />
+		<property name="subtitle_key" value="quest_fetch_clear_subtitle" />
+		<property name="description_key" value="quest_fetch_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="3" />
+		<property name="offer_key" value="quest_tier3_fetch_clear_offer" />
+		<property name="statement_key" value="quest_fetch_clear_statement" />
+		<property name="response_key" value="quest_fetch_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="12500" />
+		<reward type="Item" id="casinoCoin" value="1500-1875" />
+
+		<reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="4" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="4" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="4" />
+
+	</quest>
+
+	<quest id="tier4_fetch_clear">
+		<property name="name_key" value="quest_tier4_fetch_clear" />
+		<property name="subtitle_key" value="quest_fetch_clear_subtitle" />
+		<property name="description_key" value="quest_fetch_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="4" />
+		<property name="offer_key" value="quest_tier4_fetch_clear_offer" />
+		<property name="statement_key" value="quest_fetch_clear_statement" />
+		<property name="response_key" value="quest_fetch_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_fetch_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="15000" />
+		<reward type="Item" id="casinoCoin" value="1875-2250" />
+
+		<reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="5" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="5" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="5" />
+
+	</quest>
+
+
+	<quest id="tier3_hidden_clear">
+		<property name="name_key" value="quest_tier3_hidden_clear" />
+		<property name="subtitle_key" value="quest_hidden_clear_subtitle" />
+		<property name="description_key" value="quest_hidden_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="3" />
+		<property name="offer_key" value="quest_tier3_hidden_clear_offer" />
+		<property name="statement_key" value="quest_hidden_clear_statement" />
+		<property name="response_key" value="quest_hidden_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_hidden_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="2" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+			<property name="fetch_mode" value="Hidden" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="15000" />
+		<reward type="Item" id="casinoCoin" value="1875-2250" />
+
+		<reward type="LootItem" id="questTier3SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="4" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="4" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="4" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="4" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="4" />
+
+	</quest>
+
+	<quest id="tier4_hidden_clear">
+		<property name="name_key" value="quest_tier4_hidden_clear" />
+		<property name="subtitle_key" value="quest_hidden_clear_subtitle" />
+		<property name="description_key" value="quest_hidden_clear_description" />
+		<property name="icon" value="ui_game_symbol_quest" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="challenge" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="4" />
+		<property name="offer_key" value="quest_tier4_hidden_clear_offer" />
+		<property name="statement_key" value="quest_hidden_clear_statement" />
+		<property name="response_key" value="quest_hidden_clear_response" />
+		<property name="login_rally_reset" value="true" />
+
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_hidden_clear_completion" />
+
+		<objective type="RandomPOIGoto">
+			<property name="phase" value="1" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="ClearSleepers">
+			<property name="phase" value="3" />
+		</objective>
+
+		<objective type="FetchFromContainer">
+			<property name="phase" value="3" />
+			<property name="quest_item_ID" value="2" />
+			<property name="item_count" value="1" />
+			<property name="default_container" value="cntFetchQuestSatchel" />
+			<property name="fetch_mode" value="Hidden" />
+		</objective>
+
+		<objective type="POIStayWithin">
+			<property name="phase" value="3" />
+			<property name="radius" value="25" />
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4" />
+		</objective>
+
+		<reward type="Exp" value="17500" />
+		<reward type="Item" id="casinoCoin" value="2250-2625" />
+
+		<reward type="LootItem" id="questTier4SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMelee,questRanged" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questArmor,questMedical" ischosen="true" isfixed="true" value="5" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="5" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="5" />
+		<reward type="LootItem" id="questSchematics" ischosen="true" value="5" />
+		<reward type="LootItem" id="questMods" ischosen="true" value="5" />
+
+	</quest>
+
+	<quest id="tier1_buried_supplies">
+		<property name="name_key" value="quest_tier1_buried_supplies" />
+		<property name="subtitle_key" value="quest_buried_supplies_subtitle" />
+		<property name="description_key" value="quest_buried_supplies_description" />
+		<property name="icon" value="ui_game_symbol_treasure" />
+		<property name="repeatable" value="true" />
+		<property name="category_key" value="quest" />
+		<property name="offer_key" value="quest_tier1_buried_supplies_offer" />
+		<property name="difficulty" value="medium" />
+		<property name="difficulty_tier" value="1" />
+		<property name="statement_key" value="quest_buried_supplies_statement" />
+		<property name="response_key" value="quest_buried_supplies_response" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_buried_supplies_completion" />
+		<property name="shareable" value="true" />
+
+		<objective type="TreasureChest">
+			<property name="block" value="cntBuriedStashChest" />
+			<property name="distance" value="1000-1750" />
+			<property name="container_type" value="Supplies" />
+		</objective>
+
+		<objective type="FetchFromTreasure">
+			<property name="block" value="cntBuriedStashChest" />
+			<property name="quest_item_ID" value="1" />
+			<property name="item_count" value="1" />
+		</objective>
+
+		<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="3-5" phase="2" />
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2" />
+		</objective>
+
+		<reward type="Exp" value="5000" />
+		<reward type="Item" id="casinoCoin" value="2250-2625" />
+
+		<reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questTier1SkillRewards" ischosen="true" isfixed="true" value="1" />
+		<reward type="LootItem" id="questMedical" ischosen="true"  value="2" />
+		<reward type="LootItem" id="questMelee,questRanged,questArmor" ischosen="true"  value="2" />
+		<reward type="LootItem" id="questAmmo" ischosen="true" value="2" />
+		<reward type="LootItem" id="questTools" ischosen="true" value="2" />
+	</quest>
+
+</insertBefore>
 
 </configs>
