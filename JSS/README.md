@@ -26,6 +26,7 @@ This mod's purpose is to embrace the survival-by-scavenging and exploration styl
 * 11 Medical Journals
 * 14 Editions of Gunny's Guide to learn weapon making skills.
 * 10 Editions of Toolmaking Today to learn how to make tools and items like the workbench, cement mixer, and tablesaw.
+* 4 Editions of The Armorer to learn how to make armor.
 
 # New recipes
 
@@ -97,6 +98,7 @@ When you start a new game your player will have an item called "Starter Class Pa
 * Physician does not grant medical crafting skills but does still give healing bonus (bonus increased for first 2 tiers). Medical skills are learned by finding or purchasing Medical Journals instead.
 * Run and Gun reduced from 5 to 4 tiers with better effect at each level.
 * Living Off the Land reduced from 5 to 4 tiers.  Removed seed crafting from tier 1 (it is now a book) and then shifted each level down one so that level 1 is now the same as original level 2, etc.
+* Daring Adventurer changed so that an extra quest reward is offered at each level 0 through 4.
 
 # Assorted changes in no particular order
 
@@ -104,6 +106,7 @@ When you start a new game your player will have an item called "Starter Class Pa
 * Added more canned goods items: chocolate pudding, peanut butter, canned beans.
 * Charred meat can be made from any raw meat.
 * Weapon making skills are learned by finding Gunny's Guides (books).
+* The trader will always offer at least two skill books as rewards to quests he sends you on.
 * Antibiotics and Snowberry Extract crafting recipes must now be learned (through corresponding Medical Journals)
 * Novels can be looted from book shelves as well as other containers. They do nothing but traders will give you a good price for them or you can make paper from them. Some genres are worth more than others.
 * Yucca fruit will not make you sick and can be sold to traders.

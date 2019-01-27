@@ -127,11 +127,15 @@
 	<item name="Cookbook: Grandpas Learning Elixir"/>
 </lootgroup>
 
-<lootgroup name="medicalJournals">
+<lootgroup name="MedicalJournalsLevel1">
 	<item name="Medical Journal: First Aid Bandage"   prob = "30" />
 	<item name="Medical Journal: Plaster Cast"        prob = "20" />
 	<item name="Medical Journal: First Aid Kit"       prob = "15" />
 	<item name="Medical Journal: Snowberry Extract"   prob = "10" />
+</lootgroup>
+
+<lootgroup name="medicalJournals">
+	<item group="MedicalJournalsLevel1"               prob = "75" />
 	<item name="Medical Journal: Antibiotics"         prob = "10" />
 	<item name="Medical Journal: Herbal Antibiotics"  prob = "10" />
 	<item name="Medical Journal: Steroids"            prob = "1" />
@@ -143,10 +147,10 @@
 
 <!-- trader quest reward groups -->
 <lootgroup name="questTier1SkillRewards">
-	<item name="Medical Journal: First Aid Bandage" max_count="1"  />
-	<item name="The Armorer: Leather"               max_count="1"  />
-	<item group="WeaponsBooksLootGroupLevel1"       max_count="1"  />
-	<item group="magazineCookingLevel1Recipes"      max_count="1"  />
+	<item group="MedicalJournalsLevel1"             max_count="1" />
+	<item name="The Armorer: Leather"               max_count="1" />
+	<item group="WeaponsBooksLootGroupLevel1"       max_count="1" />
+	<item group="magazineCookingLevel1Recipes"      max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier2SkillRewards">

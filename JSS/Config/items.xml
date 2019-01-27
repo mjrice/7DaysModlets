@@ -5,7 +5,7 @@
 <!-- The traders should be more tradery and generally useful (useful does not mean easy) -->
 <!-- =================================================================================== -->
 
-<!-- My notes about prices:  Price offered is 1/5th the economicvalue
+<!-- My notes about prices:  Price offered is 1/5th the economicvalue when better barter level=0
                              Price sold by trader is 2x the economicvalue
 							 
 							 eg Corn EconomicValue = 10
@@ -19,9 +19,6 @@
 							 4                             $6                     $16
 							 5                             $7                     $15
 							 ==============================================================
-							 
-							 eg 2, ev = 200 can sell for: 40,60,80,100,120,140
-							               at bb lvl5 can buy for 300
 -->
 
 	<append xpath="/items/item[@name='resourceTestosteroneExtract']"><property name="SellableToTrader" value="true"/></append>
@@ -87,9 +84,9 @@
 	<set xpath="/items/item[@name='resourceCloth']/property[@name='EconomicBundleSize']/@value">6</set>
 	<set xpath="/items/item[@name='medicalBandage']/property[@name='EconomicValue']/@value">10</set>
 	<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='EconomicValue']/@value">24</set>
-	
-	<!-- 2 yucca + 1 bottled water make yucca juice  -->
+	<set xpath="/items/item[@name='medicalBloodBag']/property[@name='EconomicValue']/@value">12</set>
 
+	
 	<!-- 1 femur + 1 water makes glue , femur worth 5, jar worth 6 -->	
 	<set xpath="/items/item[@name='resourceFemur']/property[@name='SellableToTrader']/@value">true</set>
 	<set xpath="/items/item[@name='resourceFemur']/property[@name='EconomicValue']/@value">5</set>	
@@ -99,6 +96,24 @@
 	<set xpath="/items/item[@name='foodSteakAndPotato']/property[@name='EconomicValue']/@value">120</set>
 
 	<set xpath="/items/item[@name='foodBaconAndEggs']/property[@name='EconomicValue']/@value">110</set>
+
+	<!-- bullet casings are under valued (bundle size for both is 10) -->
+	<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='EconomicValue']/@value">50</set>
+	<set xpath="/items/item[@name='resourceBulletCasingSteel']/property[@name='EconomicValue']/@value">50</set>
+
+	<!-- RATIONAL BULET VALUES = entity damage / 4 + 3 -->	
+	<set xpath="/items/item[@name='ammo9mmBullet']/property[@name='EconomicValue']/@value">          11</set>  <!-- 32 -->
+	<set xpath="/items/item[@name='ammo9mmBulletJHP']/property[@name='EconomicValue']/@value">       12</set>  <!-- 35 -->
+	<set xpath="/items/item[@name='ammo9mmBulletSteel']/property[@name='EconomicValue']/@value">     10</set>  <!-- 29 -->
+	<set xpath="/items/item[@name='ammo44MagnumBullet']/property[@name='EconomicValue']/@value">     23</set>  <!-- 80-->
+	<set xpath="/items/item[@name='ammo44MagnumBulletAP']/property[@name='EconomicValue']/@value">   23</set>  <!-- 80 -->
+	<set xpath="/items/item[@name='ammo44MagnumBulletSteel']/property[@name='EconomicValue']/@value">22</set>  <!-- 76 -->
+	<set xpath="/items/item[@name='ammo762mmBulletFMJ']/property[@name='EconomicValue']/@value">     16</set>  <!-- 50 -->
+	<set xpath="/items/item[@name='ammo762mmBulletAP']/property[@name='EconomicValue']/@value">      16</set>  <!-- 50 -->
+	<set xpath="/items/item[@name='ammo762mmBulletFMJSteel']/property[@name='EconomicValue']/@value">15</set>  <!-- 46 -->
+	<set xpath="/items/item[@name='ammoShotgunShell']/property[@name='EconomicValue']/@value">       27</set>  <!-- 96 -->
+	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='EconomicValue']/@value">        23</set>  <!-- 80 -->
+	<set xpath="/items/item[@name='ammoBlunderbuss']/property[@name='EconomicValue']/@value">        23</set>  <!-- 88 -->
 
 	
 <!-- =================================================================================== -->
@@ -133,33 +148,14 @@
 	<append xpath="/items/item[@name= 'foodBlueberryPie']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
 	<append xpath="/items/item[@name=    'foodEggBoiled']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
 	<append xpath="/items/item[@name= 'foodCornOnTheCob']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
-	<append xpath="/items/item[@name=    'foodCornBread']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
-	<!-- <append xpath="/items/item[@name=   'foodBoiledMeat']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append> -->
-	<append xpath="/items/item[@name= 'foodBlueberryPie']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
-	<!-- <append xpath="/items/item[@name=     'foodMeatStew']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append> -->
+	<append xpath="/items/item[@name=    'foodCornBread']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>	
+	<append xpath="/items/item[@name= 'foodBlueberryPie']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>	
 	<append xpath="/items/item[@name=     'foodHoboStew']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
 	<append xpath="/items/item[@name='foodVegetableStew']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
 	
 <!-- ===================================================================================
 	 FOOD MODS |
 	 ==========+
-
-	What are all these:
-	
-	$foodAmountAdd "stamina"
-	foodHealthAmount "health"
-	$waterAmountAdd	 "water"
-	maxHealthAmount
-	maxHealthIncrease
-	healthIncrease
-	medicalHealthAmount              ( <display_value name="foodHealthAmount" value="5" /> wtf )
-	
-	whats this do and examples of other possibilities:
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="50" tags="coredamageresist"/>
-		<display_value name="dStrength" value="3"/>
-		<display_value name="dCarryCapacity" value="50"/>
-
-	==================================
 	Master plan for food item benefits
 
 	Food item or category					Food gain	Water gain	Health gain	Value	Other effects
@@ -2249,6 +2245,7 @@
 
 <item name="The Armorer: Leather" >
 	<property name="Extends" value="magazineArmorBase"/>
+	<property name="CustomIcon" value="BookLeatherArmor"/>
 	<property name="EconomicValue"    value="400"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorLeatherBoots" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2263,6 +2260,7 @@
 <item name="The Armorer: Iron" >
 	<property name="Extends" value="magazineArmorBase"/>
 	<property name="EconomicValue"    value="900"/>
+	<property name="CustomIcon" value="BookIronArmor"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorIronBoots" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronBoots" operation="set" value="1"/>
@@ -2275,6 +2273,7 @@
 
 <item name="The Armorer: Steel" >
 	<property name="Extends" value="magazineArmorBase"/>
+	<property name="CustomIcon" value="BookSteelArmor"/>
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorSteelBoots" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2288,6 +2287,7 @@
 
 <item name="The Armorer: Military" >
 	<property name="Extends" value="magazineArmorBase"/>
+	<property name="CustomIcon" value="BookMilitaryArmor"/>
 	<property name="EconomicValue"    value="2200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorMilitaryHelmet" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
