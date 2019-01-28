@@ -154,20 +154,52 @@
 <remove xpath="/recipes/recipe[@name='drugAntibiotics'][@craft_area='chemistryStation']"/>
 <remove xpath="/recipes/recipe[@name='drugHerbalAntibiotics'][@craft_area='campfire']"/>
 <remove xpath="/recipes/recipe[@name='drugHerbalAntibiotics'][@craft_area='chemistryStation']"/>
+
 <remove xpath="/recipes/recipe[@name='medicalSnowberryExtract']"/>
 <remove xpath="/recipes/recipe[@name='medicalAloeCream']"/>
+<remove xpath="/recipes/recipe[@name='medicalBandage']"/>
+<remove xpath="/recipes/recipe[@name='medicalFirstAidBandage']"/>
+<remove xpath="/recipes/recipe[@name='medicalFirstAidKit']"/>
+<remove xpath="/recipes/recipe[@name='medicalPlasterCast']"/>
+<remove xpath="/recipes/recipe[@name='medicalSplint']"/>
 
-<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltSteelAP']"/>
+<insertBefore xpath="/recipes/recipe[@name='meleeBoneShiv']">
 
-<insertBefore xpath="/recipes/recipe[@name='medicalBandage']">
-
-	<recipe name="ammoCrossbowBoltSteelAP" count="1" tags="learnable">
-		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
-		<ingredient name="resourceWood" count="1"/>
-		<ingredient name="resourceFeather" count="1"/>
+	<recipe name="medicalBandage" count="1" craft_exp_gain="20" >
+		<ingredient name="resourceCloth" count="2"/>
 	</recipe>
 
-	<recipe name="medicalAloeCream" count="1" tags="learnable">
+	<recipe name="medicalFirstAidBandage" count="1" tags="learnable" craft_exp_gain="20">
+		<ingredient name="medicalAloeCream" count="1"/>
+		<ingredient name="resourceCloth" count="2"/>
+	</recipe>
+
+	<recipe name="medicalFirstAidKit" count="1" craft_area="chemistryStation" tags="learnable" craft_exp_gain="100">
+		<ingredient name="medicalBloodBag" count="1"/>
+		<ingredient name="drinkJarGrainAlcohol" count="1"/>
+		<ingredient name="medicalBandage" count="1"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+
+	<recipe name="medicalPlasterCast" count="1" craft_area="chemistryStation" tags="learnable" craft_exp_gain="100">
+		<ingredient name="resourceCloth" count="2"/>
+		<ingredient name="foodCornMeal" count="4"/>
+		<ingredient name="resourceCrushedSand" count="2"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+	</recipe>
+
+	<recipe name="medicalSnowberryExtract" count="1" craft_area="chemistryStation" craft_exp_gain="20">
+		<ingredient name="resourceCropSnowberryPlant" count="1"/>
+		<ingredient name="foodCornMeal" count="1"/>
+	</recipe>
+
+	<recipe name="medicalSplint" count="1" craft_exp_gain="20">
+		<ingredient name="resourceCloth" count="2"/>
+		<ingredient name="resourceWood" count="2"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+
+	<recipe name="medicalAloeCream" count="1" tags="learnable" craft_exp_gain="20">
 		<ingredient name="resourceCropAloeLeaf" count="4"/>
 	</recipe>
 	
@@ -181,11 +213,6 @@
 		<ingredient name="foodMoldyBread"                 count="1"/>
 		<ingredient name="resourcePotassiumNitratePowder" count="1"/>
 		<ingredient name="drinkJarRiverWater"             count="1"/>
-	</recipe>
-	
-	<recipe name="medicalSnowberryExtract" count="1" craft_area="chemistryStation" tags="learnable">
-		<ingredient name="resourceCropSnowberryPlant" count="2"/>
-		<ingredient name="foodCornMeal" count="1"/>
 	</recipe>
 	
 	<recipe name="drugHerbalAntibiotics" count="1" craft_area="campfire" craft_tool="toolBeaker" tags="learnable">
@@ -202,6 +229,23 @@
 		<ingredient name="resourcePotassiumNitratePowder" count="2"/>
 		<ingredient name="Herbs"                          count="2"/>
 		<ingredient name="drinkJarRiverWater"             count="1"/>
+	</recipe>
+	
+	<!-- MODTAG zombie cream makes it hard for zombies to detect you -->
+	<recipe name="Zombie Cream" count="1" tags="learnable" craft_area="campfire" craft_tool="toolBeaker">
+		<ingredient name="foodRottingFlesh"  count="10"/>
+		<ingredient name="resourceAnimalFat" count="2"/>
+		<ingredient name="medicalAloeCream"  count="5"/>
+		<ingredient name="resourceAcid"      count="1"/>
+		<ingredient name="resourcePaint"     count="1"/>
+	</recipe>
+
+	<recipe name="Zombie Cream" count="1" tags="learnable" craft_area="chemistryStation">
+		<ingredient name="foodRottingFlesh"  count="5"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="medicalAloeCream"  count="2"/>
+		<ingredient name="resourceAcid"      count="1"/>
+		<ingredient name="resourcePaint"      count="1"/>
 	</recipe>
 </insertBefore>
 
@@ -417,17 +461,8 @@
 
 </insertAfter>
 
-<!-- make some items learnable -->
-<!-- these have to be removed and re-added because you can't set tags=learnable if there is no tags attr to begin with (too bad they didnt use tags=intrinsic) -->
-
-<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltIron']"/>
-<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltSteelAP']"/>
-<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltStone']"/>
-<remove xpath="/recipes/recipe[@name='meleeClubIron']"/>
-<remove xpath="/recipes/recipe[@name='ammoBlunderbuss']"/>
-
+<!-- create starter class satchel recipes -->
 <append xpath="/recipes">
-
 	<recipe name="Chef Suitcase">               <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Farmer Suitcase">             <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Survivalist Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe>
@@ -436,37 +471,60 @@
 	<recipe name="Schoolteacher Suitcase">      <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Construction Worker Suitcase"><ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Drug Dealer Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe>
+	<recipe name="Librarian Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe> <!-- this is for testing -->
+</append>
 
-	<recipe name="meleeClubIron" count="1" tags="learnable">
-		<ingredient name="resourceScrapIron" count="100"/>
-		<ingredient name="resourceWood" count="10"/>
+<!-- make some additional weapons items learnable -->
+<!-- these have to be removed and re-added because you can't set tags=learnable if there is no tags attr to begin with (too bad they didnt use tags=intrinsic) -->
+<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltIron']"/>
+<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltSteelAP']"/>                                      
+<remove xpath="/recipes/recipe[@name='ammoCrossbowBoltStone']"/>
+<remove xpath="/recipes/recipe[@name='meleeClubIron']"/>
+<remove xpath="/recipes/recipe[@name='ammoBlunderbuss']"/>
+<remove xpath="/recipes/recipe[@name='resourceForgedIron']"/>
+<remove xpath="/recipes/recipe[@name='resourceArrowHeadIron']"/>
+
+<append xpath="/recipes">	
+	<recipe name="resourceForgedIron" count="1" craft_area="forge" material_based="true" tags="learnable"> <!-- (toolmaking today: forge) -->
+		<ingredient name="unit_iron" count="10"/>
+		<ingredient name="unit_clay" count="5"/>
+	</recipe>
+		
+	<recipe name="resourceArrowHeadIron" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true" tags="learnable"> <!-- (toolmaking today: forge) -->
+		<ingredient name="unit_iron" count="2"/>
+		<ingredient name="unit_clay" count="1"/>
 	</recipe>
 
-	<recipe name="ammoBlunderbuss" count="1" tags="learnable">
-		<ingredient name="resourceRockSmall" count="1"/>
-		<ingredient name="resourceGunPowder" count="1"/>
-		<ingredient name="resourcePaper" count="1"/>
-	</recipe>
-
-	<recipe name="ammoCrossbowBoltIron" count="1" tags="learnable">
-		<ingredient name="resourceArrowHeadIron" count="1"/>
-		<ingredient name="resourceWood" count="1"/>
-		<ingredient name="resourceFeather" count="1"/>
-	</recipe>
-
-	<recipe name="ammoCrossbowBoltSteelAP" count="1" tags="learnable">
+	<recipe name="ammoCrossbowBoltSteelAP" count="1" tags="learnable"> <!-- (toolmaking today: cruicible) -->
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
 	</recipe>
 
-	<recipe name="ammoCrossbowBoltStone" count="1" tags="learnable">
+	<recipe name="meleeClubIron" count="1" tags="learnable"> <!-- (gunny's guide: clubs) -->
+		<ingredient name="resourceScrapIron" count="100"/>
+		<ingredient name="resourceWood" count="10"/>
+	</recipe>
+
+	<recipe name="ammoBlunderbuss" count="1" tags="learnable"> <!-- (gunny's guide: blunderbuss) -->
+		<ingredient name="resourceRockSmall" count="1"/>
+		<ingredient name="resourceGunPowder" count="1"/>
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+
+	<recipe name="ammoCrossbowBoltIron" count="1" tags="learnable"> <!-- (gunny's guide: crossbow) -->
+		<ingredient name="resourceArrowHeadIron" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+	</recipe>
+
+	<recipe name="ammoCrossbowBoltStone" count="1" tags="learnable"> <!-- (gunny's guide: crossbow) -->
 		<ingredient name="resourceRockSmall" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
 	</recipe>
 
-	<recipe name="Encyclopedia Set" count="1" craft_time="5" craft_exp_gain="5000">
+	<recipe name="Encyclopedia Set" count="1" craft_time="5" craft_exp_gain="6000">
 		<ingredient name="Encyclopedia Volume A" count="1"/>
 		<ingredient name="Encyclopedia Volume B" count="1"/>
 		<ingredient name="Encyclopedia Volume C" count="1"/>
@@ -495,24 +553,6 @@
 		<ingredient name="Encyclopedia Volume Z" count="1"/>
 	</recipe>
 
-<!-- MODTAG zombie cream makes it hard for zombies to detect you -->
-
-	<recipe name="Zombie Cream" count="1" tags="learnable" craft_area="campfire" craft_tool="toolBeaker">
-		<ingredient name="foodRottingFlesh"  count="10"/>
-		<ingredient name="resourceAnimalFat" count="2"/>
-		<ingredient name="medicalAloeCream"  count="5"/>
-		<ingredient name="resourceAcid"      count="1"/>
-		<ingredient name="resourcePaint"     count="1"/>
-	</recipe>
-
-	<recipe name="Zombie Cream" count="1" tags="learnable" craft_area="chemistryStation">
-		<ingredient name="foodRottingFlesh"  count="5"/>
-		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="medicalAloeCream"  count="2"/>
-		<ingredient name="resourceAcid"      count="1"/>
-		<ingredient name="resourcePaint"      count="1"/>
-	</recipe>
-	
 </append>
 
 

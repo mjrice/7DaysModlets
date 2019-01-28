@@ -1549,6 +1549,7 @@
 		<requirement name="CVarCompare" cvar="foodBaconAndEggs" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodBaconAndEggs" operation="set" value="1" tooltip_key="ttRecipeUnlocked" />
 	</effect_group>
 </item>
@@ -1561,6 +1562,7 @@
 		<requirement name="CVarCompare" cvar="Chicken Surpise" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Chicken Surpise" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Tastes Like Chicken Surpise" operation="set" value="1"/>
 	</effect_group>
@@ -1574,6 +1576,7 @@
 		<requirement name="CVarCompare" cvar="Hasenpfeffer" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Hasenpfeffer" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1586,6 +1589,7 @@
 		<requirement name="CVarCompare" cvar="Bear Tonight" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Bear Tonight" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1598,6 +1602,7 @@
 		<requirement name="CVarCompare" cvar="Chili" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Chili" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1608,26 +1613,32 @@
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="Stewed Pork" operation="Equals" value="0"/>
 	</property>	
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Pork"    operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Chicken" operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Rabbit"  operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Bear"    operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Snake"   operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Wolf"    operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Venison" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Pork"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Chicken" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Rabbit"  operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Bear"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Snake"   operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Wolf"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Venison" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Grilled Meat">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="Grilled Pork" operation="Equals" value="0"/></property>	
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Pork"    operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Chicken" operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Rabbit"  operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Bear"    operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Snake"   operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Wolf"    operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Venison" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">	
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Pork"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Chicken" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Rabbit"  operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Bear"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Snake"   operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Wolf"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Venison" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Fried Meat">
@@ -1636,6 +1647,7 @@
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="Fried Pork" operation="Equals" value="0"/></property>	
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Fried Pork"    operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Fried Chicken" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Fried Rabbit"  operation="set" value="1"/>
@@ -1651,7 +1663,10 @@
 	<property name="EconomicValue"    value="300"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodCornBread" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodCornBread" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodCornBread" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Tea and Coffee">
@@ -1660,6 +1675,7 @@
 	<property name="EconomicValue"    value="300"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="drinkJarRedTea" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarRedTea" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarCoffee" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarGoldenrodTea" operation="set" value="1"/>
@@ -1672,7 +1688,10 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="EconomicValue"    value="900"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodSteakAndPotato" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodSteakAndPotato" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodSteakAndPotato" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Blueberry Pie">
@@ -1680,7 +1699,10 @@
 	<property name="EconomicValue"    value="900"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodBlueberryPie" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodBlueberryPie" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodBlueberryPie" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Strawberry Shortcake">
@@ -1688,7 +1710,10 @@
 	<property name="EconomicValue"    value="900"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="Strawberry Shortcake" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Strawberry Shortcake" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Strawberry Shortcake" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Meat Stew">
@@ -1696,28 +1721,40 @@
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodMeatStew" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodMeatStew" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodMeatStew" operation="set" value="1"/>
+	</effect_group>
 </item>
 <item name="Cookbook: Vegetable Stew">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1000"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodVegetableStew" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodVegetableStew" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodVegetableStew" operation="set" value="1"/>
+	</effect_group>
 </item>
 <item name="Cookbook: Sham Chowder">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodShamChowder" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodShamChowder" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodShamChowder" operation="set" value="1"/>
+	</effect_group>
 </item>
 <item name="Cookbook: Hobo Stew">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodHoboStew" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHoboStew" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHoboStew" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: Juice Smoothies">
@@ -1726,6 +1763,7 @@
 	<property name="EconomicValue"    value="1000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodYuccaJuiceSmoothie" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodYuccaJuiceSmoothie" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Blueberry Smoothie" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Strawberry Smoothie" operation="set" value="1"/>
@@ -1738,36 +1776,56 @@
 	<property name="EconomicValue"    value="900"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodChiliDog" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodChiliDog" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodChiliDog" operation="set" value="1"/>
+	</effect_group>
 </item>
 <item name="Cookbook: Grandpas Moonshine">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodGrandpasMoonshine" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasMoonshine" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasMoonshine" operation="set" value="1"/>
+	</effect_group>
 </item>
 <item name="Cookbook: Grandpas Awesome Sauce">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodGrandpasAwesomeSauce" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasAwesomeSauce" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>	
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasAwesomeSauce" operation="set" value="1"/>
+	</effect_group>
 </item>
 <item name="Cookbook: Grandpas Learning Elixir">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodGrandpasLearningElixir" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasLearningElixir" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>	
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasLearningElixir" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Cookbook: All About Seeds">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="200"/>
 	<property name="CreativeMode" value="Player"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="plantedAloe1" operation="Equals" value="0"/></property>
+	<!-- <property name="ActionSkillGroup" value="Science"/> -->
+	<property class="Action0">
+		<!-- <requirement name="CVarCompare" cvar="plantedAloe1" operation="Equals" value="0"/> 				-->
+		<property name="Consume" value="true"/>
+		<property name="Delay"                    value="1.0"/>
+		<property name="Use_time"                 value="..."/>
+		<property name="ActionExpBonusMultiplier" value="1"/>     	
+	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedAloe1" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedBlueberry1" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedChrysanthemum1" operation="set" value="1"/>
@@ -1891,7 +1949,7 @@
 		<property name="Consume"                  value="true"/> <!-- MODTAG keep book after reading it -->
 		<property name="Delay"                    value="1.0"/>
 		<property name="Use_time"                 value="..."/>
-		<property name="ActionExpBonusMultiplier" value="0"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
+		<property name="ActionExpBonusMultiplier" value="1"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
 	<property name="FuelValue"        value="2"/>
@@ -1902,13 +1960,21 @@
 <item name="Toolmaking Today: Iron Tools" >
 	<property name="Extends" value="magazineToolsBase"/>
 	<property name="EconomicValue"    value="600"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolPickaxeIron" operation="Equals" value="0"/></property>
-	<effect_group tiered="false">
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="meleeToolPickaxeIron" operation="Equals" value="0"/>		
+		<property name="Consume" value="true"/>
+		<property name="Delay"                    value="1.0"/>
+		<property name="Use_time"                 value="..."/>
+		<property name="ActionExpBonusMultiplier" value="1"/>     	
+	</property>
+	<effect_group tiered="false">				
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeIron" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolHoeIron" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolHoeIron"     operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelIron"  operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeIron" operation="set" value="1"/>
-	</effect_group>
+	</effect_group>		
 </item>
 
 <item name="Toolmaking Today: Hammers" >
@@ -1916,6 +1982,7 @@
 	<property name="EconomicValue"    value="300"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolClawHammer" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolClawHammer" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolSledgehammer" operation="set" value="1"/>
 	</effect_group>
@@ -1926,6 +1993,7 @@
 	<property name="EconomicValue"    value="1200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolFireaxeSteel" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelSteel" operation="set" value="1"/>
@@ -1937,6 +2005,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolChainsaw" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolChainsaw" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1946,6 +2015,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolAuger" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolAuger" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1956,6 +2026,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunToolNailgun" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunToolNailgun" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1965,6 +2036,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="tablesaw" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="tablesaw" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1974,6 +2046,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="workbench" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="workbench" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1983,6 +2056,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="cementMixer" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cementMixer" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1992,17 +2066,22 @@
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolWrench" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolWrench" operation="set" value="1"/>
 	</effect_group>
 </item>
 
 <item name="Toolmaking Today: Forges" >
 	<property name="Extends" value="magazineToolsBase"/>
+	<property name="Description" value="Unlocks recipes for the forge, anvil, and forged iron"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="forge" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="forge" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolAnvil" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceForgedIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceArrowHeadIron" operation="set" value="1"/>		
 	</effect_group>
 </item>
 
@@ -2011,6 +2090,7 @@
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="toolForgeCrucible" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolForgeCrucible" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceForgedSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceArrowHeadSteelAP" operation="set" value="1"/>
@@ -2051,6 +2131,7 @@
 	<property name="EconomicValue"    value="200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeClubIron" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeClubIron" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -2064,6 +2145,7 @@
 	</property>
 	
 	<effect_group tiered="false">		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolHuntingKnife" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -2073,6 +2155,7 @@
 	<property name="EconomicValue"    value="220"/>
 
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolMachete" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -2082,6 +2165,7 @@
 	<property name="EconomicValue"    value="400"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunCompoundBow" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunCompoundBow" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -2091,6 +2175,7 @@
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunCrossbow" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunCrossbow" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltExploding" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltIron" operation="set" value="1"/>
@@ -2104,6 +2189,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunPistol" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunPistol" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo9mmBullet" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo9mmBulletSteel" operation="set" value="1"/>
@@ -2118,6 +2204,7 @@
 	<property name="EconomicValue"    value="2000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunHuntingRifle" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunHuntingRifle" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo762mmBulletFMJ" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo762mmBulletFMJSteel" operation="set" value="1"/>
@@ -2132,6 +2219,7 @@
 	<property name="EconomicValue"    value="2200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunBlunderbuss" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunBlunderbuss" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoBlunderbuss" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoShotgunShell" operation="set" value="1"/>
@@ -2145,6 +2233,7 @@
 	<property name="EconomicValue"    value="2500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunPumpShotgun" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunPumpShotgun" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoShotgunSlug" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoShotgunShell" operation="set" value="1"/>
@@ -2158,6 +2247,7 @@
 	<property name="EconomicValue"    value="3100"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gun44Magnum" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gun44Magnum" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo44MagnumBullet" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo44MagnumBulletSteel" operation="set" value="1"/>
@@ -2172,6 +2262,7 @@
 	<property name="EconomicValue"    value="3500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunAK47" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5550"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunAK47" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo762mmBulletFMJ" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo762mmBulletFMJSteel" operation="set" value="1"/>
@@ -2186,6 +2277,7 @@
 	<property name="EconomicValue"    value="3300"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunSMG5" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunSMG5" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo9mmBullet" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo9mmBulletSteel" operation="set" value="1"/>
@@ -2200,6 +2292,7 @@
 	<property name="EconomicValue"    value="3300"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunMR10" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunMR10" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo762mmBulletFMJ" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo762mmBulletFMJSteel" operation="set" value="1"/>
@@ -2214,6 +2307,7 @@
 	<property name="EconomicValue"    value="3300"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunRocketLauncher" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunRocketLauncher" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -2249,6 +2343,7 @@
 	<property name="EconomicValue"    value="400"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorLeatherBoots" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherBoots" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherGloves" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherHood" operation="set" value="1"/>
@@ -2263,6 +2358,7 @@
 	<property name="CustomIcon" value="BookIronArmor"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorIronBoots" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronBoots" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronGloves" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronHelmet" operation="set" value="1"/>
@@ -2277,6 +2373,7 @@
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorSteelBoots" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelBoots" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelGloves" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelHelmet" operation="set" value="1"/>
@@ -2291,6 +2388,7 @@
 	<property name="EconomicValue"    value="2200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorMilitaryHelmet" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryHelmet" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryVest" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryGloves" operation="set" value="1"/>
@@ -2339,7 +2437,7 @@
 	<property name="Name"          value="name romance" /> 
 	<property name="EconomicValue" value="200"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="readABook" />		
+		
 	</effect_group>
 </item>
 

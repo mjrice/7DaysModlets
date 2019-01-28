@@ -236,13 +236,13 @@
 		<property name="CreativeMode"        value="None"/>
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
 		<drop event="Destroy" name="Cookbook: Grilled Meat"   count="1"/>
-		<drop event="Destroy" name="Cookbook: Boiled Meat"    count="1"/>		
+		<drop event="Destroy" name="Cookbook: Stewed Meat"    count="1"/>		
 		<drop event="Destroy" name="toolCookingPot"           count="1"/>
 		<drop event="Destroy" name="Herbs"                    count="16"/>
 		
-		<drop event="Destroy" name="Chili"           count="1"/>
+		<!--<drop event="Destroy" name="Chili"           count="1"/>
 		<drop event="Destroy" name="Mixed Fruit Smoothie"           count="1"/>
-		<drop event="Destroy" name="drinkJarCoffee"           count="1"/>
+		<drop event="Destroy" name="drinkJarCoffee"           count="1"/>-->
 	</block>
 	
 	<block name="Medic Suitcase">	
@@ -303,8 +303,7 @@
 		<drop event="Destroy" name="Cookbook: All About Seeds"    count="1"/>
 		<drop event="Destroy" name="Toolmaking Today: Iron Tools" count="1"/>		
 		<drop event="Destroy" name="meleeToolHoeIron"             count="1"/>
-		<drop event="Destroy" name="plantedCorn1"                 count="20"/>
-		
+		<drop event="Destroy" name="plantedCorn1"                 count="20"/>		
 	</block>
 
 	<block name="Business Person Suitcase">
@@ -387,6 +386,47 @@
 		<drop event="Destroy" name="meleeToolClawHammer"          count="1"/>
 	</block>
 	
+	<block name="Librarian Suitcase">
+		<property name="DisplayType"         value="blockHardened" />
+		<property name="Material"            value="Mcloth"/>
+		<property name="LightOpacity"        value="0"/>
+		<property name="Shape"               value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="Collide"             value="melee,bullet,arrow,rocket"/>
+		<property name="Shape"               value="ModelEntity"/>
+		<property name="CustomIcon"          value="cntFetchQuestSatchel"/>
+		<property name="Model"               value="Entities/LootContainers/loot_satchelPrefab"/>
+		<property name="Place"               value="TowardsPlacerInverted"/>
+		<property name="MaxDamage"           value="1"/>
+		<property name="CreativeMode"        value="None"/>
+		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
+		<drop event="Destroy" name="Encyclopedia Volume A" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume B" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume C" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume D" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume E" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume F" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume G" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume H" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume I" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume J" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume K" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume L" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume M" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume N" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume O" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume P" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume Q" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume R" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume S" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume T" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume U" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume V" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume W" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume X" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume Y" count="1"/>		
+		<drop event="Destroy" name="Encyclopedia Volume Z" count="1"/>		
+	</block>
 	</append>
 	
 </configs>

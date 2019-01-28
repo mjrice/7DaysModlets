@@ -278,6 +278,11 @@ Notes about quests
 <remove xpath="/quests/quest[@id='tier4_hidden_clear']"/>   
 
 <insertBefore xpath="/quests/quest_list[@id='trader_quests']">
+
+<quest id="give_xp_quest">
+		<reward type="Exp" value="5000" />
+</quest>
+
 	<quest id="tier1_clear">
 		<property name="name_key" value="quest_tier1_clear" />
 		<property name="subtitle_key" value="quest_clear_subtitle" />

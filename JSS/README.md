@@ -88,13 +88,7 @@ When you start a new game your player will have an item called "Starter Class Pa
 
 # Perk Progression changes
 * Removed Master Chef. Recipes are learned by finding or purchasing Cookbooks instead. Some cookbooks unlock multiple recipes at once (e.g. Grilled Meats lets you make any meat grilled).
-* Hammer and Forge reduced to 4 levels. Does not grant tool making skills, those are discovered via ToolMaking Today books.
-* Hammer and Forge level 1 only requires player level 4 instead of 10.
-* Hammer and Forge level 2 only requires player level 8 instead of 20.
-* Hammer and Forge level 1 unlocks leather armor as well as the forge (still requires a workbench to craft leather armor).
-* Hammer and Forge level 2 unlocks iron armor
-* Hammer and Forge level 3 unlocks Forged Steel
-* Hammer and Forge level 4 unlocks military armor
+* Removed Hammer and Forge.  Forge and related recipes are learned by reading issues of Toolmaking Today.  Armor recipes are learned by reading issues of The Armorer.
 * Physician does not grant medical crafting skills but does still give healing bonus (bonus increased for first 2 tiers). Medical skills are learned by finding or purchasing Medical Journals instead.
 * Run and Gun reduced from 5 to 4 tiers with better effect at each level.
 * Living Off the Land reduced from 5 to 4 tiers.  Removed seed crafting from tier 1 (it is now a book) and then shifted each level down one so that level 1 is now the same as original level 2, etc.

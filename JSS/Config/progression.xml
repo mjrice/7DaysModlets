@@ -46,31 +46,8 @@
 </perk>
 </insertAfter>
 
-<!-- MODTAG Replace hammer forge perks, leather armor unlocked with level 1, player level gates reduced for levels 1 and 2 -->
+<!-- MODTAG Remove Hammer and Forge perks.  Find Toolmaking Today or The Armorer to learn recipes -->
 <remove xpath="/progression/perks/perk[@name='perkHammerForge']"/>
-<insertBefore xpath="/progression/perks/perk[@name='perkGreaseMonkey']">
-	<perk name="perkHammerForge" parent="skillCraftsmanship" max_level="4" name_key="perkHammerForgeName" desc_key="perkHammerForgeDesc" icon="ui_game_symbol_forge">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="2" text="Level 4, INT 2"/>
-								<requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqAttributeLevelDummy"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="4" text="Level 8, INT 4"/>
-								<requirement name="PlayerLevel" operation="GTE" value="8" desc_key="reqAttributeLevelDummy"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06-35"/>
-								<requirement name="PlayerLevel" operation="GTE" value="35" desc_key="reqAttributeLevelDummy"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08-70"/>
-								<requirement name="PlayerLevel" operation="GTE" value="70" desc_key="reqAttributeLevelDummy"/></level_requirements>
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1,5" tags="forge,toolAnvil"/> <!-- ,armorLeatherBoots,armorLeatherGloves,armorLeatherHood,armorLeatherChest,armorLeatherPants -->
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5" tags="armorIronBoots,armorIronChest,armorIronGloves,armorIronHelmet,armorIronLegs"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5" tags="toolForgeCrucible,resourceArrowHeadSteelAP,resourceForgedSteel"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5" tags="armorMilitaryHelmet,armorMilitaryVest,armorMilitaryGloves,armorMilitaryLegs,armorMilitaryBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelHelmet,armorSteelLegs"/>
-			
-			<effect_description level="1" desc_base="You can craft a forge, forged iron, and leather armor"/>
-			<effect_description level="2" desc_base="You can craft iron armor"/>
-			<effect_description level="3" desc_base="You can make forged steel"/>
-			<effect_description level="4" desc_base="You can make military armor"/>			
-		</effect_group>
-	</perk>
-</insertBefore>
 
 <!-- MODTAG replace Living off the land perk, reduced to 4 levels (new level 1 is same as old level 2 etc) -->
 <remove xpath="/progression/perks/perk[@name='perkLivingOffTheLand']"/>
