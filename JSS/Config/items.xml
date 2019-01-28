@@ -2496,7 +2496,7 @@
 	<property name="Group"            value="Special Items"/>
 </item>
 
-<item name="EncyclopediaBase">	
+<item name="EncyclopediaBase" craft_exp_gain="600">	
 	<property name="CreativeMode"     value="None"/>
 	<property name="HoldType"         value="21"/>
 	<property name="Meshfile"         value="Items/Misc/bookPrefab"/>

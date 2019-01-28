@@ -524,8 +524,8 @@
 		<ingredient name="resourceFeather" count="1"/>
 	</recipe>
 
-	<recipe name="Encyclopedia Set" count="1" craft_time="5" craft_exp_gain="6000">
-		<ingredient name="Encyclopedia Volume A" count="1"/>
+	<recipe name="Encyclopedia Set" count="1" craft_time="5" >
+		<ingredient name="Encyclopedia Volume A" count="1" />
 		<ingredient name="Encyclopedia Volume B" count="1"/>
 		<ingredient name="Encyclopedia Volume C" count="1"/>
 		<ingredient name="Encyclopedia Volume D" count="1"/>

@@ -1,8 +1,8 @@
 <configs>
 
-<append xpath="/buffs">
-	<buff name="readABook"  description_key="readabook"  tooltip_key="buffGodModeTooltip"  />
-</append>
+
+
+
 
 <!-- MODTAG Nerf the reload movement penalty -->
 <remove xpath="/buffs/buff[@name='buffReloadMovementPenalty']"/>
@@ -134,6 +134,7 @@
 				<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="5"/>
 	</triggered_effect>
 </append>
+	
 	
 </configs>
 	

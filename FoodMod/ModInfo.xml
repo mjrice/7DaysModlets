@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Progresssion" />
+		<Description value="Progression system mod" />
+		<Author value="mjrice" />
+		<Version value="0.1" />
+		<Website value="" />
+	</ModInfo>
+</xml>
