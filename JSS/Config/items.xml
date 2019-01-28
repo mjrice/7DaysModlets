@@ -1647,7 +1647,7 @@
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="Fried Pork" operation="Equals" value="0"/></property>	
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Fried Pork"    operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Fried Chicken" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Fried Rabbit"  operation="set" value="1"/>
@@ -1700,7 +1700,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodBlueberryPie" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2000"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodBlueberryPie" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1711,7 +1711,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="Strawberry Shortcake" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2000"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Strawberry Shortcake" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1722,7 +1722,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodMeatStew" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2000"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodMeatStew" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -1771,6 +1771,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Herbal Smoothie" operation="set" value="1"/>
 	</effect_group>
 </item>
+
 <item name="Cookbook: Chili Dog">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="900"/>
@@ -1781,6 +1782,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodChiliDog" operation="set" value="1"/>
 	</effect_group>
 </item>
+
 <item name="Cookbook: Grandpas Moonshine">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
@@ -1791,6 +1793,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasMoonshine" operation="set" value="1"/>
 	</effect_group>
 </item>
+
 <item name="Cookbook: Grandpas Awesome Sauce">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
@@ -1801,6 +1804,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasAwesomeSauce" operation="set" value="1"/>
 	</effect_group>
 </item>
+
 <item name="Cookbook: Grandpas Learning Elixir">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
@@ -1825,7 +1829,7 @@
 		<property name="ActionExpBonusMultiplier" value="1"/>     	
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedAloe1" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedBlueberry1" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedChrysanthemum1" operation="set" value="1"/>
@@ -1871,66 +1875,107 @@
 <item name="Medical Journal: First Aid Bandage">
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="mecialFirstAidBandage" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidBandage" operation="set" value="1"/></effect_group>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidBandage" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: First Aid Kit">
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property name="EconomicValue"    value="1000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="mecialFirstAidKit" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidKit" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidKit" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: Plaster Cast">
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="medicalPlasterCast" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalPlasterCast" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalPlasterCast" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: Snowberry Extract">
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="medicalSnowberryExtract" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalSnowberryExtract" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalSnowberryExtract" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: Antibiotics">
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="drugAntibiotics" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugAntibiotics" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugAntibiotics" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: Herbal Antibiotics" >
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="drugHerbalAntibiotics" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugHerbalAntibiotics" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugHerbalAntibiotics" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: Steroids"  >
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="drugSteroids" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugSteroids" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugSteroids" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: Recog"     >
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="drugRecog" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugRecog" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugRecog" operation="set" value="1"/>
+	</effect_group>
 </item>
+
 <item name="Medical Journal: FortBites" >
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="drugFortBites" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugFortBites" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drugFortBites" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Medical Journal: Zombie Cream" >
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="Zombie Cream" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Zombie Cream" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Zombie Cream" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="Medical Journal: Chemistry Station" >
 	<property name="Extends" value="magazineMedicalJournal"/>
 	<property name="EconomicValue"    value="2500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="chemistryStation" operation="Equals" value="0"/></property>
-	<effect_group tiered="false"><triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="chemistryStation" operation="set" value="1"/></effect_group>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="chemistryStation" operation="set" value="1"/>
+	</effect_group>
 </item>
 
 <item name="magazineToolsBase">
@@ -1968,8 +2013,7 @@
 		<property name="ActionExpBonusMultiplier" value="1"/>     	
 	</property>
 	<effect_group tiered="false">				
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4400"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeIron" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolHoeIron"     operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelIron"  operation="set" value="1"/>
@@ -1982,7 +2026,7 @@
 	<property name="EconomicValue"    value="300"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolClawHammer" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolClawHammer" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolSledgehammer" operation="set" value="1"/>
 	</effect_group>
@@ -1993,7 +2037,7 @@
 	<property name="EconomicValue"    value="1200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="meleeToolFireaxeSteel" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelSteel" operation="set" value="1"/>
@@ -2125,7 +2169,6 @@
 	<property name="Group"            value="Books"/>
 </item>
 
-
 <item name="Gunny's Guide: Iron Clubs" >
 	<property name="Extends" value="magazineWeaponsBase"/>
 	<property name="EconomicValue"    value="200"/>
@@ -2167,6 +2210,7 @@
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunCompoundBow" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoArrowFlaming" operation="set" value="1"/>
 	</effect_group>
 </item>
 
@@ -2181,6 +2225,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltIron" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltSteelAP" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltStone" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoArrowFlaming" operation="set" value="1"/>
 	</effect_group>
 </item>
 
@@ -2309,6 +2354,48 @@
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunRocketLauncher" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoRocketHE" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoRocketFrag" operation="set" value="1"/>
+	</effect_group>
+</item>
+	 
+<item name="Gunny's Guide: Shotgun Turret" >
+	<property name="Extends" value="magazineWeaponsBase"/>
+	<property name="EconomicValue"    value="2500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="shotgunTurret" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="shotgunTurret" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoShotgunSlug" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoShotgunShell" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceBulletTip" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceBulletCasing" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="Gunny's Guide: Auto Turret" >
+	<property name="Extends" value="magazineWeaponsBase"/>
+	<property name="EconomicValue"    value="2200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="dartTrap" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="autoTurret" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo9mmBullet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammo9mmBulletSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceBulletCasing" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceBulletCasingSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceBulletTip" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="Gunny's Guide: Dart Trap" >
+	<property name="Extends" value="magazineWeaponsBase"/>
+	<property name="EconomicValue"    value="2200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="dartTrap" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="dartTrap" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoDartSteel" operation="set" value="1"/>
 	</effect_group>
 </item>
 
@@ -2388,7 +2475,7 @@
 	<property name="EconomicValue"    value="2200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorMilitaryHelmet" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="4450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryHelmet" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryVest" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryGloves" operation="set" value="1"/>
@@ -2397,12 +2484,132 @@
 	</effect_group>
 </item>
 
-<!-- other skill books 
-	armorMiningHelmet
-	ammoCrossbowBoltExploding
-	ammoDartSteel
-	ammoArrowFlaming
- -->
+<item name="LesBuild: Gas Cans" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="ammowGasCan" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammowGasCan" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+	
+<item name="LesBuild: Generator Bank" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="generatorbank" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="generatorbank"         operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="electricwirerelay"     operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="switch"                operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ceilingLight01_player" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="LesBuild: Advanced Electricity" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="motionsensor" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="spotlightPlayer"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="speaker"            operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="motionsensor"       operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="electrictimerrelay" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="pressureplateLong"  operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="pressureplate"      operation="set" value="1"/>
+	</effect_group>
+</item>
+	
+<item name="LesBuild: Blade Traps" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="bladeTrap" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bladeTrap" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="tripwirepost" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="electricfencepost" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="LesBuild: Mining Helmet" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookMilitaryArmor"/>
+	<property name="EconomicValue"    value="2200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="armorMiningHelmet" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMiningHelmet" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="LesBuild: Bicycle" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookBicycle"/>
+	<property name="EconomicValue"    value="1200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleBicycleHandlebars" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleBicycleHandlebars" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels"            operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleBicycleChassis"    operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="LesBuild: Minibike" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookMinibike"/>
+	<property name="EconomicValue"    value="2200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleMinibikeChassis" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleMinibikeChassis"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleMinibikeHandlebars" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels"            operation="set" value="1"/>
+	</effect_group>
+</item>
+
+<item name="LesBuild: Motorcycle" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookMotorcycle"/>
+	<property name="EconomicValue"    value="4200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleMotorcycleChassis" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleMotorcycleChassis"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels"               operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleMotorcycleHandlebars" operation="set" value="1"/>
+	</effect_group>
+</item>
+		
+<item name="LesBuild: Truck" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookTruck"/>
+	<property name="EconomicValue"    value="4200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="vehicle4x4TruckChassis" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="5500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicle4x4TruckChassis"     operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels"              operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicle4x4TruckAccessories" operation="set" value="1"/>
+	</effect_group>
+</item>
+		
+<item name="LesBuild: Gyrocopter" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookGyrocopter"/>
+	<property name="EconomicValue"    value="8200"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleGyroCopterChassis" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="8500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleGyroCopterChassis"     operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels"              operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleGyroCopterAccessories" operation="set" value="1"/>
+	</effect_group>
+</item>
 
 <!-- ============== -->
 <!-- MODTAG Novels  -->
