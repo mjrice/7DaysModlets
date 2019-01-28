@@ -98,6 +98,7 @@ When you start a new game your player will have an item called "Starter Class Pa
 
 * All timed-effect perk magazines have been removed.
 * Added more canned goods items: chocolate pudding, peanut butter, canned beans.
+* Gain XP from reading skill books (amount depends on book, but generally several thousand XP).
 * Charred meat can be made from any raw meat.
 * Weapon making skills are learned by finding Gunny's Guides (books).
 * The trader will always offer at least two skill books as rewards to quests he sends you on.
