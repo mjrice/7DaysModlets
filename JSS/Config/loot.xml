@@ -33,6 +33,20 @@
 	<item name="Toolmaking Today: Cement Mixer" prob="1" />
 </lootgroup>
 
+<lootgroup name="EugeneExplainsScienceBooks">
+	<item name="Eugene Explains: Mining Helmet"        prob="60" />
+	<item name="Eugene Explains: Bicycles"             prob="20"/>
+	<item name="Eugene Explains: Chemistry Stations"   prob= "5"/>
+	<item name="Eugene Explains: Gas Cans"             prob= "5.5"/>
+	<item name="Eugene Explains: Generator Bank"       prob= "2"/>
+	<item name="Eugene Explains: Advanced Electricity" prob= "1"/>
+	<item name="Eugene Explains: Blade Traps"          prob= "2"/>
+	<item name="Eugene Explains: Minibikes"            prob= "2"/>
+	<item name="Eugene Explains: Motorcycles"          prob= "1"/>
+	<item name="Eugene Explains: Trucks"               prob= "1"/>
+	<item name="Eugene Explains: Gyrocopters"          prob= "0.5"/>
+</lootgroup>
+
 <lootgroup name="WeaponsBooksLootGroupLevel1">
 	<item name="Gunny's Guide: Iron Clubs"      />
 	<item name="Gunny's Guide: Hunting Knives"  />
@@ -142,7 +156,6 @@
 	<item name="Medical Journal: Recog"               prob = "1" />
 	<item name="Medical Journal: FortBites"           prob = "1" />
 	<item name="Medical Journal: Zombie Cream"        prob = "1" />
-	<item name="Medical Journal: Chemistry Station"   prob = "1" />
 </lootgroup>
 
 <!-- trader quest reward groups -->
@@ -236,9 +249,11 @@
 		<item group="ToolmakingToday"  prob="14" />
 		<item group="medicalJournals"  prob="12" />
 		<item group="GunnysGuides"     prob="10" />
+		<item group="EugeneExplainsScienceBooks" prob="10"/>
 		<item group="Armorer"          prob="8"  />
 		<item group="commonBooks"      prob="2"  /> <!-- these are schematics -->
 		<item group="rareBooks"        prob="1"  /> <!-- these are also schematics -->
+
 </lootgroup>
 
 </insertBefore>
@@ -280,6 +295,7 @@
 <append xpath="/lootcontainers/lootcontainer[@id='34']">
 	<item group="books"/>
 </append>
+
 <!-- decrease probability of canned food in supply crates -->
 <set xpath="/lootcontainers/lootcontainer[@id='34']/item[@group='cannedfood']/@prob">0.9</set>
 

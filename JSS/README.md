@@ -1,15 +1,13 @@
 # JSS (Just Survive, Somehow)
 A mod for the game 7 Days To Die (A17)
 
-This mod uses the xpath modding system supported by 7dt4 version A17.  This means that installing it does not alter any of your 7Days files, and the mod is installed automatically by the game engine at runtime.  
+This mod's purpose is to tailor the game toward scavenging and exploration with more emphasis on learning skills by discovering them rather than by using the perk system in A17. The perk system is still centrally used to level up your base attributes. When a skill is learned by reading the appropriate book, it is retained indefinitely (there are no time-limited perks such as the perk magazines in A17 vanilla). 
 
-To install the mod, all you have to do is unzip the master files into the Mods folder (e.g. mine is e:\steam\steamapps\common\7 Days To Die\Mods\)
+Part of this overhaul is that the traders are a more relevant feature of the game. They will buy most things and also offer more and a better variety of things. Skill books that you can't seem to scavenge can be purchased from traders using money you earn by selling them what you can find or make. You can earn more money by selling value-added items (things you craft from basic materials) than by just selling the basic materials. Traders will also offer you skill books in reward for completing their quests.
 
-https://github.com/mjrice/JSS/archive/master.zip
+There is also a greater variety of loot in the game. This includes new types of meat, new canned foods, and new crops as described below.
 
-# About this Mod
-
-This mod's purpose is to embrace the survival-by-scavenging and exploration style of play.  The perk system is still used for leveling up your base attributes and abilities, but most skills must be learned by finding books, journals, or schematics in the world.  Once learned, skills are retained (no time-limited perks).  The traders offer more goods and also give prices more commensurate with the value of the items you can scavenge or craft.  
+And lastly, you will begin the game by choosing your player's previous career using a starter class paper. This will grant you specific initial knowledge and items based on what you choose.
 
 # New item types
 
@@ -23,10 +21,11 @@ This mod's purpose is to embrace the survival-by-scavenging and exploration styl
 
 ## New Skills-Learning Loot types
 * 21 Cookbooks 
-* 11 Medical Journals
+* 10 Medical Journals
 * 14 Editions of Gunny's Guide to learn weapon making skills.
 * 10 Editions of Toolmaking Today to learn how to make tools and items like the workbench, cement mixer, and tablesaw.
 * 4 Editions of The Armorer to learn how to make armor.
+* 11 Editions of Eugene Explains Science to learn everything from mining helmets to electrical devices to vehicles.
 
 # New recipes
 
@@ -86,9 +85,15 @@ When you start a new game your player will have an item called "Starter Class Pa
 * Nailgun and 50 nails
 * Claw hammer
 
+## Bike Messenger
+* Eugene Explains: Bicycles
+* Paper
+
 # Perk Progression changes
 * Removed Master Chef. Recipes are learned by finding or purchasing Cookbooks instead. Some cookbooks unlock multiple recipes at once (e.g. Grilled Meats lets you make any meat grilled).
 * Removed Hammer and Forge.  Forge and related recipes are learned by reading issues of Toolmaking Today.  Armor recipes are learned by reading issues of The Armorer.
+* Removed Advanced Engineering (read issues of Eugene Explains Science or Gunny's Guides to learn these skills)
+* Removed Grease Monkey (read issues of Eugene Explains Science to learn these skills) 
 * Physician does not grant medical crafting skills but does still give healing bonus (bonus increased for first 2 tiers). Medical skills are learned by finding or purchasing Medical Journals instead.
 * Run and Gun reduced from 5 to 4 tiers with better effect at each level.
 * Living Off the Land reduced from 5 to 4 tiers.  Removed seed crafting from tier 1 (it is now a book) and then shifted each level down one so that level 1 is now the same as original level 2, etc.

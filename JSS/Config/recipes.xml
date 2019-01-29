@@ -471,7 +471,7 @@
 	<recipe name="Schoolteacher Suitcase">      <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Construction Worker Suitcase"><ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Drug Dealer Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe>
-	<recipe name="Librarian Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe> <!-- this is for testing -->
+	<recipe name="Bicycle Messenger Suitcase">  <ingredient name="Starter Class Paper" count="1"/></recipe> 
 </append>
 
 <!-- make some additional weapons items learnable -->

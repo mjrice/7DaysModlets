@@ -1968,16 +1968,6 @@
 	</effect_group>
 </item>
 
-<item name="Medical Journal: Chemistry Station" >
-	<property name="Extends" value="magazineMedicalJournal"/>
-	<property name="EconomicValue"    value="2500"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="chemistryStation" operation="Equals" value="0"/></property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="chemistryStation" operation="set" value="1"/>
-	</effect_group>
-</item>
-
 <item name="magazineToolsBase">
 	<property name="DescriptionKey"   value="journal_desc"/>
 	<property name="CustomIcon"       value="ToolBookIcon"/>	
@@ -2484,8 +2474,21 @@
 	</effect_group>
 </item>
 
-<item name="LesBuild: Gas Cans" >
+<item name="Eugene Explains: Chemistry Stations" >
 	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookScience"/>
+	<property name="EconomicValue"    value="2500"/>
+	<property class="Action0"><requirement name="CVarCompare" cvar="chemistryStation" operation="Equals" value="0"/></property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="chemistryStation" operation="set" value="1"/>
+	</effect_group>
+</item>
+
+
+<item name="Eugene Explains: Gas Cans" >
+	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="ammowGasCan" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2495,8 +2498,9 @@
 </item>
 
 	
-<item name="LesBuild: Generator Bank" >
+<item name="Eugene Explains: Generator Bank" >
 	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="generatorbank" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2508,8 +2512,9 @@
 	</effect_group>
 </item>
 
-<item name="LesBuild: Advanced Electricity" >
+<item name="Eugene Explains: Advanced Electricity" >
 	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="motionsensor" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2523,8 +2528,9 @@
 	</effect_group>
 </item>
 	
-<item name="LesBuild: Blade Traps" >
+<item name="Eugene Explains: Blade Traps" >
 	<property name="Extends" value="magazineToolsBase"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="bladeTrap" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2535,9 +2541,9 @@
 	</effect_group>
 </item>
 
-<item name="LesBuild: Mining Helmet" >
+<item name="Eugene Explains: Mining Helmet" >
 	<property name="Extends" value="magazineToolsBase"/>
-	<property name="CustomIcon" value="BookMilitaryArmor"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="2200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="armorMiningHelmet" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2546,9 +2552,9 @@
 	</effect_group>
 </item>
 
-<item name="LesBuild: Bicycle" >
+<item name="Eugene Explains: Bicycles" >
 	<property name="Extends" value="magazineToolsBase"/>
-	<property name="CustomIcon" value="BookBicycle"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleBicycleHandlebars" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2559,9 +2565,9 @@
 	</effect_group>
 </item>
 
-<item name="LesBuild: Minibike" >
+<item name="Eugene Explains: Minibikes" >
 	<property name="Extends" value="magazineToolsBase"/>
-	<property name="CustomIcon" value="BookMinibike"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="2200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleMinibikeChassis" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2572,9 +2578,9 @@
 	</effect_group>
 </item>
 
-<item name="LesBuild: Motorcycle" >
+<item name="Eugene Explains: Motorcycles" >
 	<property name="Extends" value="magazineToolsBase"/>
-	<property name="CustomIcon" value="BookMotorcycle"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="4200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleMotorcycleChassis" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2585,9 +2591,9 @@
 	</effect_group>
 </item>
 		
-<item name="LesBuild: Truck" >
+<item name="Eugene Explains: Trucks" >
 	<property name="Extends" value="magazineToolsBase"/>
-	<property name="CustomIcon" value="BookTruck"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="4200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="vehicle4x4TruckChassis" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
@@ -2598,9 +2604,9 @@
 	</effect_group>
 </item>
 		
-<item name="LesBuild: Gyrocopter" >
+<item name="Eugene Explains: Gyrocopters" >
 	<property name="Extends" value="magazineToolsBase"/>
-	<property name="CustomIcon" value="BookGyrocopter"/>
+	<property name="CustomIcon" value="BookScience"/>
 	<property name="EconomicValue"    value="8200"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleGyroCopterChassis" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">

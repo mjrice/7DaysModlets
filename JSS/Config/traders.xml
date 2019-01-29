@@ -130,8 +130,19 @@
 	<item name="Toolmaking Today: Chainsaws"       />
 	<item name="Toolmaking Today: Augers"          />
 	<item name="Medical Journal: Zombie Cream"     />
-	<item name="Medical Journal: Chemistry Station"/>
 	<item name="The Armorer: Military"             />
+	<item name="Eugene Explains: Chemistry Stations"   />
+	<item name="Eugene Explains: Gas Cans"             />
+	<item name="Eugene Explains: Generator Bank"       />
+	<item name="Eugene Explains: Advanced Electricity" />
+	<item name="Eugene Explains: Blade Traps"          />
+	<item name="Eugene Explains: Mining Helmet"        />
+	<item name="Eugene Explains: Bicycles"             />
+	<item name="Eugene Explains: Minibikes"            />
+	<item name="Eugene Explains: Motorcycles"          />
+	<item name="Eugene Explains: Trucks"               />
+	<item name="Eugene Explains: Gyrocopters"          />
+
 </append>
 
 </configs>

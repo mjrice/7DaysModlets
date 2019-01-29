@@ -5,6 +5,9 @@
 <!-- MODTAG Remove Advanced Engineering -->
 <remove xpath="/progression/perks/perk[@name='perkAdvancedEngineering']"/>
 
+<!-- MODTAG Remove Grease Monkey (read Eugene Explains Science) -->
+<remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']"/>
+
 <!-- MODTAG Replace Run and Gun perk -->
 <remove xpath="/progression/perks/perk[@name='perkRunAndGun']"/>
 <insertAfter xpath="/progression/perks/perk[@name='perkHeadshot']">

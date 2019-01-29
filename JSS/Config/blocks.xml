@@ -386,7 +386,7 @@
 		<drop event="Destroy" name="meleeToolClawHammer"          count="1"/>
 	</block>
 	
-	<block name="Librarian Suitcase">
+	<block name="Bicycle Messenger Suitcase">
 		<property name="DisplayType"         value="blockHardened" />
 		<property name="Material"            value="Mcloth"/>
 		<property name="LightOpacity"        value="0"/>
@@ -400,32 +400,8 @@
 		<property name="MaxDamage"           value="1"/>
 		<property name="CreativeMode"        value="None"/>
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
-		<drop event="Destroy" name="Encyclopedia Volume A" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume B" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume C" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume D" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume E" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume F" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume G" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume H" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume I" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume J" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume K" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume L" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume M" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume N" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume O" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume P" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume Q" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume R" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume S" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume T" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume U" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume V" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume W" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume X" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume Y" count="1"/>		
-		<drop event="Destroy" name="Encyclopedia Volume Z" count="1"/>		
+		<drop event="Destroy" name="Eugene Explains: Bicycles" count="1"/>		
+		<drop event="Destroy" name="resourcePaper" count="50"/>					
 	</block>
 	</append>
 	
