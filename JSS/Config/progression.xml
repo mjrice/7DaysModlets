@@ -8,6 +8,9 @@
 <!-- MODTAG Remove Grease Monkey (read Eugene Explains Science) -->
 <remove xpath="/progression/perks/perk[@name='perkGreaseMonkey']"/>
 
+<!-- MODTAG Remove Hammer and Forge perks.  Find Toolmaking Today or The Armorer to learn recipes -->
+<remove xpath="/progression/perks/perk[@name='perkHammerForge']"/>
+
 <!-- MODTAG Replace Run and Gun perk -->
 <remove xpath="/progression/perks/perk[@name='perkRunAndGun']"/>
 <insertAfter xpath="/progression/perks/perk[@name='perkHeadshot']">
@@ -51,9 +54,6 @@
 		</effect_group>
 </perk>
 </insertAfter>
-
-<!-- MODTAG Remove Hammer and Forge perks.  Find Toolmaking Today or The Armorer to learn recipes -->
-<remove xpath="/progression/perks/perk[@name='perkHammerForge']"/>
 
 <!-- MODTAG replace Living off the land perk, reduced to 4 levels (new level 1 is same as old level 2 etc) -->
 <remove xpath="/progression/perks/perk[@name='perkLivingOffTheLand']"/>

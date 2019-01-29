@@ -296,6 +296,11 @@
 	<item group="books"/>
 </append>
 
+<!-- MODTAG add science books to locked gun safes -->
+<append xpath="/lootcontainers/lootcontainer[@id='42']">
+     <item group="EugeneExplainsScienceBooks" prob=".1"/>
+</append>
+
 <!-- decrease probability of canned food in supply crates -->
 <set xpath="/lootcontainers/lootcontainer[@id='34']/item[@group='cannedfood']/@prob">0.9</set>
 
