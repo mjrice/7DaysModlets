@@ -94,7 +94,7 @@
 	<!-- establish proper valuation for steak and potato -->
 	<set xpath="/items/item[@name='foodSteakAndPotato']/property[@name='EconomicBundleSize']/@value">1</set>
 	<set xpath="/items/item[@name='foodSteakAndPotato']/property[@name='EconomicValue']/@value">120</set>
-
+ 
 	<set xpath="/items/item[@name='foodBaconAndEggs']/property[@name='EconomicValue']/@value">110</set>
 
 	<!-- bullet casings are under valued (bundle size for both is 10) -->
@@ -115,6 +115,23 @@
 	<set xpath="/items/item[@name='ammoShotgunSlug']/property[@name='EconomicValue']/@value">        23</set>  <!-- 80 -->
 	<set xpath="/items/item[@name='ammoBlunderbuss']/property[@name='EconomicValue']/@value">        23</set>  <!-- 88 -->
 
+	<!-- ==================================== -->
+	<!-- comparison of weapon damages 
+	original values
+	item                  entity damage   stamina loss     attacks per minute    economic value
+	===================== =============   ============     ==================    ==============
+	meleeToolSledgehammer 42              27.6             34                    500
+	meleeClubWood         16              15.3             55                    5
+	meleeClubIron         21              16.1             52                    350
+	meleeBoneShiv         16              13.5             55                    34
+	meleeToolHuntingKnife 13              12.3             60                    300
+	meleeToolMachete      20              15.8             50	                 600
+	-->
+	
+	<!-- MODTAG increase damage of hunting knife by 38% -->
+	<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">18</set>
+	<!-- MODTAG increase damage of machete by 15% -->
+	<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">23</set>
 	
 <!-- =================================================================================== -->
 
@@ -2185,10 +2202,10 @@
 
 <item name="Gunny's Guide: Machetes" >
 	<property name="Extends" value="magazineWeaponsBase"/>
-	<property name="EconomicValue"    value="220"/>
+	<property name="EconomicValue"    value="620"/>
 
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2650"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolMachete" operation="set" value="1"/>
 	</effect_group>
 </item>
@@ -2209,7 +2226,7 @@
 	<property name="EconomicValue"    value="1500"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="gunCrossbow" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2450"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2650"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunCrossbow" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltExploding" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoCrossbowBoltIron" operation="set" value="1"/>

@@ -132,6 +132,8 @@ When you start a new game your player will have an item called "Starter Class Pa
 * testosterone extract added to dire wolf drop/harvest
 * supply drop crates contain less canned food and more books.
 * Munitions boxes may appear at the bottom of lakes and ponds.
+* Hunting knife entity damage increased by 38%
+* Machete entity damage increased by 15%
 
 # Changes not related to skills/perks/traders
 
