@@ -47,6 +47,7 @@
 	<item name="Cookbook: Stewed Meat"         />
 	<item name="Cookbook: Grilled Meat"        />
 	<item name="Cookbook: Tea and Coffee"      />
+	<item name="Cookbook: Noodles"             />
 	<item name="Gunny's Guide: Compound Bows"  />
 	<item name="Gunny's Guide: Crossbows"      />
 	<item name="Gunny's Guide: Pistols"        />
@@ -111,6 +112,8 @@
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
 	<item group="books" />
+	<item name="toolCookingGrill"/>
+	<item name="toolCookingPot"/>
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']">

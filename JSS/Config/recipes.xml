@@ -42,13 +42,13 @@
 
     <!-- === -->
 	<!-- MODTAG more intermediate recipes for other meat types (comparable benefit to bacon and eggs) -->
-	<recipe name="Chicken Suprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Chicken Surprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="foodCornMeal" count="2"/>
 		<ingredient name="Moss"         count="1"/>
 		<ingredient name="Raw Chicken"  count="10"/>
 	</recipe>
 
-	<recipe name="Tastes Like Chicken Suprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Tastes Like Chicken Surprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="foodCornMeal" count="2"/>
 		<ingredient name="Moss"         count="1"/>
 		<ingredient name="Snake Meat"   count="10"/>
@@ -106,6 +106,25 @@
 		<ingredient name="Canned Beans"        count="1"/>
 		<ingredient name="foodCornMeal"        count="1"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
+	</recipe>
+
+	<recipe name="Noodles" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+		<ingredient name="Dried Noodles"         count="1"/>
+		<ingredient name="drinkJarBoiledWater"   count="1"/>
+	</recipe>
+
+	<recipe name="Chicken Noodle Soup" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+		<ingredient name="Raw Chicken"           count="10"/>
+		<ingredient name="Dried Noodles"         count="1"/>
+		<ingredient name="Herbs"                 count="1"/>
+		<ingredient name="drinkJarBoiledWater"   count="1"/>
+	</recipe>
+
+	<recipe name="Tuna Noodle Casserole" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+		<ingredient name="foodCanTuna"           count="1"/>
+		<ingredient name="foodCanPeas"           count="1"/>		
+		<ingredient name="Dried Noodles"         count="1"/>
+		<ingredient name="drinkJarBoiledWater"   count="1"/>
 	</recipe>
 
 	<recipe name="drinkYuccaJuiceSmoothie" count="1" tags="learnable">
