@@ -38,6 +38,7 @@ And lastly, you will begin the game by choosing your player's previous career us
 * Herbal tea (has the benefits of both goldenrod tea and coffee)
 * Hasenpfeffer, Chicken Tonight, Tastes Like Chicken Tonight, Bear Roast, Drunken Dog.
 * Zombie Cream (apply to become very hard to detect by zombies for 3 minutes).
+* Noodles, Chicken Noodle Soup, Tuna Noodle Casserole
 
 # Starter Classes
 
@@ -134,6 +135,7 @@ When you start a new game your player will have an item called "Starter Class Pa
 * Munitions boxes may appear at the bottom of lakes and ponds.
 * Hunting knife entity damage increased by 38%
 * Machete entity damage increased by 15%
+* Canned goods added to shamway boxes
 
 # Changes not related to skills/perks/traders
 
