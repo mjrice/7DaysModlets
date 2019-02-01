@@ -188,7 +188,7 @@
 		<ingredient name="resourceCloth" count="2"/>
 	</recipe>
 
-	<recipe name="medicalFirstAidBandage" count="1" tags="learnable" craft_exp_gain="20">
+	<recipe name="medicalFirstAidBandage" count="1" tags="learnable" craft_exp_gain="20"  > <!-- tooltip_key="ttRecipeUnlocked" -->
 		<ingredient name="medicalAloeCream" count="1"/>
 		<ingredient name="resourceCloth" count="2"/>
 	</recipe>

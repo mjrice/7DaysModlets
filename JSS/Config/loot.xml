@@ -30,7 +30,7 @@
 	<item name="Toolmaking Today: Augers"       prob="2" />	
 	<item name="Toolmaking Today: Nail Gun"     prob="2" />
 	<item name="Toolmaking Today: Tablesaw"     prob="1" />
-	<item name="Toolmaking Today: Workbench"    prob="1" />
+	<item name="Toolmaking Today: Workbench"    prob="2" />
 	<item name="Toolmaking Today: Cement Mixer" prob="1" />
 	<item name="Toolmaking Today: Crucible"     prob="1" />
 </lootgroup>
