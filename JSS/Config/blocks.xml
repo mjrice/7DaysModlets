@@ -303,7 +303,7 @@
 		<drop event="Destroy" name="plantedCorn1"                 count="20"/>		
 	</block>
 
-	<block name="Business Person Suitcase">
+	<block name="CEO Suitcase">
 		<property name="DisplayType"         value="blockHardened" />
 		<property name="Material"            value="Mcloth"/>
 		<property name="LightOpacity"        value="0"/>
@@ -317,9 +317,11 @@
 		<property name="MaxDamage"           value="1"/>
 		<property name="CreativeMode"        value="None"/>
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
-		<drop event="Destroy" name="Business Book"  count="10"/>
+		<drop event="Destroy" name="Business Book"  count="10"  />
 		<drop event="Destroy" name="oldCash"        count="1000"/>		
-	    <drop event="Destroy" name="meleeClubIron"  count="1" />
+	    <drop event="Destroy" name="cigar"          count="1"   />
+		<drop event="Destroy" name="Golf Trophy"    count="1"  /> 
+
 	</block>
 	
 	<block name="Drug Dealer Suitcase">

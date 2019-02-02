@@ -486,7 +486,7 @@
 	<recipe name="Farmer Suitcase">             <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Survivalist Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Medic Suitcase">              <ingredient name="Starter Class Paper" count="1"/></recipe>
-	<recipe name="Business Person Suitcase">    <ingredient name="Starter Class Paper" count="1"/></recipe>
+	<recipe name="CEO Suitcase">                <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Schoolteacher Suitcase">      <ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Construction Worker Suitcase"><ingredient name="Starter Class Paper" count="1"/></recipe>
 	<recipe name="Drug Dealer Suitcase">        <ingredient name="Starter Class Paper" count="1"/></recipe>

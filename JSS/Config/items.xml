@@ -265,6 +265,7 @@
 	<effect_group tiered="false">
 		<requirement name="HasBuff" buff="buffIsOnFire"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffExtinguishFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel cooler"/> 		
 	</effect_group>
 	</item>
 
@@ -778,6 +779,19 @@
 		<requirement name="HasBuff" buff="buffIsOnFire"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffExtinguishFire"/>
 	</effect_group>
+</item>
+
+<item name="Golf Trophy">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="GolfTrophy"/> 
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="MresourceScrapBrassMedium"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="Weight" value="20"/>
+	<property name="EconomicValue" value="40"/>
+	<property name="Group" value="Resources"/>
+	<property name="DescriptionKey" value="resourceTrophy1Desc"/>
 </item>
 
 <item name="RawMeatBase">
@@ -3037,7 +3051,7 @@
 	<property name="Name"          value="name romance" /> 
 	<property name="EconomicValue" value="200"/>
 	<effect_group tiered="false">
-		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="How Romantic"/> 		
 	</effect_group>
 </item>
 
@@ -3047,6 +3061,9 @@
 	<property name="EconomicValue"    value="200"/>
 	<property name="DisplayInfo" value="Name" />
 	<property name="Name"  value="name scifi" /> 
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Robots! Time machines!"/> 		
+	</effect_group>
 </item>
 
 <item name="Adventure Book">
@@ -3062,6 +3079,9 @@
 		<property name="ActionExpBonusMultiplier" value="0"/> 
 		<property name="Sound_start"              value="open_apache_artifact_chest"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You are thrilled"/> 		
+	</effect_group>
 </item>
 
 <item name="Horror Book">
@@ -3069,13 +3089,19 @@
 	<property name="CustomIcon"       value="BookIconHorror"/>	
 	<property name="itemdescription" value="so scary" /> 
 	<property name="EconomicValue"    value="150"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="All things considered: Not that scary"/> 		
+	</effect_group>
 </item>
 
 <item name="Business Book">
-	<property name="Extends" value="bookNovelBase"/>
+	<property name="Extends"          value="bookNovelBase"/>
 	<property name="CustomIcon"       value="BookIconBusiness"/>	
 	<property name="EconomicValue"    value="20"/>
-	<property name="DescriptionKey" value="business"/>
+	<property name="Description"      value="business books will boost your ROI and key metrics"/>	
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Your core competencies have been realigned with your value proposition."/> 		
+	</effect_group>
 </item>
 
 <!-- ============== -->
@@ -3111,7 +3137,7 @@
 		<property name="Consume"                  value="false"/> <!-- MODTAG keep book after reading it -->
 		<property name="Delay"                    value="1.0"/>
 		<property name="Use_time"                 value="..."/>
-		<property name="ActionExpBonusMultiplier" value="0"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
+		<property name="ActionExpBonusMultiplier" value="1"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
 	<property name="FuelValue"        value="3"/>

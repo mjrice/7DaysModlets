@@ -47,9 +47,10 @@ Notes about quests
 
 <insertBefore xpath="/quests/quest_list[@id='trader_quests']">		
 
+<!--
 	<quest id="quest_FirstAid">
 		<property name="group_name"   value="First Aid Training" />
-		<property name="name"         value="First Aid" /> <!-- this should appear in the trader quest list but it does not -->
+		<property name="name"         value="First Aid" />  this should appear in the trader quest list but it does not 
 		<property name="subtitle"     value="Foraging" />
 		<property name="description"  value="Learn the basics of first aid." />
 		<property name="icon"         value="ui_game_symbol_survival" />
@@ -58,17 +59,14 @@ Notes about quests
 		<property name="difficulty_tier" value="1" />
 		<property name="offer"        value="offer" />
 		<property name="shareable"    value="false" />
-
 		<action type="TrackQuest" />
-
 		<objective type="FetchKeep" id="resourceCropCottonPlant"      value="10" phase="1" /> 
 		<objective type="FetchKeep" id="resourceCropAloeLeaf"         value="10" phase="1" /> 
 		<objective type="Craft" 	id="medicalBandage" 			  value="5" phase="1" />
-
 		<reward type="Exp" value="1000" />
-		<!-- <reward type="Quest" id="quest_AdvancedSurvival2" /> -->
 		<reward type="SkillPoints" value="1" chainreward="true" />
 	</quest>
+-->
 
 	<!-- advanced survival 1 : foraging -->
 	<quest id="quest_AdvancedSurvival1">

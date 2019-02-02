@@ -72,14 +72,16 @@
 		<duration value="180"/>
 		<effect_group>
 			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel warmer"/> 		
 		</effect_group>
 	</buff>
 	
-	<buff name="buffColdFood" description="Warmth from food eaten" icon="ui_game_symbol_cold" tags="drug">
+	<buff name="buffColdFood" description="Cooling from food eaten" icon="ui_game_symbol_cold" tags="drug">
 		<stack_type value="duration"/>
 		<duration value="180"/>
 		<effect_group>
 			<passive_effect name="HyperthermalResist" operation="base_add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel cooler"/> 		
 		</effect_group>
 	</buff>
 	
@@ -93,6 +95,7 @@
 			<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.1">
 				<requirement name="HasBuff" buff="buffHealWaterMax"/>
 			</passive_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel invigorated"/> 		
 		</effect_group>
 	</buff>
 

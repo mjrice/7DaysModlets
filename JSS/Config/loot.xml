@@ -367,6 +367,11 @@
 	<item name="Dried Noodles"    />		
 </append>
 
+<!-- add to trophy junk loot list -->
+<append xpath="/lootcontainers/lootcontainer[@name='trophyGroup']">
+	<item name="Golf Trophy"    />		
+</append>
+
 
 </configs>
 
