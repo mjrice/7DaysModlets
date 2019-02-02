@@ -321,6 +321,18 @@
 		<drop event="Destroy" name="oldCash"        count="1000"/>		
 	    <drop event="Destroy" name="cigar"          count="1"   />
 		<drop event="Destroy" name="Golf Trophy"    count="1"  /> 
+		<!--<drop event="Destroy" name="Pewter Chess Piece - Pawn"    count="6"  /> 
+		<drop event="Destroy" name="Pewter Chess Piece - Rook"    count="2"  /> 
+		<drop event="Destroy" name="Pewter Chess Piece - Queen"    count="1"  /> 
+		<drop event="Destroy" name="Pewter Chess Piece - King"    count="1"  /> 
+		<drop event="Destroy" name="Pewter Chess Piece - Knight"    count="2"  /> 
+		<drop event="Destroy" name="Pewter Chess Piece - Bishop"    count="2"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - Pawn"    count="6"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - Rook"    count="2"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - Queen"    count="1"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - King"    count="1"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - Knight"    count="2"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - Bishop"    count="2"  />  -->
 
 	</block>
 	

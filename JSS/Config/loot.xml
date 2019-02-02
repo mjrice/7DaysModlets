@@ -18,6 +18,10 @@
 	<item name="Strawberry Seeds"/>
 </append>
 
+<append xpath="/lootcontainers/lootgroup[@name='junk']">
+	<item group="chessPieces" prob=".3" />
+</append>
+
 <insertBefore xpath="/lootcontainers/lootgroup[@name='junk']">
 
 <lootgroup name="ToolmakingToday">
@@ -245,10 +249,33 @@
 	<item name="Encyclopedia Volume Z"/> 
 </lootgroup>
 
-<lootgroup name="books" count="1">
+<lootgroup name="chessPiecesPewter" count="1">
+		<item name="Pewter Chess Piece - Pawn"   prob="8"  /> 
+		<item name="Pewter Chess Piece - Rook"   prob="2"  /> 
+		<item name="Pewter Chess Piece - Queen"  prob="1"  /> 
+		<item name="Pewter Chess Piece - King"   prob="1"  /> 
+		<item name="Pewter Chess Piece - Knight" prob="2"  /> 
+		<item name="Pewter Chess Piece - Bishop" prob="2"  /> 
+</lootgroup>
+
+<lootgroup name="chessPiecesBrass" count="1">
+		<item name="Brass Chess Piece - Pawn"    prob="8"  /> 
+		<item name="Brass Chess Piece - Rook"    prob="2"  /> 
+		<item name="Brass Chess Piece - Queen"   prob="1"  /> 
+		<item name="Brass Chess Piece - King"    prob="1"  /> 
+		<item name="Brass Chess Piece - Knight"  prob="2"  /> 
+		<item name="Brass Chess Piece - Bishop"  prob="2"  /> 
+</lootgroup>
+
+<lootgroup name="chessPieces">
+	<item group="chessPiecesBrass"/>
+	<item group="chessPiecesPewter"/>
+</lootgroup>
+
+<lootgroup name="books">
 		<item group="bookNovelsGroup"  prob="22" />
-		<item group="cookingMagazines" prob="16" />
-      	<item group="encyclopedias"    prob="15" />
+      	<item group="encyclopedias"    prob="16" />
+		<item group="cookingMagazines" prob="15" />
 		<item group="ToolmakingToday"  prob="14" />
 		<item group="medicalJournals"  prob="12" />
 		<item group="GunnysGuides"     prob="10" />
@@ -337,15 +364,14 @@
 	<item group="books"                            prob= "5"/>	
 	<item name="resourceScrapPolymers" count="1,2" prob= "5"/>
 	<item group="clothes"                          prob= "5"/>
-	<item name="resourceTrophy2"                   prob= "5"/>
+	<item group="trophyGroup"                      prob= "5"/>
 	<item name="resourceDuctTape" count="1,4"      prob= "5"/>
-	<item group="brassResource"                    prob= "1"/>
+	<item group="chessPieces"                      prob= "5"/>
 	<item group="dyes"                             prob= "1"/>
 	<item name="resourceAcid"      count="1,4"     prob= "1"/>
 	<item name="meleeToolPaintTool"                prob= "1"/>
 	<item name="vehicleBicycleChassis"             prob= "1"/>
 	<item name="vehicleBicycleHandlebars"          prob= "1"/>
-	<item name="resourceTrophy3"                   prob= "1"/>	
 	<item group="electricalDevices"                prob= "1"/>
 </lootcontainer>
 
@@ -355,6 +381,7 @@
 <lootcontainer id="49" count="1,6" size="4,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="baseTemplate">
 	<item name="resourcePaper" count="2,8" prob="0.2"/>
 	<item group="books"/>	
+	<item group="chessPieces" prob=".2"/>
 </lootcontainer>
 
 </append>
@@ -367,11 +394,14 @@
 	<item name="Dried Noodles"    />		
 </append>
 
-<!-- add to trophy junk loot list -->
-<append xpath="/lootcontainers/lootcontainer[@name='trophyGroup']">
-	<item name="Golf Trophy"    />		
+<append xpath="/lootcontainers/lootgroup[@name='brassResource']">
+	<lootgroup name="chessPiecesBrass"/>
 </append>
 
+<!-- add to trophy loot list -->
+<append xpath="/lootcontainers/lootgroup[@name='trophyGroup']">
+	<item name="Golf Trophy"    />		
+	<item name="Baseball Trophy"/>
+</append>
 
 </configs>
-

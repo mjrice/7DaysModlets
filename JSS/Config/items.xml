@@ -794,6 +794,32 @@
 	<property name="DescriptionKey" value="resourceTrophy1Desc"/>
 </item>
 
+<item name="Baseball Trophy">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="BaseballTrophy"/> 
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="MresourceScrapBrassMedium"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="Weight" value="26"/>
+	<property name="EconomicValue" value="44"/>
+	<property name="Group" value="Resources"/>
+	<property name="DescriptionKey" value="resourceTrophy1Desc"/>
+</item>
+
+<item name="Coffee Cup">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="CoffeeCup"/> 
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="MresourceClayLump"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="Weight" value="6"/>
+	<property name="EconomicValue" value="14"/>
+	<property name="Group" value="Resources"/>
+	<property name="DescriptionKey" value="Ceramic coffee cups can be used to make some food or scrapped into clay"/>
+</item>
+
 <item name="RawMeatBase">
 	<property name="SellableToTrader" value="true"/>
 	<property name="HoldType"               value="31"/>
@@ -3122,6 +3148,76 @@
 	<property name="Group"            value="Special Items"/>
 </item>
 
+<item name="ChessPieceBaseLead" >	
+	<property name="CreativeMode"     value="None"/>
+	<property name="HoldType"         value="21"/>
+	<property name="Meshfile"         value="Items/Misc/bookPrefab"/>
+	<property name="DropMeshfile"     value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"         value="MresourceScrapLeadMedium"/>
+	<property name="Stacknumber"      value="20"/> 
+	<property name="EconomicValue"    value="50"/>
+	<property name="SellableToTrader" value="true"/>	
+	<property name="FuelValue"        value="3"/>
+	<property name="Weight"           value="10"/>
+	<property name="Group"            value="Special Items"/>
+</item>
+
+<item name="ChessPieceBaseBrass" >	
+	<property name="CreativeMode"     value="None"/>
+	<property name="HoldType"         value="21"/>
+	<property name="Meshfile"         value="Items/Misc/bookPrefab"/>
+	<property name="DropMeshfile"     value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"         value="MresourceScrapBrassMedium"/>
+	<property name="Stacknumber"      value="20"/> 
+	<property name="EconomicValue"    value="50"/>
+	<property name="SellableToTrader" value="true"/>	
+	<property name="FuelValue"        value="3"/>
+	<property name="Weight"           value="10"/>
+	<property name="Group"            value="Special Items"/>
+</item>
+
+<item name="Pewter Chess Piece - Pawn">  <property name="Extends" value="ChessPieceBaseLead"/><property name="CustomIcon" value="ChessPawn"/></item>
+<item name="Pewter Chess Piece - Rook">  <property name="Extends" value="ChessPieceBaseLead"/><property name="CustomIcon" value="ChessRook"/></item>
+<item name="Pewter Chess Piece - Knight"><property name="Extends" value="ChessPieceBaseLead"/><property name="CustomIcon" value="ChessKnight"/></item>
+<item name="Pewter Chess Piece - Bishop"><property name="Extends" value="ChessPieceBaseLead"/><property name="CustomIcon" value="ChessBishop"/></item>
+<item name="Pewter Chess Piece - King">  <property name="Extends" value="ChessPieceBaseLead"/><property name="CustomIcon" value="ChessKing"/></item>
+<item name="Pewter Chess Piece - Queen"> <property name="Extends" value="ChessPieceBaseLead"/><property name="CustomIcon" value="ChessQueen"/></item>
+<item name="Brass Chess Piece - Pawn">   <property name="Extends" value="ChessPieceBaseBrass"/><property name="CustomIcon" value="ChessPawn"/>  <property name="CustomIconTint" value="cc8040"/></item>
+<item name="Brass Chess Piece - Rook">   <property name="Extends" value="ChessPieceBaseBrass"/><property name="CustomIcon" value="ChessRook"/>  <property name="CustomIconTint" value="cc8040"/></item>
+<item name="Brass Chess Piece - Knight"> <property name="Extends" value="ChessPieceBaseBrass"/><property name="CustomIcon" value="ChessKnight"/><property name="CustomIconTint" value="cc8040"/></item>
+<item name="Brass Chess Piece - Bishop"> <property name="Extends" value="ChessPieceBaseBrass"/><property name="CustomIcon" value="ChessBishop"/><property name="CustomIconTint" value="cc8040"/></item>
+<item name="Brass Chess Piece - King">   <property name="Extends" value="ChessPieceBaseBrass"/><property name="CustomIcon" value="ChessKing"/>  <property name="CustomIconTint" value="cc8040"/></item>
+<item name="Brass Chess Piece - Queen">  <property name="Extends" value="ChessPieceBaseBrass"/><property name="CustomIcon" value="ChessQueen"/> <property name="CustomIconTint" value="cc8040"/></item>
+
+<item name="Chess Set">
+	<property name="CreativeMode"     value="None"/>
+	<property name="CustomIcon"       value="ChessSet"/>
+	<property name="HoldType"         value="21"/>
+	<property name="Meshfile"         value="Items/Misc/bookPrefab"/>
+	<property name="DropMeshfile"     value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"         value="Mbrass"/>
+	<property name="Stacknumber"      value="5"/> 
+	<property name="EconomicValue"    value="2000"/>
+	<property name="SellableToTrader" value="true"/>
+	<property class="Action0">
+		<property name="Class"                    value="Eat"/> <!-- Eat, UseOther, doesn't work: LearnRecipe? -->
+		<property name="Consume"                  value="false"/> <!-- MODTAG keep book after reading it -->
+		<property name="Delay"                    value="1.0"/>
+		<property name="Use_time"                 value="..."/>
+		<property name="ActionExpBonusMultiplier" value="1"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
+		<property name="Sound_start"              value="recipe_unlocked"/>
+	</property> 
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You played against yourself."/> 		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You win!"> 		
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+		</triggered_effect>
+	</effect_group>
+	<property name="FuelValue"        value="3"/>
+	<property name="Weight"           value="10"/>
+	<property name="Group"            value="Special Items"/>
+</item>
+
 <item name="EncyclopediaBase" craft_exp_gain="600">	
 	<property name="CreativeMode"     value="None"/>
 	<property name="HoldType"         value="21"/>
@@ -3207,4 +3303,10 @@
 </append>
 
 
+<!-- MODTAG make puffer coat bad for hot weather (duh) -->
+<remove xpath="/items/item[@name='pufferCoat']/effect_group/passive_effect[@name='HyperthermalResist']"/>
+<append xpath="/items/item[@name='pufferCoat']/effect_group">
+	<passive_effect name="HyperthermalResist" operation="base_subtract" value="5"/>
+</append>
+	
 </configs>

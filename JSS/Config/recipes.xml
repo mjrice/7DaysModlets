@@ -572,6 +572,23 @@
 		<ingredient name="Encyclopedia Volume Z" count="1"/>
 	</recipe>
 
+	<recipe name="Chess Set" count="1" craft_time="5">
+		<ingredient name="resourceWood" count="2" />
+		<ingredient name="resourcePaint" count="1" />
+		<ingredient name="Pewter Chess Piece - Pawn"    count="8"  /> 
+		<ingredient name="Pewter Chess Piece - Rook"    count="2"  /> 
+		<ingredient name="Pewter Chess Piece - Queen"   count="1"  /> 
+		<ingredient name="Pewter Chess Piece - King"    count="1"  /> 
+		<ingredient name="Pewter Chess Piece - Knight"  count="2"  /> 
+		<ingredient name="Pewter Chess Piece - Bishop"  count="2"  /> 
+		<ingredient name="Brass Chess Piece - Pawn"     count="8"  /> 
+		<ingredient name="Brass Chess Piece - Rook"     count="2"  /> 
+		<ingredient name="Brass Chess Piece - Queen"    count="1"  /> 
+		<ingredient name="Brass Chess Piece - King"     count="1"  /> 
+		<ingredient name="Brass Chess Piece - Knight"   count="2"  /> 
+		<ingredient name="Brass Chess Piece - Bishop"   count="2"  /> 
+	</recipe>
+	
 </append>
 
 

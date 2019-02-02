@@ -18,6 +18,7 @@ And lastly, you will begin the game by choosing your player's previous career us
 * Starter Class paper lets you choose your player's previous proffession.
 * 5 Novel genres
 * Encyclopedia - 26 Volumes, collect the whole set!  (Seriously, collect them all and craft a Encyclopedia Set for a significant XP reward and trader value)
+* Chess pieces - 12 difference pieces, can be scrapped into lead or brass, or...
 
 ## New Skills-Learning Loot types
 * 21 Cookbooks 
@@ -65,10 +66,10 @@ When you start a new game your player will have an item called "Starter Class Pa
 * Gunny's Guide: Hunting Knives
 * Shotgun and 10 shells
 
-## Business Person Starter Loot
+## CEO Starter Loot
 * $1000 old cash
 * 10 business books 
-* Iron reinforced club
+* Golf Trophy
 
 ## Schoolteacher Starter Loot
 * Cookbooks: Teas and Coffee, Bacon and Eggs
