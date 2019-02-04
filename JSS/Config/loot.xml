@@ -2,7 +2,7 @@
 
 <!-- MODTAG Add a chance for a bicycle chassis to the car parts store loot box -->
 <append xpath="/lootcontainers/lootcontainer[@id='90']">
-	<item name="vehicleBicycleChassis" prob="0.3"/>
+	<item name="vehicleBicycleChassis" prob="0.2"/>
 	<item name="vehicleWheels" prob="0.3"/>	
 </append>
 
@@ -25,32 +25,32 @@
 <insertBefore xpath="/lootcontainers/lootgroup[@name='junk']">
 
 <lootgroup name="ToolmakingToday">
-	<item name="Toolmaking Today: Iron Tools"   prob="33" />
-	<item name="Toolmaking Today: Hammers"      prob="19" />
-	<item name="Toolmaking Today: Wrench"       prob="18" />
-	<item name="Toolmaking Today: Steel Tools"  prob="10" />
-	<item name="Toolmaking Today: Chainsaws"    prob="8" />
-	<item name="Toolmaking Today: Forges"       prob="4" />
-	<item name="Toolmaking Today: Augers"       prob="2" />	
-	<item name="Toolmaking Today: Nail Gun"     prob="2" />
-	<item name="Toolmaking Today: Tablesaw"     prob="1" />
-	<item name="Toolmaking Today: Workbench"    prob="2" />
-	<item name="Toolmaking Today: Cement Mixer" prob="1" />
-	<item name="Toolmaking Today: Crucible"     prob="1" />
+	<item name="Toolmaking Today: Iron Tools"   prob=".33" />
+	<item name="Toolmaking Today: Hammers"      prob=".19" />
+	<item name="Toolmaking Today: Wrench"       prob=".18" />
+	<item name="Toolmaking Today: Steel Tools"  prob=".10" />
+	<item name="Toolmaking Today: Chainsaws"    prob=".08" />
+	<item name="Toolmaking Today: Forges"       prob=".04" />
+	<item name="Toolmaking Today: Augers"       prob=".02" />	
+	<item name="Toolmaking Today: Nail Gun"     prob=".02" />
+	<item name="Toolmaking Today: Tablesaw"     prob=".01" />
+	<item name="Toolmaking Today: Workbench"    prob=".02" />
+	<item name="Toolmaking Today: Cement Mixer" prob=".01" />
+	<item name="Toolmaking Today: Crucible"     prob=".01" />
 </lootgroup>
 
 <lootgroup name="EugeneExplainsScienceBooks">
-	<item name="Eugene Explains: Mining Helmet"        prob="60" />
-	<item name="Eugene Explains: Bicycles"             prob="20"/>
-	<item name="Eugene Explains: Chemistry Stations"   prob= "5"/>
-	<item name="Eugene Explains: Gas Cans"             prob= "5.5"/>
-	<item name="Eugene Explains: Generator Bank"       prob= "2"/>
-	<item name="Eugene Explains: Advanced Electricity" prob= "1"/>
-	<item name="Eugene Explains: Blade Traps"          prob= "2"/>
-	<item name="Eugene Explains: Minibikes"            prob= "2"/>
-	<item name="Eugene Explains: Motorcycles"          prob= "1"/>
-	<item name="Eugene Explains: Trucks"               prob= "1"/>
-	<item name="Eugene Explains: Gyrocopters"          prob= "0.5"/>
+	<item name="Eugene Explains: Mining Helmet"        prob= ".60" />
+	<item name="Eugene Explains: Bicycles"             prob= ".20" />
+	<item name="Eugene Explains: Chemistry Stations"   prob= ".05" />
+	<item name="Eugene Explains: Gas Cans"             prob= ".055"/>
+	<item name="Eugene Explains: Generator Bank"       prob= ".02" />
+	<item name="Eugene Explains: Advanced Electricity" prob= ".01" />
+	<item name="Eugene Explains: Blade Traps"          prob= ".02" />
+	<item name="Eugene Explains: Minibikes"            prob= ".02" />
+	<item name="Eugene Explains: Motorcycles"          prob= ".01" />
+	<item name="Eugene Explains: Trucks"               prob= ".01" />
+	<item name="Eugene Explains: Gyrocopters"          prob= ".005"/>
 </lootgroup>
 
 <lootgroup name="WeaponsBooksLootGroupLevel1">
@@ -80,21 +80,21 @@
 </lootgroup>
 
 <lootgroup name="GunnysGuides">
-    <item group="WeaponsBooksLootGroupLevel1"        prob="53"/>
-    <item group="WeaponsBooksLootGroupLevel2"        prob="33"/>
-    <item group="WeaponsBooksLootGroupLevel3"        prob="13"/>
-    <item group="WeaponsBooksLootGroupLevel4"        prob="1"/>
+    <item group="WeaponsBooksLootGroupLevel1"        prob=".53"/>
+    <item group="WeaponsBooksLootGroupLevel2"        prob=".33"/>
+    <item group="WeaponsBooksLootGroupLevel3"        prob=".13"/>
+    <item group="WeaponsBooksLootGroupLevel4"        prob=".01"/>
 </lootgroup>
 
 <lootgroup name="Armorer">
-	<item name="The Armorer: Leather"  prob="70" />
-	<item name="The Armorer: Iron"     prob="25" />
-	<item name="The Armorer: Steel"    prob="4"  />
-	<item name="The Armorer: Military" prob="1"  />
+	<item name="The Armorer: Leather"  prob=".70" />
+	<item name="The Armorer: Iron"     prob=".25" />
+	<item name="The Armorer: Steel"    prob=".04"  />
+	<item name="The Armorer: Military" prob=".01"  />
 </lootgroup>
 
 <lootgroup name="coldfood">
-	<item name="foodEgg" count="1,2"/>
+	<item name="foodEgg"          count="1,2"/>
 	<item name="foodBlueberryPie"/>
 	<item name="foodMeatStew"/>
 	<item name="Raw Pork"         count="5,10"/>
@@ -168,7 +168,7 @@
 <!-- trader quest reward groups -->
 <lootgroup name="questTier1SkillRewards">
 	<item group="MedicalJournalsLevel1"             max_count="1" />
-	<item name="The Armorer: Leather"               max_count="1" />
+	<item name="The Armorer: Leather"               max_count="1" prob=".5"/>
 	<item group="WeaponsBooksLootGroupLevel1"       max_count="1" />
 	<item group="magazineCookingLevel1Recipes"      max_count="1" />
 </lootgroup>
@@ -183,15 +183,15 @@
 <lootgroup name="questTier3SkillRewards">
 	<item name="Medical Journal: Steroids"      max_count="1" />
 	<item name="The Armorer: Steel"             max_count="1" />
-	<item group="WeaponsBooksLootGroupLevel3"         max_count="1" />
-	<item group="magazineCookingLevel3Recipes" max_count="1"  />
+	<item group="WeaponsBooksLootGroupLevel3"   max_count="1" />
+	<item group="magazineCookingLevel3Recipes"  max_count="1"  />
 </lootgroup>
 
 <lootgroup name="questTier4SkillRewards">
 	<item name="Medical Journal: FortBites"     max_count="1" />
 	<item name="The Armorer: Military"          max_count="1" />
-	<item group="WeaponsBooksLootGroupLevel4"         max_count="1" />
-	<item group="magazineCookingLevel4Recipes" max_count="1"  />
+	<item group="WeaponsBooksLootGroupLevel4"   max_count="1" />
+	<item group="magazineCookingLevel4Recipes"  max_count="1"  />
 </lootgroup>
 
 
@@ -205,19 +205,19 @@
 <!-- ======================================================================= -->
 
 <lootgroup name="bookNovelsGroup">
-	<item name="Business Book"               prob="30" /> 
-	<item name="Romance Novel"               prob="25" />
-	<item name="Sci-Fi Book"                 prob="25" />
-	<item name="Horror Book"                 prob="19" />
-	<item name="Adventure Book"              prob="01" /> 
+	<item name="Business Book"               prob=".30" /> 
+	<item name="Romance Novel"               prob=".25" />
+	<item name="Sci-Fi Book"                 prob=".25" />
+	<item name="Horror Book"                 prob=".19" />
+	<item name="Adventure Book"              prob=".01" /> 
 </lootgroup>
 
 <lootgroup name="cookingMagazines" count="1">
-	<item group="magazineCookingLevel1Recipes" prob="60" />
-	<item group="magazineCookingLevel2Recipes" prob="30" />
-	<item group="magazineCookingLevel3Recipes" prob="7" />
-	<item group="magazineCookingLevel4Recipes" prob="2" />
-	<item group="magazineCookingLevel5Recipes" prob="1" />	
+	<item group="magazineCookingLevel1Recipes" prob=".60" />
+	<item group="magazineCookingLevel2Recipes" prob=".30" />
+	<item group="magazineCookingLevel3Recipes" prob=".07" />
+	<item group="magazineCookingLevel4Recipes" prob=".02" />
+	<item group="magazineCookingLevel5Recipes" prob=".01" />	
 </lootgroup>
 
 <lootgroup name="encyclopedias">
@@ -250,21 +250,21 @@
 </lootgroup>
 
 <lootgroup name="chessPiecesPewter" count="1">
-		<item name="Pewter Chess Piece - Pawn"   prob="8"  /> 
-		<item name="Pewter Chess Piece - Rook"   prob="2"  /> 
-		<item name="Pewter Chess Piece - Queen"  prob="1"  /> 
-		<item name="Pewter Chess Piece - King"   prob="1"  /> 
-		<item name="Pewter Chess Piece - Knight" prob="2"  /> 
-		<item name="Pewter Chess Piece - Bishop" prob="2"  /> 
+		<item name="Pewter Chess Piece - Pawn"   prob=".44"  /> 
+		<item name="Pewter Chess Piece - Rook"   prob=".11"  /> 
+		<item name="Pewter Chess Piece - Queen"  prob=".055" /> 
+		<item name="Pewter Chess Piece - King"   prob=".055" /> 
+		<item name="Pewter Chess Piece - Knight" prob=".11"  /> 
+		<item name="Pewter Chess Piece - Bishop" prob=".11"  /> 
 </lootgroup>
 
 <lootgroup name="chessPiecesBrass" count="1">
-		<item name="Brass Chess Piece - Pawn"    prob="8"  /> 
-		<item name="Brass Chess Piece - Rook"    prob="2"  /> 
-		<item name="Brass Chess Piece - Queen"   prob="1"  /> 
-		<item name="Brass Chess Piece - King"    prob="1"  /> 
-		<item name="Brass Chess Piece - Knight"  prob="2"  /> 
-		<item name="Brass Chess Piece - Bishop"  prob="2"  /> 
+		<item name="Brass Chess Piece - Pawn"    prob=".44"  /> 
+		<item name="Brass Chess Piece - Rook"    prob=".11"  /> 
+		<item name="Brass Chess Piece - Queen"   prob=".055" /> 
+		<item name="Brass Chess Piece - King"    prob=".055" /> 
+		<item name="Brass Chess Piece - Knight"  prob=".11"  /> 
+		<item name="Brass Chess Piece - Bishop"  prob=".11"  /> 
 </lootgroup>
 
 <lootgroup name="chessPieces">
@@ -273,16 +273,16 @@
 </lootgroup>
 
 <lootgroup name="books">
-		<item group="bookNovelsGroup"  prob="22" />
-      	<item group="encyclopedias"    prob="16" />
-		<item group="cookingMagazines" prob="15" />
-		<item group="ToolmakingToday"  prob="14" />
-		<item group="medicalJournals"  prob="12" />
-		<item group="GunnysGuides"     prob="10" />
-		<item group="EugeneExplainsScienceBooks" prob="10"/>
-		<item group="Armorer"          prob="8"  />
-		<item group="commonBooks"      prob="2"  /> <!-- these are schematics -->
-		<item group="rareBooks"        prob="1"  /> <!-- these are also schematics -->
+		<item group="bookNovelsGroup"            prob=".22" />
+      	<item group="encyclopedias"              prob=".16" />
+		<item group="cookingMagazines"           prob=".15" />
+		<item group="ToolmakingToday"            prob=".14" />
+		<item group="medicalJournals"            prob=".12" />
+		<item group="GunnysGuides"               prob=".10" />
+		<item group="EugeneExplainsScienceBooks" prob=".10" />
+		<item group="Armorer"                    prob=".08" />
+		<item group="commonBooks"                prob=".02" /> <!-- these are schematics -->
+		<item group="rareBooks"                  prob=".01" /> <!-- these are also schematics -->
 
 </lootgroup>
 
@@ -292,16 +292,16 @@
 <remove xpath="/lootcontainers/lootcontainer[@id='48']"/>
 <append xpath="/lootcontainers">
 	<lootcontainer id="48" count="1,5" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="baseTemplate">
-		<item name="resourcePaper" count="2,8"  prob="15" />
-		<item name="oldCash"       count="5,60" prob="15" />
-		<item group="bookNovelsGroup"           prob="15" />
-		<item group="weaponsPistol+ammo"        prob="10" />
-		<item name="drinkJarBoiledWater"        prob="10" />
-		<item group="medicine"                  prob="10" />
-		<item name="meleeToolFlashlight02"      prob="10" />		
-		<item group="cannedfood"                prob="5" />
-     	<item name="casinoCoin"    count="5,25" prob="5" />
-		<item group="ammo"                      prob="5" />
+		<item name="resourcePaper" count="2,8"  prob=".15" />
+		<item name="oldCash"       count="5,60" prob=".15" />
+		<item group="bookNovelsGroup"           prob=".15" />
+		<item group="weaponsPistol+ammo"        prob=".10" />
+		<item name="drinkJarBoiledWater"        prob=".10" />
+		<item group="medicine"                  prob=".10" />
+		<item name="meleeToolFlashlight02"      prob=".10" />		
+		<item group="cannedfood"                prob=".05" />
+     	<item name="casinoCoin"    count="5,25" prob=".05" />
+		<item group="ammo"                      prob=".05" />
 	</lootcontainer>
 </append>
 
@@ -355,24 +355,24 @@
 <!-- garage stuff, tools, etc -->
 <!-- ======================== -->
 <lootcontainer id="22" count="0,4" size="5,4" sound_open="UseActions/open_cardboard" open_time="1" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
-	<item group="automotive"                       prob="13"/>
-	<item name="resourcePaint"    count="5,50"     prob="12"/>
-	<item name="resourcePaper"    count="4,25"     prob="12"/>	<!-- probably old tax returns -->
-	<item group="ammo"                             prob="10"/>
-	<item name="resourceCloth"    count="1,20"     prob="10"/>
-	<item name="resourceGlue"     count="1,4"      prob="10"/>
-	<item group="books"                            prob= "5"/>	
-	<item name="resourceScrapPolymers" count="1,2" prob= "5"/>
-	<item group="clothes"                          prob= "5"/>
-	<item group="trophyGroup"                      prob= "5"/>
-	<item name="resourceDuctTape" count="1,4"      prob= "5"/>
-	<item group="chessPieces"                      prob= "5"/>
-	<item group="dyes"                             prob= "1"/>
-	<item name="resourceAcid"      count="1,4"     prob= "1"/>
-	<item name="meleeToolPaintTool"                prob= "1"/>
-	<item name="vehicleBicycleChassis"             prob= "1"/>
-	<item name="vehicleBicycleHandlebars"          prob= "1"/>
-	<item group="electricalDevices"                prob= "1"/>
+	<item group="automotive"                       prob=".130"/>
+	<item name="resourcePaint"    count="5,40"     prob=".120"/>
+	<item name="resourcePaper"    count="4,25"     prob=".120"/>	<!-- probably old tax returns -->
+	<item group="ammo"                             prob=".100"/>
+	<item group="books"                            prob=".100"/>	
+	<item name="resourceCloth"    count="1,20"     prob= ".07"/>
+	<item name="resourceGlue"     count="1,4"      prob= ".05"/>
+	<item name="resourceScrapPolymers" count="1,2" prob= ".05"/>
+	<item group="clothes"                          prob= ".05"/>
+	<item group="trophyGroup"                      prob= ".05"/>
+	<item name="resourceDuctTape" count="1,4"      prob= ".05"/>
+	<item group="chessPieces"                      prob= ".05"/>
+	<item group="dyes"                             prob= ".01"/>
+	<item name="resourceAcid"      count="1,4"     prob= ".01"/>
+	<item name="meleeToolPaintTool"                prob= ".01"/>
+	<item name="vehicleBicycleChassis"             prob= ".01"/>
+	<item name="vehicleBicycleHandlebars"          prob= ".01"/>
+	<item group="electricalDevices"                prob= ".01"/>
 </lootcontainer>
 
 <!-- =================================== -->
