@@ -35,11 +35,32 @@
 
 <!-- decrease wood needed to make spikes from 20 to 15 -->
 <!-- <set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set> -->
-
+	
 <!-- MODTAG New fruit smoothie recipes -->
 <remove xpath="/recipes/recipe[@name='drinkYuccaJuiceSmoothie']"/>
 <insertAfter xpath="/recipes/recipe[@name='drinkJarEmpty']">
 
+	<recipe name="Tar" count="1" craft_area="chemistryStation">
+    	<ingredient name="Pine Resin" count="5"/>
+		<ingredient name="drinkJarEmpty" count="1" />
+    </recipe>
+
+	<recipe name="Tar" count="1" craft_area="campfire" craft_tool="toolBeaker">
+		<ingredient name="Pine Resin" count="8"/>
+		<ingredient name="drinkJarEmpty" count="1" />
+	</recipe>
+	
+	<recipe name="resourceDuctTape" count="1">
+    	<ingredient name="Tar" count="1"/>
+    	<ingredient name="resourceCloth" count="1"/>
+    </recipe>
+
+    <recipe name="meleeToolTorch" count="1">
+    	<ingredient name="Tar" count="2"/>
+    	<ingredient name="resourceCloth" count="2"/>
+    	<ingredient name="resourceWood" count="1"/>
+    </recipe>	
+	
     <!-- === -->
 	<!-- MODTAG more intermediate recipes for other meat types (comparable benefit to bacon and eggs) -->
 	<recipe name="Chicken Surprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
@@ -221,6 +242,11 @@
 	<recipe name="medicalAloeCream" count="1" tags="learnable" craft_exp_gain="20">
 		<ingredient name="resourceCropAloeLeaf" count="4"/>
 	</recipe>
+	
+	<recipe name="toolBeaker" count="1" craft_area="forge" material_based="true">
+    	<ingredient name="unit_glass" count="100" />
+    	<ingredient name="unit_clay" count="10" />
+    </recipe>
 	
 	<recipe name="drugAntibiotics" count="1" craft_area="campfire" craft_tool="toolBeaker" tags="learnable">
 		<ingredient name="foodMoldyBread"                 count="4"/>
@@ -572,7 +598,8 @@
 		<ingredient name="Encyclopedia Volume Z" count="1"/>
 	</recipe>
 
-	<recipe name="Chess Set" count="1" craft_time="5">
+	<recipe name="Chess Set" count="1" craft_time="5"  craft_exp_gain="1110" > <!-- experience="1000"  learn_exp_gain="1000" -->
+
 		<ingredient name="resourceWood" count="2" />
 		<ingredient name="resourcePaint" count="1" />
 		<ingredient name="Pewter Chess Piece - Pawn"    count="8"  /> 

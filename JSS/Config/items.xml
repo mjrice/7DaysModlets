@@ -233,6 +233,30 @@
 
 <insertAfter xpath="/items/item[@name='drinkJarRedTea']">
 
+	<item name="Pine Resin">
+        <property name="CustomIcon" value="Resin"/> 
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+      	<property name="EconomicValue" value="38"/>
+      	<property name="Group" value="Resources,Chemicals"/>
+      </item>
+
+      <item name="Tar">
+        <property name="CustomIcon" value="Tar"/> 
+      	<property name="HoldType" value="45"/>
+      	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+      	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+      	<property name="Material" value="Morganic"/>
+      	<property name="Weight" value="10"/>
+      	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+      	<property name="EconomicValue" value="38"/>
+      	<property name="Group" value="Resources,Chemicals"/>
+      </item>
+	  
 <!-- various new smoothies (food) -->
 	<item name="drinkYuccaJuiceSmoothie"> 	                               
 		<property name="HoldType" value="3"/>

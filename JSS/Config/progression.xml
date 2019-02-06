@@ -65,7 +65,7 @@
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="HarvestCount" operation="perc_add" value="2,8" level="2,4" tags="cropHarvest"/>
+			<passive_effect name="HarvestCount" operation="perc_add" value="2,8" level="1,4" tags="cropHarvest"/>
 			<passive_effect name="HarvestCount" operation="perc_add" value="0,0" level="1,4" tags="wildCropsHarvest"/>
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4" tags="plantedGraceCorn1"/>
