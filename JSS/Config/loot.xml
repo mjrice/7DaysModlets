@@ -1,15 +1,11 @@
 <configs>
 
-<!-- MODTAG Add a chance for a bicycle chassis to the car parts store loot box -->
-<append xpath="/lootcontainers/lootcontainer[@id='90']">
-	<item name="vehicleBicycleChassis" prob="0.2"/>
-	<item name="vehicleWheels" prob="0.3"/>	
-</append>
 
 <!-- replace dumb perk magazines with something less dumb -->
 <remove xpath="/lootcontainers/lootgroup[@name='books']"/>
 <remove xpath="/lootcontainers/lootgroup[@name='perkMagazines']"/>
 <remove xpath="/lootcontainers/lootgroup[@name='coldfood']"/>
+<remove xpath="/lootcontainers/lootgroup[@name='shamwaySafeFiller']"/>
 
 <!-- MODTAG increase chance of finding seeds in cupboards -->
 <set xpath="/lootcontainers/lootgroup[@name='cupboard']/item[@group='seeds']/@prob">0.2</set>
@@ -22,6 +18,7 @@
 	<item group="chessPieces" prob=".3" />
 </append>
 
+<!-- you have to put loot groups after the items or groups that they contain -->
 <insertBefore xpath="/lootcontainers/lootgroup[@name='junk']">
 
 <lootgroup name="ToolmakingToday">
@@ -283,26 +280,38 @@
 		<item group="Armorer"                    prob=".08" />
 		<item group="commonBooks"                prob=".02" /> <!-- these are schematics -->
 		<item group="rareBooks"                  prob=".01" /> <!-- these are also schematics -->
-
 </lootgroup>
-
 </insertBefore>
 
-<!-- MODTAG purse, contains more items and wider variety  of junk-->
-<remove xpath="/lootcontainers/lootcontainer[@id='48']"/>
-<append xpath="/lootcontainers">
-	<lootcontainer id="48" count="1,5" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="baseTemplate">
-		<item name="resourcePaper" count="2,8"  prob=".15" />
-		<item name="oldCash"       count="5,60" prob=".15" />
-		<item group="bookNovelsGroup"           prob=".15" />
-		<item group="weaponsPistol+ammo"        prob=".10" />
-		<item name="drinkJarBoiledWater"        prob=".10" />
-		<item group="medicine"                  prob=".10" />
-		<item name="meleeToolFlashlight02"      prob=".10" />		
-		<item group="cannedfood"                prob=".05" />
-     	<item name="casinoCoin"    count="5,25" prob=".05" />
-		<item group="ammo"                      prob=".05" />
-	</lootcontainer>
+<insertBefore xpath="/lootcontainers/lootgroup[@name='shamwaySafe']">
+	<!-- MODTAG more stuff in shamway safes -->
+	<lootgroup name="shamwaySafeFiller" count="1,3">	
+		<item name="oldCash" count="50,200"/>
+		<item group="cannedfood" />
+		<item group="books"      />
+		<item name ="cigar"      />
+		<item group="medicine"   />
+	</lootgroup>
+</insertBefore>
+
+<!-- decrease probability of canned food in supply crates -->
+<set xpath="/lootcontainers/lootcontainer[@id='34']/item[@group='cannedfood']/@prob">0.9</set>
+
+<!-- MODTAG Increase probability of finding honey in shamway boxes -->
+<set xpath="/lootcontainers/lootcontainer[@id='59']/item[@name='foodHoney']/@prob">0.3</set>
+
+<!-- MODTAG increase number of items that can be found in bookstore crates -->
+<set xpath="/lootcontainers/lootcontainer[@id='89']/@count">0,6</set>
+
+<remove xpath="/lootcontainers/lootcontainer[@id='11']"/> <!-- MODTAG safes contain more and better stuff to make it worth breaking into them -->
+<remove xpath="/lootcontainers/lootcontainer[@id='22']"/> <!-- MODTAG garage storage loot has more variety and a chance of better stuff -->
+<remove xpath="/lootcontainers/lootcontainer[@id='48']"/> <!-- MODTAG purse, contains more items and wider variety  of junk-->
+<remove xpath="/lootcontainers/lootcontainer[@id='49']"/> <!-- MODTAG bookcase contains more stuff -->
+
+<!-- MODTAG Add a chance for a bicycle chassis to the car parts store loot box -->
+<append xpath="/lootcontainers/lootcontainer[@id='90']">
+	<item name="vehicleBicycleChassis" prob="0.2"/>
+	<item name="vehicleWheels" prob="0.3"/>	
 </append>
 
 <!-- MODTAG add medical journals to pop-n-pills cases -->
@@ -336,53 +345,64 @@
 	<item group="cannedfood"/>
 </append>
 
-
-<!-- decrease probability of canned food in supply crates -->
-<set xpath="/lootcontainers/lootcontainer[@id='34']/item[@group='cannedfood']/@prob">0.9</set>
-
-<!-- MODTAG Increase probability of finding honey in shamway boxes -->
-<set xpath="/lootcontainers/lootcontainer[@id='59']/item[@name='foodHoney']/@prob">0.3</set>
-
-<!-- MODTAG increase number of items that can be found in bookstore crates -->
-<set xpath="/lootcontainers/lootcontainer[@id='89']/@count">0,6</set>
-
-<!-- MODTAG garage storage loot has more variety and a chance of better stuff -->
-<remove xpath="/lootcontainers/lootcontainer[@id='22']"/>
-<remove xpath="/lootcontainers/lootcontainer[@id='49']"/>
-
 <append xpath="/lootcontainers">
-<!-- ======================== -->
-<!-- garage stuff, tools, etc -->
-<!-- ======================== -->
-<lootcontainer id="22" count="0,4" size="5,4" sound_open="UseActions/open_cardboard" open_time="1" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
-	<item group="automotive"                       prob=".130"/>
-	<item name="resourcePaint"    count="5,40"     prob=".120"/>
-	<item name="resourcePaper"    count="4,25"     prob=".120"/>	<!-- probably old tax returns -->
-	<item group="ammo"                             prob=".100"/>
-	<item group="books"                            prob=".100"/>	
-	<item name="resourceCloth"    count="1,20"     prob= ".07"/>
-	<item name="resourceGlue"     count="1,4"      prob= ".05"/>
-	<item name="resourceScrapPolymers" count="1,2" prob= ".05"/>
-	<item group="clothes"                          prob= ".05"/>
-	<item group="trophyGroup"                      prob= ".05"/>
-	<item name="resourceDuctTape" count="1,4"      prob= ".05"/>
-	<item group="chessPieces"                      prob= ".05"/>
-	<item group="dyes"                             prob= ".01"/>
-	<item name="resourceAcid"      count="1,4"     prob= ".01"/>
-	<item name="meleeToolPaintTool"                prob= ".01"/>
-	<item name="vehicleBicycleChassis"             prob= ".01"/>
-	<item name="vehicleBicycleHandlebars"          prob= ".01"/>
-	<item group="electricalDevices"                prob= ".01"/>
-</lootcontainer>
+	<!-- safes, weapon caches rare good loot -->
+	<lootcontainer id="11" count="1,5" size="5,4" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="baseTemplate">
+		<item group="ammo"                       prob="0.20" />
+		<item group="ammoSteel"                  prob="0.20" />
+		<item group="weaponsBasicGuns+ammo"      prob="0.10" />
+		<item group="ToolmakingToday"            prob="0.10" />
+		<item group="EugeneExplainsScienceBooks" prob="0.10" />
+		<item name="oldCash" count="10,100"      prob="0.10" />
+		<item group="rareOres"                   prob="0.05" />
+		<item group="modAllT1"                   prob="0.05" />
+		<item group="modAllT2"                   prob="0.05" />
+		<item group="modAllT3"                   prob="0.04" />
+		<item name="oldCash" count="100,1000"    prob="0.01" />
+	</lootcontainer>
 
-<!-- =================================== -->
-<!-- MODTAG bookcase contains more stuff -->
-<!-- =================================== -->
-<lootcontainer id="49" count="1,6" size="4,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="baseTemplate">
-	<item name="resourcePaper" count="2,8" prob="0.2"/>
-	<item group="books"/>	
-	<item group="chessPieces" prob=".2"/>
-</lootcontainer>
+	<!-- garage stuff, tools, etc -->
+	<lootcontainer id="22" count="0,4" size="5,4" sound_open="UseActions/open_cardboard" open_time="1" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
+		<item group="automotive"                       prob=".130"/>
+		<item name="resourcePaint"    count="5,40"     prob=".120"/>
+		<item name="resourcePaper"    count="4,25"     prob=".120"/>	<!-- probably old tax returns your gonna want to keep these for at least 10 years after the apocalypse -->
+		<item group="ammo"                             prob=".100"/>
+		<item group="books"                            prob=".100"/>	
+		<item name="resourceCloth"    count="1,20"     prob= ".07"/>
+		<item name="resourceGlue"     count="1,4"      prob= ".05"/>
+		<item name="resourceScrapPolymers" count="1,2" prob= ".05"/>
+		<item group="clothes"                          prob= ".05"/>
+		<item group="trophyGroup"                      prob= ".05"/>
+		<item name="resourceDuctTape" count="1,4"      prob= ".05"/>
+		<item group="chessPieces"                      prob= ".05"/>
+		<item group="dyes"                             prob= ".01"/>
+		<item name="resourceAcid"      count="1,4"     prob= ".01"/>
+		<item name="meleeToolPaintTool"                prob= ".01"/>
+		<item name="vehicleBicycleChassis"             prob= ".01"/>
+		<item name="vehicleBicycleHandlebars"          prob= ".01"/>
+		<item group="electricalDevices"                prob= ".01"/>
+	</lootcontainer>
+
+	<!-- purses -->
+	<lootcontainer id="48" count="1,5" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="baseTemplate">
+		<item name="resourcePaper" count="2,8"   prob="0.15" />
+		<item name="oldCash"       count="5,60"  prob="0.15" />
+		<item group="bookNovelsGroup"            prob="0.15" />
+		<item group="weaponsPistol+ammo"         prob="0.10" />
+		<item name="drinkJarBoiledWater"         prob="0.10" />
+		<item group="medicine"                   prob="0.10" />
+		<item name="meleeToolFlashlight02"       prob="0.10" />		
+		<item group="cannedfood"                 prob="0.05" />
+     	<item name="casinoCoin"    count="5,25"  prob="0.05" />
+		<item group="ammo"                       prob="0.05" />
+	</lootcontainer>
+
+	<!-- bookcase -->
+	<lootcontainer id="49" count="1,6" size="4,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="baseTemplate">
+		<item name="resourcePaper" count="2,8" prob="0.2"/>
+		<item group="books"/>	
+		<item group="chessPieces" prob=".2"/>
+	</lootcontainer>
 
 </append>
 

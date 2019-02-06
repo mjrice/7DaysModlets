@@ -10,6 +10,7 @@
 
 <!-- move legend up a smidge -->
 <set xpath="/windows/window[@name='worldGeneration']/rect[@pos='0,-50']/rect[@name='generationControls']/rect[@height='340']/@pos">227,-372</set>
+<set xpath="/windows/window[@name='worldGeneration']/rect[@pos='0,-50']/rect[@name='generationControls']/rect[@pos='8,-40']/grid[@rows='13']/rect/combobox[@name='WorldSize']/@values">4096,8192,12288,16384</set>
 
 <!-- add prairie biome to previewer legend -->	
 <append xpath="/windows/window[@name='worldGeneration']/rect[@pos='0,-50']/rect[@name='generationControls']/rect[@height='340']/grid">
@@ -22,5 +23,6 @@
 		<sprite depth="10" pos="218,-6" name="border" width="16" height="16" sprite="menu_empty3px" color="64,128,32" type="sliced" fillcenter="true" globalopacity="false" />
 	</rect>
 </append>
-	
+
+		
 </configs>
