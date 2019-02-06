@@ -216,9 +216,12 @@
 <append xpath="/blocks/block[@name='treePlantedOak27m']"><drop event="Destroy" name="foodHoney" count="1" prob=".2"/></append>
 
 <!-- MODTAG add chance of moss harvest from large pine trees -->
-<append xpath="/blocks/block[@name='treeMountainPine41m']"><drop event="Destroy" name="Moss" count="1" prob=".4"/></append>
-<append xpath="/blocks/block[@name='treeMountainPine48m']"><drop event="Destroy" name="Moss" count="1" prob=".4"/></append>
-
+<!-- MODTAG add pine resin to pine tree harvest -->
+<append xpath="/blocks/block[starts-with(@name, 'treeMountainPine')]">
+    <drop event="Harvest" name="Pine Resin" count="4" prob="0.5" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="Moss" count="1" prob=".4"/>
+</append>
+  
 <append xpath="/blocks">
 
 	<block name="Chef Suitcase">
@@ -321,13 +324,14 @@
 		<drop event="Destroy" name="oldCash"        count="1000"/>		
 	    <drop event="Destroy" name="cigar"          count="1"   />
 		<drop event="Destroy" name="Golf Trophy"    count="1"  /> 
-		<!--<drop event="Destroy" name="Pewter Chess Piece - Pawn"    count="6"  /> 
+		<!-- <drop event="Destroy" name="Pewter Chess Piece - Pawn"    count="8"  /> 
+		<drop event="Destroy" name="resourcePaint"/>
 		<drop event="Destroy" name="Pewter Chess Piece - Rook"    count="2"  /> 
 		<drop event="Destroy" name="Pewter Chess Piece - Queen"    count="1"  /> 
 		<drop event="Destroy" name="Pewter Chess Piece - King"    count="1"  /> 
 		<drop event="Destroy" name="Pewter Chess Piece - Knight"    count="2"  /> 
 		<drop event="Destroy" name="Pewter Chess Piece - Bishop"    count="2"  /> 
-		<drop event="Destroy" name="Brass Chess Piece - Pawn"    count="6"  /> 
+		<drop event="Destroy" name="Brass Chess Piece - Pawn"    count="8"  /> 
 		<drop event="Destroy" name="Brass Chess Piece - Rook"    count="2"  /> 
 		<drop event="Destroy" name="Brass Chess Piece - Queen"    count="1"  /> 
 		<drop event="Destroy" name="Brass Chess Piece - King"    count="1"  /> 
