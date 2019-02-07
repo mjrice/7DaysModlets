@@ -109,8 +109,8 @@
 <!-- ======================================================================= -->
 <lootgroup name="magazineCookingLevel1Recipes">
 	<item name="Cookbook: Bacon and Eggs"/>
-	<item name="Cookbook: Stewed Meat"/>
-	<item name="Cookbook: Grilled Meat"/>
+	<!-- <item name="Cookbook: Stewed Meat"/>
+	<item name="Cookbook: Grilled Meat"/> -->
 	<item name="Cookbook: Cornbread"/>
 	<item name="Cookbook: Tea and Coffee"/>
 	<item name="Cookbook: All About Seeds"/>

@@ -344,56 +344,56 @@
 	<!-- ================================== -->
     <!-- MODTAG 7 new grilled meat recipes  -->
 	<!-- ================================== -->
-	<recipe name="Grilled Pork" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Pork" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- tags="learnable"> -->
 		<ingredient name="Raw Pork" count="5"/>
 	</recipe>
-	<recipe name="Grilled Chicken" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Chicken" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- ="learnable">-->
 		<ingredient name="Raw Chicken" count="5"/>
 	</recipe>	
-	<recipe name="Grilled Rabbit" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Rabbit" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- ="learnable"> -->
 		<ingredient name="Rabbit Meat" count="5"/>
 	</recipe>	
-	<recipe name="Grilled Bear" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Bear" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- ="learnable"> -->
 		<ingredient name="Bear Meat" count="5"/>
 	</recipe>
-	<recipe name="Grilled Snake" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Snake" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- ="learnable"> -->
 		<ingredient name="Snake Meat" count="5"/>
 	</recipe>
-	<recipe name="Grilled Venison" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Venison" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- ="learnable"> -->
 		<ingredient name="Raw Venison" count="5"/>
 	</recipe>
-	<recipe name="Grilled Wolf" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+	<recipe name="Grilled Wolf" count="1" craft_area="campfire" craft_tool="toolCookingGrill"> <!-- ="learnable"> -->
 		<ingredient name="Wolf Meat" count="5"/>
 	</recipe>
 
 	<!-- ================================= -->
     <!-- MODTAG 7 new boiled meat recipes  -->
 	<!-- ================================= -->
-	<recipe name="Stewed Pork" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Pork" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Raw Pork"            count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
-	<recipe name="Stewed Chicken" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Chicken" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Raw Chicken"         count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
-	<recipe name="Stewed Rabbit" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Rabbit" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Rabbit Meat"         count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
-	<recipe name="Stewed Bear" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Bear" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Bear Meat"           count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
-	<recipe name="Stewed Snake" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Snake" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Snake Meat"          count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
-	<recipe name="Stewed Venison" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Venison" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Raw Venison"         count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
-	<recipe name="Stewed Wolf" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
+	<recipe name="Stewed Wolf" count="1" craft_area="campfire" craft_tool="toolCookingPot" > <!-- tags="learnable"> -->
 		<ingredient name="Wolf Meat"           count="5"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>

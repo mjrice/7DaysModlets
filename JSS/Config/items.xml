@@ -1,5 +1,18 @@
 <configs>
 
+<!-- MODTAG increase damage of hunting knife by 38% -->
+<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">18</set>  
+<!-- MODTAG increase damage of machete by 15% -->
+<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">23</set> 
+
+<!-- Change damage based on quality level -->
+<remove xpath="/items/item/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']"/>
+<remove xpath="/items/item/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage'][@operation='perc_add']"/>
+<append xpath="/items/item/effect_group[@name='Base Effects']">
+	<passive_effect tier="1,6" value="0,1" operation="perc_add" name="EntityDamage"/>
+	<passive_effect tier="1,6" value="0,2" operation="perc_add" name="BlockDamage"/>
+</append>
+
 <!-- =================================================================================== -->
 <!-- TRADER MODS                                                                         -->
 <!-- The traders should be more tradery and generally useful (useful does not mean easy) -->
@@ -127,11 +140,7 @@
 	meleeToolHuntingKnife 13              12.3             60                    300
 	meleeToolMachete      20              15.8             50	                 600
 	-->
-	
-	<!-- MODTAG increase damage of hunting knife by 38% -->
-	<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">18</set> 
-	<!-- MODTAG increase damage of machete by 15% -->
-	<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">23</set>
+
 	
 <!-- =================================================================================== -->
 
@@ -1836,7 +1845,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Chili"/>
 	</effect_group>
 </item>
-
+<!--
 <item name="Cookbook: Stewed Meat">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="CreativeMode" value="Player"/>
@@ -1884,7 +1893,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Venison"/>
 	</effect_group>
 </item>
-
+-->
 <item name="Cookbook: Fried Meat">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="CreativeMode" value="Player"/>

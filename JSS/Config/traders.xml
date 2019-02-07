@@ -52,8 +52,8 @@
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='commonBooks']">
     <item name="Medical Journal: First Aid Bandage"/>
-	<item name="Cookbook: Stewed Meat"         />
-	<item name="Cookbook: Grilled Meat"        />
+<!--	<item name="Cookbook: Stewed Meat"         />
+	<item name="Cookbook: Grilled Meat"        /> -->
 	<item name="Cookbook: Tea and Coffee"      />
 	<item name="Cookbook: Noodles"             />
 	<item name="Cookbook: Bacon and Eggs"      />
@@ -76,8 +76,8 @@
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
 <!-- i am calling this group perkMagazines instead of something logical like lootRecipes because perkMagazines is referred to in lots of different places and i just want to replace those -->
 <trader_item_group name="perkMagazines">
-	<item name="Cookbook: Stewed Meat"         />
-	<item name="Cookbook: Grilled Meat"        />
+	<!-- <item name="Cookbook: Stewed Meat"         />
+	<item name="Cookbook: Grilled Meat"        /> -->
 	<item name="Cookbook: Fried Meat"          />
 	<item name="Cookbook: Cornbread"           />
 	<item name="Cookbook: Tea and Coffee"      />

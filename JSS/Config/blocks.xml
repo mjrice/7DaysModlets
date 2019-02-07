@@ -238,8 +238,8 @@
 		<property name="MaxDamage"           value="1"/>
 		<property name="CreativeMode"        value="None"/>
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
-		<drop event="Destroy" name="Cookbook: Grilled Meat"   count="1"/>
-		<drop event="Destroy" name="Cookbook: Stewed Meat"    count="1"/>		
+		<drop event="Destroy" name="Cookbook: Fried Meat"   count="1"/>
+		<drop event="Destroy" name="toolCookingGrill"    count="1"/>		
 		<drop event="Destroy" name="toolCookingPot"           count="1"/>
 		<drop event="Destroy" name="Herbs"                    count="6"/>
 	</block>
