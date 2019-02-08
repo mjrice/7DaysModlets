@@ -325,6 +325,15 @@
 	<ingredient name="Strawberries" count="2"/>
 </recipe>
 
+	<recipe name="Strawberry Preserves" count="1" craft_area="campfire" craft_tool="toolCookingPot" > 
+		<ingredient name="Strawberries"   count="10"/>
+		<ingredient name="drinkJarEmpty"  count="1"/>
+	</recipe>
+	<recipe name="Blueberry Preserves" count="1" craft_area="campfire" craft_tool="toolCookingPot" > 
+		<ingredient name="foodCropBlueberries"   count="10"/>
+		<ingredient name="drinkJarEmpty"  count="1"/>
+	</recipe>
+	
 <!-- MODTAG strawberry shortcake -->
 	<recipe name="Strawberry Shortcake" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Strawberries" count="15"/>

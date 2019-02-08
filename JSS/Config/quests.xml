@@ -243,7 +243,14 @@ Notes about quests
 		<objective type="Craft" id="ammoArrowStone" value="2" phase="2" />
 
 		<reward type="Exp" value="500" />
-		<reward type="Quest" id="quest_BasicSurvival7" />
+		<!-- <reward type="Quest" id="quest_BasicSurvival7" /> -->
+		<reward type="Quest" id="quest_whiteRiverCitizen1" stage="aftercomplete">
+			<property name="chainquest" value="false" />
+		</reward>
+		<reward type="SkillPoints" value="4" chainreward="true" />
+		<reward type="Item" id="Note from Enid" stage="aftercomplete">
+			<property name="chainquest" value="false" />
+		</reward>
 	</quest>
 	
 </insertBefore>

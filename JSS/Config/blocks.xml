@@ -375,8 +375,8 @@
 		<property name="MaxDamage"           value="1"/>
 		<property name="CreativeMode"        value="None"/>
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
-		<drop event="Destroy" name="Cookbook: Tea and Coffee" count="1"/>
-		<drop event="Destroy" name="Cookbook: Bacon and Eggs" count="1"/>
+		<drop event="Destroy" name="Cookbook: Tea and Coffee" count="1" />
+		<drop event="Destroy" name="Cookbook: Bacon and Eggs" count="1" />
 		<drop event="Destroy" name="resourceGlue"             count="12"/>		
 		<drop event="Destroy" name="meleeToolMachete"         count="1" />
 	</block>

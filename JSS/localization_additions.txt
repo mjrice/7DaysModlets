@@ -1,0 +1,61 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+Pine Resin,items,Item,KgNone,Pine resin can be crafted into tar.,,,,,
+Tar,items,Item,KgNone,Tar is a viscous goo that can be burned or used to make adhesive tape.,,,,,
+Blueberry Smoothie,items,food,New,A tasty smoothie,,,,,
+Strawberry Smoothie,items,food,New,A tasty smoothie,,,,,
+Mixed Fruit Smoothie,items,food,New,A tasty smoothie,,,,,
+Herbal Smoothie,items,food,New,A tasty smoothie,,,,,
+Chocolate Pudding,items,food,New,This extra large can of chocolate pudding is a tasty treat,,,,,
+Peanut Butter,items,food,New,Warning: Contains peanut butter,,,,,
+Canned Beans,items,food,New,These are beans in a can,,,,,
+Dried Noodles,items,food,New,Dried noodles can be cooked into a variety of meals,,,,,
+Strawberries
+Strawberry Shortcake
+Herbs
+Herbal Tea
+Moss
+Chili
+Chicken Noodle Soup
+Tuna Noodle Casserole
+Noodles
+RawMeatDesc
+FriedMeatDesc
+Chicken Surprise
+Tastes Like Chicken Surprise
+Drunken Dog
+Hasenpfeffer
+Bear Roast
+Starter Class Paper
+Cookbook: Bear
+Cookbook: Bacon and Eggs
+Cookbook: Chicken Surprise
+Cookbook: Noodles
+Cookbook: Hasenpfeffer
+Cookbook: Chili
+Cookbook: Stewed Meat
+Cookbook: Grilled Meat
+Cookbook: Fried Meat
+Cookbook: Cornbread
+Cookbook: Tea and Coffee
+Cookbook: Steak And Potato
+Cookbook: Blueberry Pie
+Cookbook: Strawberry Shortcake
+Cookbook: Meat Stew
+Cookbook: Vegetable Stew
+Cookbook: All About Seeds
+MedicalJournalDesc
+ToolmakingTodayDesc
+GunnysGuideDesc
+TheArmorerDesc
+EugeneExplainsDesc
+Romance Novel
+Sci-Fi Book
+Adventure Book
+Horror Book
+Business Book
+ChessPieceDesc
+EncyclopediaDesc
+Chess Set
+Encyclopedia Set
+Zombie Cream
+

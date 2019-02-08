@@ -301,7 +301,57 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel cooler"/> 		
 	</effect_group>
 	</item>
-
+	
+	<item name="Strawberry Preserves">
+		<property name="CustomIcon"  value="StrawberryPreserves"/>
+		<property name="HoldType" value="3"/>
+		<property name="DisplayType" value="cannedFoodDrink"/>
+		<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="15"/> <!-- STK drink -->
+		<property name="EconomicValue" value="40"/>
+		<property name="Group" value="Food/Cooking"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+			<property name="Create_item" value="drinkCanEmpty"/>
+		</property>
+		<property name="Group" value="Food/Cooking"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		</effect_group>
+	</item>
+	
+	<item name="Blueberry Preserves">
+		<property name="CustomIcon"  value="BlueberryPreserves"/>
+		<property name="HoldType" value="3"/>
+		<property name="DisplayType" value="cannedFoodDrink"/>
+		<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
+		<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="15"/> <!-- STK drink -->
+		<property name="EconomicValue" value="40"/>
+		<property name="Group" value="Food/Cooking"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+			<property name="Create_item" value="drinkCanEmpty"/>
+		</property>
+		<property name="Group" value="Food/Cooking"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		</effect_group>
+	</item>
+	
 	<item name="Blueberry Smoothie"> <!-- MODTAG Blueberry Smoothie (drink) -->
 		<property name="HoldType" value="3"/>
 		<property name="DisplayType" value="coolFoodDrink"/>
@@ -543,7 +593,7 @@
 <!-- MODTAG Added Strawberries (food) -->
 <item name="Strawberries"> <!-- food resource item -->
 	<property name="CustomIcon"    value="StrawberriesIcon"/> 
-	<property name="HoldType"      value="45"/>
+	<property name="HoldType"      value="31"/>
 	<property name="DisplayType"   value="food"/>
 	<property name="Meshfile"      value="Items/Misc/sackPrefab"/>
 	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
@@ -1818,17 +1868,17 @@
 	</effect_group>
 </item>
 
-<item name="Cookbook: Bear Tonight" >
+<item name="Cookbook: Bear Roast" >
 	<property name="Extends"      value="recipeBookBase"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="Bear Tonight" operation="Equals" value="0"/> <!-- Equals 0 -->
+		<requirement name="CVarCompare" cvar="Bear Roast" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Bear Tonight" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Bear Tonight"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Bear Roast" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Bear Roast"/>
 	</effect_group>
 </item>
 
