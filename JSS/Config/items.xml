@@ -802,7 +802,7 @@
 
 <item name="Tuna Noodle Casserole">
 	<property name="HoldType" value="3"/>	
-	<property name="CustomIcon"  value="ChickenSurprise"/>  <property name="CustomIconTint" value="7f7f40"/> 
+	<property name="CustomIcon"  value="TunaNoodleCasserole"/> 
 	<property name="DisplayType" value="warmFoodDrink"/>
 	<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>

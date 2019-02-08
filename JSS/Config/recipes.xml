@@ -145,6 +145,7 @@
 		<ingredient name="foodCanTuna"           count="1"/>
 		<ingredient name="foodCanPeas"           count="1"/>		
 		<ingredient name="Dried Noodles"         count="1"/>
+		<ingredient name="foodCornMeal"          count="1"/>
 		<ingredient name="drinkJarBoiledWater"   count="1"/>
 	</recipe>
 
