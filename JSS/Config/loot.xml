@@ -304,14 +304,19 @@
 <set xpath="/lootcontainers/lootcontainer[@id='89']/@count">0,6</set>
 
 <remove xpath="/lootcontainers/lootcontainer[@id='11']"/> <!-- MODTAG safes contain more and better stuff to make it worth breaking into them -->
+<remove xpath="/lootcontainers/lootcontainer[@id='19']"/> <!-- MODTAG cars contain more stuff but less ammo -->
 <remove xpath="/lootcontainers/lootcontainer[@id='22']"/> <!-- MODTAG garage storage loot has more variety and a chance of better stuff -->
 <remove xpath="/lootcontainers/lootcontainer[@id='48']"/> <!-- MODTAG purse, contains more items and wider variety  of junk-->
 <remove xpath="/lootcontainers/lootcontainer[@id='49']"/> <!-- MODTAG bookcase contains more stuff -->
 
+<!-- kitchen sink, cupboards (lower), cleaning chemicals, plates, silverware, pots and pans -->
+<append xpath="/lootcontainers/lootcontainer[@id='8']">
+	<item group="cannedfood" prob=".5"/>
+</append>
+
 <!-- MODTAG Add a chance for a bicycle chassis to the car parts store loot box -->
 <append xpath="/lootcontainers/lootcontainer[@id='90']">
-	<item name="vehicleBicycleChassis" prob="0.2"/>
-	<item name="vehicleWheels" prob="0.3"/>	
+	<item group="bicycleParts"/>
 </append>
 
 <!-- MODTAG add medical journals to pop-n-pills cases -->
@@ -359,6 +364,14 @@
 		<item group="modAllT2"                   prob="0.05" />
 		<item group="modAllT3"                   prob="0.04" />
 		<item name="oldCash" count="100,1000"    prob="0.01" />
+	</lootcontainer>
+
+	<lootcontainer id="19" count="1,3" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate">
+		<item group="junk"                  prob="0.50"/>
+		<item group="automotive"            prob="0.20"/>
+		<item group="ammo"                  prob="0.17"/>
+		<item group="tools"                 prob="0.10"/>
+		<item name="armorMiningHelmet"      prob="0.03"/>
 	</lootcontainer>
 
 	<!-- garage stuff, tools, etc -->

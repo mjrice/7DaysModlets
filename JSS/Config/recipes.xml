@@ -149,6 +149,12 @@
 		<ingredient name="drinkJarBoiledWater"   count="1"/>
 	</recipe>
 
+	<recipe name="Tortillas" count="2" craft_area="campfire" craft_tool="toolCookingPot">
+		<ingredient name="foodCornMeal" count="5"/>
+		<ingredient name="drinkJarBoiledWater"   count="1"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+	</recipe>
+	
 	<recipe name="drinkYuccaJuiceSmoothie" count="1" tags="learnable">
 		<ingredient name="foodCropYuccaFruit"  count="4"/>
 		<ingredient name="foodHoney"           count="1"/>

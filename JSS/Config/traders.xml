@@ -7,7 +7,7 @@
 <!-- remove the generic meat food items from trader inventory -->
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']/item[@name='foodBoiledMeat']"/>
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']/item[@name='foodGrilledMeat']"/>
-
+<!-- increase trader stock levels -->
 <set xpath="/traders/trader_info[@id='1']/@min_inventory">75</set>
 <set xpath="/traders/trader_info[@id='1']/@max_inventory">100</set>
 
@@ -74,10 +74,15 @@
 </append>
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+
+	<trader_item_group name="bicycleParts">
+		<item name="vehicleBicycleChassis"/>
+		<item name="vehicleBicycleHandlebars"/>
+		<item name="vehicleWheels"/>
+	</trader_item_group>
+
 <!-- i am calling this group perkMagazines instead of something logical like lootRecipes because perkMagazines is referred to in lots of different places and i just want to replace those -->
 <trader_item_group name="perkMagazines">
-	<!-- <item name="Cookbook: Stewed Meat"         />
-	<item name="Cookbook: Grilled Meat"        /> -->
 	<item name="Cookbook: Fried Meat"          />
 	<item name="Cookbook: Cornbread"           />
 	<item name="Cookbook: Tea and Coffee"      />
@@ -155,5 +160,10 @@
 	<item name="Eugene Explains: Gyrocopters"          />
 
 </append>
+
+<append xpath="/traders/trader_info[@id='1']/tier_items[@level='1,499']">
+			<item group="bicycleParts" />
+</append>
+
 
 </configs>
