@@ -109,8 +109,6 @@
 <!-- ======================================================================= -->
 <lootgroup name="magazineCookingLevel1Recipes">
 	<item name="Cookbook: Bacon and Eggs"/>
-	<!-- <item name="Cookbook: Stewed Meat"/>
-	<item name="Cookbook: Grilled Meat"/> -->
 	<item name="Cookbook: Cornbread"/>
 	<item name="Cookbook: Tea and Coffee"/>
 	<item name="Cookbook: All About Seeds"/>
@@ -315,7 +313,7 @@
 	<item group="cannedfood" prob=".5"/>
 </append>
 
-<!-- MODTAG Add a chance for a bicycle chassis to the car parts store loot box -->
+<!-- MODTAG Add a chance for bicycle parts to the car parts store loot box -->
 <append xpath="/lootcontainers/lootcontainer[@id='90']">
 	<item group="bicycleParts"/>
 </append>
@@ -413,7 +411,7 @@
 	</lootcontainer>
 
 	<!-- bookcase -->
-	<lootcontainer id="49" count="1,6" size="4,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="baseTemplate">
+	<lootcontainer id="49" count="0,8" size="4,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="baseTemplate">
 		<item name="resourcePaper" count="2,8" prob="0.2"/>
 		<item group="books"/>	
 		<item group="chessPieces" prob=".2"/>
@@ -426,7 +424,8 @@
 	<item name="Chocolate Pudding"/>	
 	<item name="Canned Beans"     />	
 	<item name="Peanut Butter"    />		
-	<item name="Dried Noodles"    />		
+	<item name="Dried Noodles"    />
+	<item name="Tortillas"  count="1,4" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='brassResource']">

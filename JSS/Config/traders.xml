@@ -67,11 +67,11 @@
 	<item name="Toolmaking Today: Iron Tools"  />
 	<item name="Toolmaking Today: Hammers"     />
 	<item name="Toolmaking Today: Wrench"      />
-	<item name="The Armorer: Leather"   />
-	<item name="The Armorer: Iron"      />
-	<item name="The Armorer: Steel"     />
-	<item name="Eugene Explains: Mining Helmet" />
-	<item name="Eugene Explains: Bicycles"             />
+	<item name="The Armorer: Leather"          />
+	<item name="The Armorer: Iron"             />
+	<item name="The Armorer: Steel"            />
+	<item name="Eugene Explains: Mining Helmet"/>
+	<item name="Eugene Explains: Bicycles"     />
 </append>
 
 <insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
