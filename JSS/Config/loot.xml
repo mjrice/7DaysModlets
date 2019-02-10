@@ -313,7 +313,7 @@
 	<item group="cannedfood" prob=".5"/>
 </append>
 
-<!-- MODTAG Add a chance for bicycle parts to the car parts store loot box -->
+<!-- MODTAG increase chance for bicycle parts to the car parts store loot box -->
 <append xpath="/lootcontainers/lootcontainer[@id='90']">
 	<item group="bicycleParts"/>
 </append>
@@ -369,9 +369,10 @@
 	<lootcontainer id="19" count="1,3" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate">
 		<item group="junk"                  prob="0.50"/>
 		<item group="automotive"            prob="0.20"/>
-		<item group="ammo"                  prob="0.17"/>
+		<item group="ammo"                  prob="0.14"/>
 		<item group="tools"                 prob="0.10"/>
-		<item name="armorMiningHelmet"      prob="0.03"/>
+		<item name="armorMiningHelmet"      prob="0.01"/>
+		<item group="vehicleParts"          prob="0.05"/>
 	</lootcontainer>
 
 	<!-- garage stuff, tools, etc -->

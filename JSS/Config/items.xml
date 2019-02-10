@@ -10,7 +10,7 @@
 <remove xpath="/items/item/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage'][@operation='perc_add']"/>
 <append xpath="/items/item/effect_group[@name='Base Effects']">
 	<passive_effect tier="1,6" value="0,1" operation="perc_add" name="EntityDamage"/>
-	<passive_effect tier="1,6" value="0,2" operation="perc_add" name="BlockDamage"/>
+	<passive_effect tier="1,6" value="0,1" operation="perc_add" name="BlockDamage"/>
 </append>
 
 <!-- =================================================================================== -->
@@ -206,7 +206,7 @@
 		Boiled Egg 							10			0 			5 			40  
 		Grilled meat						10			0 			2 			110		
 		Stewed meat                        	8 			10 			2 			110 
-		Fried meat							10			0  			15 			120
+		Fried meat							16			0  			5 			140
 	Intermediate meal 						===			===			===			===
 		Meat Stew							47			20			24			200		Hypothermal Resist +10 3minutes
 		Chili 								50			10			10			184     Hypothermal Resist +10 3minutes
@@ -1454,7 +1454,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="20"/> <!-- STK food -->
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue"          value="120"/>
+	<property name="EconomicValue"          value="140"/>
 	<property name="EconomicBundleSize"     value="1"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -1464,9 +1464,9 @@
 		<property name="Create_item" value="drinkJarEmpty"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="0"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="15"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
 	<property name="Group" value="Food/Cooking"/>
@@ -1622,7 +1622,7 @@
 
 <item name="IntermediateMealBase">
 	<property name="HoldType"      value="31"/>
-	<property name="DisplayType"   value="foodDrink"/>
+	<property name="DisplayType" value="foodWater"/>
 	<property name="Meshfile"      value="Items/Misc/parcelPrefab"/>
 	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material"      value="Morganic"/>
@@ -1705,6 +1705,7 @@
 		
 <item name="Hasenpfeffer">
 	<property name="Extends"    value="IntermediateMealBase"/>
+	<property name="DisplayType" value="foodWater"/>
 	<property name="CustomIcon" value="Hasenpfeffer"/> 
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -1992,8 +1993,10 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Enchilada de Frijoles" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Enchilada de Carne"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodFishTacos" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Enchilada de Carne"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Enchilada de Frijoles"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Fish Tacos"/>
 	</effect_group>
 </item>
 <!--

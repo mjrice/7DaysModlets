@@ -35,9 +35,11 @@
 
 <!-- decrease wood needed to make spikes from 20 to 15 -->
 <!-- <set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set> -->
-	
+
 <!-- MODTAG New fruit smoothie recipes -->
 <remove xpath="/recipes/recipe[@name='drinkYuccaJuiceSmoothie']"/>
+<remove xpath="/recipes/recipe[@name='foodFishTacos']"/>
+
 <insertAfter xpath="/recipes/recipe[@name='drinkJarEmpty']">
 
 	<recipe name="Tar" count="1" craft_area="chemistryStation">
@@ -60,7 +62,7 @@
     	<ingredient name="resourceCloth" count="2"/>
     	<ingredient name="resourceWood" count="1"/>
     </recipe>	
-	
+
     <!-- === -->
 	<!-- MODTAG more intermediate recipes for other meat types (comparable benefit to bacon and eggs) -->
 	<recipe name="Chicken Surprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
@@ -155,6 +157,13 @@
 		<ingredient name="resourceAnimalFat" count="1"/>
 	</recipe>
 	
+	<!-- MODTAG fish tacos changed to use tortillas -->
+	<recipe name="foodFishTacos" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable">
+		<ingredient name="foodCanSalmon" count="1"/>
+		<ingredient name="Tortillas" count="1"/>
+	</recipe>
+	
+	<!-- MODTAG bean and meat enchilada recipes -->
 	<recipe name="Enchilada de Frijoles" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Tortillas" count="1"/> <ingredient name="Canned Beans"   count="1"/> <ingredient name="Herbs" count="1"/>
 	</recipe>
@@ -248,7 +257,7 @@
 		<ingredient name="resourceCloth" count="2"/>
 	</recipe>
 
-	<recipe name="medicalFirstAidBandage" count="1" tags="learnable" craft_exp_gain="20"  > <!-- tooltip_key="ttRecipeUnlocked" -->
+	<recipe name="medicalFirstAidBandage" count="1" tags="learnable" craft_exp_gain="20"  > 
 		<ingredient name="medicalAloeCream" count="1"/>
 		<ingredient name="resourceCloth" count="2"/>
 	</recipe>
