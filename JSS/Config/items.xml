@@ -481,6 +481,12 @@
 	</item>
 </insertAfter>
 
+<!-- MODTAG add cooling buff to aloe cream, but remove stop-bleeding buff -->
+<append xpath="/items/item[@name='medicalAloeCream']/effect_group">
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffColdFood"/>
+</append>
+<remove xpath="/items/item[@name='medicalAloeCream']/effect_group/triggered_effect[@buff='buffInjuryBleeding']"/>
+
 <!-- add new items -->
 <append xpath="/items">
 
@@ -2327,10 +2333,11 @@
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidBandage" operation="set" value="1"/> <!-- tooltip_key="ttRecipeUnlocked" -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream" operation="set" value="1"/>
-		
+		<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Aloe Cream"/>
+		-->
 		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: First Aid Bandage"/> 
-		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Aloe Cream"/> 
+		  
 	</effect_group>
 </item>
 

@@ -167,6 +167,7 @@
 	<item name="The Armorer: Leather"               max_count="1" prob=".5"/>
 	<item group="WeaponsBooksLootGroupLevel1"       max_count="1" />
 	<item group="magazineCookingLevel1Recipes"      max_count="1" />
+	<item group="EugeneExplainsScienceBooks"        max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier2SkillRewards">
@@ -174,6 +175,7 @@
 	<item name="The Armorer: Iron"               max_count="1" />
 	<item group="WeaponsBooksLootGroupLevel2"    max_count="1" />
 	<item group="magazineCookingLevel2Recipes"   max_count="1" />
+	<item group="EugeneExplainsScienceBooks"        max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier3SkillRewards">
@@ -181,6 +183,7 @@
 	<item name="The Armorer: Steel"             max_count="1" />
 	<item group="WeaponsBooksLootGroupLevel3"   max_count="1" />
 	<item group="magazineCookingLevel3Recipes"  max_count="1"  />
+	<item group="EugeneExplainsScienceBooks"        max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier4SkillRewards">
@@ -188,6 +191,7 @@
 	<item name="The Armorer: Military"          max_count="1" />
 	<item group="WeaponsBooksLootGroupLevel4"   max_count="1" />
 	<item group="magazineCookingLevel4Recipes"  max_count="1"  />
+	<item group="EugeneExplainsScienceBooks"        max_count="1" />
 </lootgroup>
 
 

@@ -286,10 +286,6 @@
 		<ingredient name="resourceWood" count="2"/>
 		<ingredient name="resourceDuctTape" count="1"/>
 	</recipe>
-
-	<recipe name="medicalAloeCream" count="1" tags="learnable" craft_exp_gain="20">
-		<ingredient name="resourceCropAloeLeaf" count="4"/>
-	</recipe>
 	
 	<recipe name="toolBeaker" count="1" craft_area="forge" material_based="true">
     	<ingredient name="unit_glass" count="100" />
@@ -350,6 +346,15 @@
 	<set xpath="/recipes/recipe[@name='foodCornBread']/ingredient[@name='foodCornMeal']/@count">2</set>
 	<append xpath="/recipes/recipe[@name='foodCornBread']">
 		<ingredient name="foodEgg" count="1"/>
+	</append>
+
+	<!-- MODTAG add botanical ingredients to recipes for recog and steroids -->
+	<append xpath="/recipes/recipe[@name='drugRecog']">
+		<ingredient name="resourceCropChrysanthemumPlant" count="10"/>
+	</append>
+
+	<append xpath="/recipes/recipe[@name='drugSteroids']">
+		<ingredient name="resourceCropGoldenrodPlant" count="10"/>
 	</append>
 
 <!-- remove previous meat recipes that used generic meat and replace with new meat varieties -->
