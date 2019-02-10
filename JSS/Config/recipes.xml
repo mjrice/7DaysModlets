@@ -156,35 +156,35 @@
 	</recipe>
 	
 	<recipe name="Enchilada de Frijoles" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/> <ingredient name="Canned Beans"   count="1"/>
+		<ingredient name="Tortillas" count="1"/> <ingredient name="Canned Beans"   count="1"/> <ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Chicken"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Chicken"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Pork"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Pork"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Wolf"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Wolf"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Snake"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Snake"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Venison"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Venison"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Rabbit"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Rabbit"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 	
 	<recipe name="Enchilada de Carne" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Bear"   count="1"/>
+		<ingredient name="Tortillas" count="1"/><ingredient name="Grilled Bear"   count="1"/><ingredient name="Herbs" count="1"/>
 	</recipe>
 
 	<recipe name="drinkYuccaJuiceSmoothie" count="1" tags="learnable">

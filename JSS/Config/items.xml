@@ -628,7 +628,7 @@
 	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material"      value="MresourceCrop"/>
 	<property name="Stacknumber"   value="50"/> <!-- STK resource -->
-	<property name="EconomicValue" value="80"/>
+	<property name="EconomicValue" value="90"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="CraftingIngredientTime" value="8"/>
 	<property name="SellableToTrader" value="true"/>
@@ -668,7 +668,7 @@
 	<property name="Group" value="Food/Cooking"/>
 
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="27"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="37"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -1977,6 +1977,23 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Chili" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Chili"/>
+	</effect_group>
+</item>
+
+
+<item name="Cookbook: Enchiladas" >
+	<property name="Extends"      value="recipeBookBase"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="Enchilada de Carne" operation="Equals" value="0"/> <!-- Equals 0 -->
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Enchilada de Frijoles" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Enchilada de Carne"    operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Enchilada de Carne"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Enchilada de Frijoles"/>
 	</effect_group>
 </item>
 <!--

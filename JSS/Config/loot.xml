@@ -114,6 +114,7 @@
 	<item name="Cookbook: Cornbread"/>
 	<item name="Cookbook: Tea and Coffee"/>
 	<item name="Cookbook: All About Seeds"/>
+	<item name="Cookbook: Enchiladas"/>
 </lootgroup>
 
 <lootgroup name="magazineCookingLevel2Recipes">
@@ -366,6 +367,7 @@
 		<item name="oldCash" count="100,1000"    prob="0.01" />
 	</lootcontainer>
 
+	<!-- cars -->
 	<lootcontainer id="19" count="1,3" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="baseTemplate">
 		<item group="junk"                  prob="0.50"/>
 		<item group="automotive"            prob="0.20"/>
