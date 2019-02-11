@@ -194,7 +194,7 @@
 
             <decoration type="block" blockname="treeAzalea"                   prob="0.002" rotatemax="3"/>
 			
-			<decoration type="block" blockname="rockResource"			      prob="0.05" rotatemax="3"/>
+			<decoration type="block" blockname="rockResource"			      prob="0.035" rotatemax="3"/>
 			<decoration type="block" blockname="treeCactus04"                 prob="0.010" rotatemax="3"/> 
 			<decoration type="block" blockname="treeDeadShrub"                prob="0.010" rotatemax="7"/>
 			<decoration type="block" blockname="treeDeadPineLeaf"             prob="0.005" rotatemax="7"/>
