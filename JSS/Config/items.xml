@@ -1,9 +1,22 @@
 <configs>
 
 <!-- MODTAG increase damage of hunting knife by 38% -->
-<set xpath="/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">18</set>  
 <!-- MODTAG increase damage of machete by 15% -->
-<set xpath="/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">23</set> 
+<!-- MODTAG increase block damage of Tazas stone axe by 20% -->
+
+<set xpath=     "/items/item[@name='meleeToolStoneAxe']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">10</set> 
+<set xpath="/items/item[@name='meleeToolStoneAxeTazas']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">12</set> 
+<set xpath=         "/items/item[@name='meleeBoneShiv']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">16</set>  
+<set xpath= "/items/item[@name='meleeToolHuntingKnife']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">18</set>  
+<set xpath=      "/items/item[@name='meleeToolMachete']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">23</set> 
+<set xpath=  "/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">26</set> 
+<set xpath= "/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage']/@value">30</set> 
+
+<set xpath=     "/items/item[@name='meleeToolStoneAxe']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']/@value">21</set> 
+<set xpath="/items/item[@name='meleeToolStoneAxeTazas']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']/@value">29</set> 
+<set xpath=  "/items/item[@name='meleeToolFireaxeIron']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']/@value">60</set> 
+<set xpath= "/items/item[@name='meleeToolFireaxeSteel']/effect_group[@name='Base Effects']/passive_effect[@name='BlockDamage']/@value">86</set> 
+
 
 <!-- Change damage based on quality level -->
 <remove xpath="/items/item/effect_group[@name='Base Effects']/passive_effect[@name='EntityDamage'][@operation='perc_add']"/>
@@ -101,7 +114,6 @@
 	<set xpath="/items/item[@name='medicalBandage']/property[@name='EconomicValue']/@value">10</set>
 	<set xpath="/items/item[@name='medicalFirstAidBandage']/property[@name='EconomicValue']/@value">24</set>
 	<set xpath="/items/item[@name='medicalBloodBag']/property[@name='EconomicValue']/@value">12</set>
-
 	
 	<!-- 1 femur + 1 water makes glue , femur worth 5, jar worth 6 -->	
 	<set xpath="/items/item[@name='resourceFemur']/property[@name='SellableToTrader']/@value">true</set>
@@ -269,7 +281,7 @@
       	<property name="Group" value="Resources,Chemicals"/>
       </item>
 	  	  
-<!-- various new smoothies (food) -->
+	<!-- various new smoothies (food) -->
 	<item name="drinkYuccaJuiceSmoothie"> 	                               
 		<property name="HoldType" value="3"/>
 		<property name="DisplayType" value="coolFoodDrink"/>
@@ -448,6 +460,33 @@
 		</effect_group>
 	</item>
 
+	<item name="Rekt's Apocolyptic Sundae"> <!-- MODTAG Rekt's Apocolyptic Sundae -->
+		<property name="HoldType"      value="3"/>
+		<property name="DisplayType"   value="coolFoodDrink"/>
+		<property name="Meshfile"      value="Items/Food/bottled_waterPrefab"/>
+		<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
+		<property name="Material"      value="Morganic"/>
+		<property name="Stacknumber"   value="15"/> <!-- STK drink -->		
+		<property name="Group"         value="Food/Cooking"/>
+		<property name="CustomIcon"    value="MixedFruitSmoothie"/> 
+		<property name="EconomicValue" value="200"/>
+		<property class="Action0">
+			<property name="Class"       value="Eat"/>
+			<property name="Delay"       value="1.0"/>
+			<property name="Use_time"    value="..."/>
+			<property name="Sound_start" value="player_drinking"/>
+			<property name="Buff"        value="buffExtinguishFireBuff"/>
+			<property name="Create_item" value="drinkJarEmpty"/>
+		</property>
+		<effect_group tiered="false">			
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel nicer than usual."/> 		
+		</effect_group>
+	</item>
+
 	<item name="Herbal Smoothie"> <!-- MODTAG Herbal Smoothie (drink) -->
 		<property name="HoldType"      value="3"/> 
 		<property name="CustomIcon"    value="HerbalSmoothie"/> 
@@ -484,6 +523,7 @@
 <!-- MODTAG add cooling buff to aloe cream, but remove stop-bleeding buff -->
 <append xpath="/items/item[@name='medicalAloeCream']/effect_group">
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffColdFood"/>
+	<display_value name="dHyperthermalResist" value="10"/>
 </append>
 <remove xpath="/items/item[@name='medicalAloeCream']/effect_group/triggered_effect[@buff='buffInjuryBleeding']"/>
 
@@ -492,19 +532,19 @@
 
 <!-- Coorals Chocolate Pudding -->
 <item name="Chocolate Pudding">
-	<property name="HoldType" value="31"/>
-	<property name="CustomIcon" value="ChocolatePudding"/>
-	<property name="DisplayType" value="cannedFoodDrink"/>
-	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
-	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="Weight" value="5"/>
+	<property name="HoldType"      value="31"/>
+	<property name="CustomIcon"    value="ChocolatePudding"/>
+	<property name="DisplayType"   value="cannedFoodDrink"/>
+	<property name="Meshfile"      value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"      value="Mmetal"/>
+	<property name="Weight"        value="5"/>
 	<property name="EconomicValue" value="50"/>
-	<property name="Stacknumber" value="20"/> <!-- STK food -->
+	<property name="Stacknumber"   value="20"/> <!-- STK food -->
 	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="Use_time" value="..."/>
+		<property name="Class"       value="Eat"/>
+		<property name="Delay"       value="1.0"/>
+		<property name="Use_time"    value="..."/>
 		<property name="Sound_start" value="player_eating"/>
 		<property name="Create_item" value="drinkCanEmpty"/>
 	</property>
@@ -518,15 +558,15 @@
 </item>
 
 <item name="Peanut Butter">
-	<property name="HoldType" value="31"/>
-	<property name="CustomIcon" value="PeanutButter"/>
-	<property name="DisplayType" value="cannedFoodDrink"/>
-	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
-	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="Weight" value="5"/>
+	<property name="HoldType"      value="31"/>
+	<property name="CustomIcon"    value="PeanutButter"/>
+	<property name="DisplayType"   value="cannedFoodDrink"/>
+	<property name="Meshfile"      value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"      value="Mmetal"/>
+	<property name="Weight"        value="5"/>
 	<property name="EconomicValue" value="60"/>
-	<property name="Stacknumber" value="20"/> <!-- STK food -->
+	<property name="Stacknumber"   value="20"/> <!-- STK food -->
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -573,15 +613,15 @@
 </item>
 
 <item name="Dried Noodles">
-	<property name="HoldType" value="31"/>
-	<property name="CustomIcon" value="DryNoodlesPackage"/>
-	<property name="DisplayType" value="cannedFoodDrink"/>
-	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
-	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="Weight" value="5"/>
+	<property name="HoldType"      value="31"/>
+	<property name="CustomIcon"    value="DryNoodlesPackage"/>
+	<property name="DisplayType"   value="cannedFoodDrink"/>
+	<property name="Meshfile"      value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"      value="Mmetal"/>
+	<property name="Weight"        value="5"/>
 	<property name="EconomicValue" value="40"/>
-	<property name="Stacknumber" value="20"/> <!-- STK food -->
+	<property name="Stacknumber"   value="20"/> <!-- STK food -->
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -825,19 +865,19 @@
 
 
 <item name="Chili">
-	<property name="HoldType" value="3"/>	
-	<property name="CustomIcon"  value="Chili"/> <!-- <property name="CustomIconTint" value="ff9f9f"/> -->
-	<property name="DisplayType" value="warmFoodDrink"/>
-	<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
-	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-	<property name="Material" value="Morganic"/>
-	<property name="Weight" value="10"/>
-	<property name="Stacknumber" value="15"/> <!-- STK drink -->
+	<property name="HoldType"      value="3"/>	
+	<property name="CustomIcon"    value="Chili"/> <!-- <property name="CustomIconTint" value="ff9f9f"/> -->
+	<property name="DisplayType"   value="warmFoodDrink"/>
+	<property name="Meshfile"      value="Items/Food/bottled_waterPrefab"/>
+	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"      value="Morganic"/>
+	<property name="Weight"        value="10"/>
+	<property name="Stacknumber"   value="15"/> <!-- STK drink -->
 	<property name="EconomicValue" value="96"/>
 	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="Use_time" value="..."/>
+		<property name="Class"       value="Eat"/>
+		<property name="Delay"       value="1.0"/>
+		<property name="Use_time"    value="..."/>
 		<property name="Sound_start" value="player_drinking"/>
 		<property name="Create_item" value="drinkJarEmpty"/>
 	</property>

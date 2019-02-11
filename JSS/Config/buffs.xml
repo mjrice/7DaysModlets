@@ -72,7 +72,7 @@
 		<duration value="180"/>
 		<effect_group>
 			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel warmer"/> 		
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Warmth spreads through your body"/> 		
 		</effect_group>
 	</buff>
 	
@@ -81,7 +81,7 @@
 		<duration value="180"/>
 		<effect_group>
 			<passive_effect name="HyperthermalResist" operation="base_add" value="10"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel cooler"/> 		
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel... cooler"/> 		
 		</effect_group>
 	</buff>
 	

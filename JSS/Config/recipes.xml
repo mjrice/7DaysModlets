@@ -234,6 +234,13 @@
 		<ingredient name="drinkJarEmpty"      count="1"/>
 	</recipe>
 
+	<recipe name="Rekt's Apocolyptic Sundae" count="1">
+		<ingredient name="Peanut Butter"      count="1"/>
+		<ingredient name="Chocolate Pudding"  count="1"/>
+		<ingredient name="resourceSnowBall"   count="2"/>
+		<ingredient name="drinkJarEmpty"      count="1"/>
+	</recipe>
+	
 </insertAfter>
 
 <!-- MODTAG new herbal antibiotics recipes -->
