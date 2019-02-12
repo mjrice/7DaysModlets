@@ -129,6 +129,9 @@
 	<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='EconomicValue']/@value">50</set>
 	<set xpath="/items/item[@name='resourceBulletCasingSteel']/property[@name='EconomicValue']/@value">50</set>
 
+	<!-- iron club is over valued -->
+	<set xpath="/items/item[@name='meleeClubIron']/property[@name='EconomicValue']/@value">250</set>
+
 	<!-- RATIONAL BULET VALUES = entity damage / 4 + 3 -->	
 	<set xpath="/items/item[@name='ammo9mmBullet']/property[@name='EconomicValue']/@value">          11</set>  <!-- 32 -->
 	<set xpath="/items/item[@name='ammo9mmBulletJHP']/property[@name='EconomicValue']/@value">       12</set>  <!-- 35 -->
@@ -144,13 +147,13 @@
 	<set xpath="/items/item[@name='ammoBlunderbuss']/property[@name='EconomicValue']/@value">        23</set>  <!-- 88 -->
 
 	<!-- ==================================== -->
-	<!-- comparison of weapon damages 
+	<!-- comparison of weapon/tool damages and values
 	original values
 	item                  entity damage   stamina loss     attacks per minute    economic value
 	===================== =============   ============     ==================    ==============
 	meleeToolSledgehammer 42              27.6             34                    500
 	meleeClubWood         16              15.3             55                    5
-	meleeClubIron         21              16.1             52                    350
+	meleeClubIron         21              16.1             52                    250 (orig 350)
 	meleeBoneShiv         16              13.5             55                    34
 	meleeToolHuntingKnife 13              12.3             60                    300
 	meleeToolMachete      20              15.8             50	                 600
@@ -717,6 +720,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="37"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="me gustan estas enchiladas!"/>
 	</effect_group>
 </item>
 
@@ -2372,7 +2376,7 @@
 	<property class="Action0"><requirement name="CVarCompare" cvar="mecialFirstAidBandage" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3000"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidBandage" operation="set" value="1"/> <!-- tooltip_key="ttRecipeUnlocked" -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalFirstAidBandage" operation="set" value="1"/>
 		<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalAloeCream" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Aloe Cream"/>
 		-->

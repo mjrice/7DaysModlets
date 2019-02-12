@@ -114,6 +114,7 @@
 	<item name="Toolmaking Today: Workbench"   />
 	<item name="Toolmaking Today: Cement Mixer"/>
 	<item name="Toolmaking Today: Tablesaw"    />
+	<item name="Toolmaking Today: Forges"      />
 </trader_item_group>
 
 <trader_item_group name="books" >

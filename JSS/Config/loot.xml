@@ -168,6 +168,7 @@
 	<item group="WeaponsBooksLootGroupLevel1"       max_count="1" />
 	<item group="magazineCookingLevel1Recipes"      max_count="1" />
 	<item group="EugeneExplainsScienceBooks"        max_count="1" />
+	<item group="ToolmakingToday"                   max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier2SkillRewards">
@@ -176,6 +177,7 @@
 	<item group="WeaponsBooksLootGroupLevel2"    max_count="1" />
 	<item group="magazineCookingLevel2Recipes"   max_count="1" />
 	<item group="EugeneExplainsScienceBooks"        max_count="1" />
+	<item group="ToolmakingToday"                   max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier3SkillRewards">
@@ -184,6 +186,7 @@
 	<item group="WeaponsBooksLootGroupLevel3"   max_count="1" />
 	<item group="magazineCookingLevel3Recipes"  max_count="1"  />
 	<item group="EugeneExplainsScienceBooks"        max_count="1" />
+	<item group="ToolmakingToday"                   max_count="1" />
 </lootgroup>
 
 <lootgroup name="questTier4SkillRewards">
@@ -192,6 +195,7 @@
 	<item group="WeaponsBooksLootGroupLevel4"   max_count="1" />
 	<item group="magazineCookingLevel4Recipes"  max_count="1"  />
 	<item group="EugeneExplainsScienceBooks"        max_count="1" />
+	<item group="ToolmakingToday"                   max_count="1" />
 </lootgroup>
 
 
