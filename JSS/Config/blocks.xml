@@ -261,7 +261,7 @@
 		<drop event="Destroy" name="Medical Journal: First Aid Bandage" count="1"/>
 		<drop event="Destroy" name="Medical Journal: Plaster Cast" count="1"/>
 		<drop event="Destroy" name="medicalFirstAidKit"                 count="2"/>
-		<drop event="Destroy" name="drugPainkillers" count="5"/>		
+		<drop event="Destroy" name="drugPainkillers" count="2"/>		
 	</block>
 	
 	<block name="Survivalist Suitcase">
@@ -324,7 +324,11 @@
 		<drop event="Destroy" name="oldCash"        count="1000"/>		
 	    <drop event="Destroy" name="cigar"          count="1"   />
 		<drop event="Destroy" name="Golf Trophy"    count="1"  /> 
-		<!-- <drop event="Destroy" name="Pewter Chess Piece - Pawn"    count="8"  /> 
+				
+		<!--<drop event="Destroy" name="Cookbook: Grandpas Learning Elixir"/>
+        <drop event="Destroy" name="Cookbook: Grandpas Moonshine"/>
+        <drop event="Destroy" name="Cookbook: Grandpas Awesome Sauce"/>
+        <drop event="Destroy" name="Pewter Chess Piece - Pawn"    count="8"  /> 
 		<drop event="Destroy" name="resourcePaint"/>
 		<drop event="Destroy" name="Pewter Chess Piece - Rook"    count="2"  /> 
 		<drop event="Destroy" name="Pewter Chess Piece - Queen"    count="1"  /> 
@@ -355,7 +359,7 @@
 		<property name="CreativeMode"        value="None"/>
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
 		<drop event="Destroy" name="oldCash" count="500"/>		
-		<drop event="Destroy" name="drugPainkillers" count="5"/>		
+		<drop event="Destroy" name="drugPainkillers" count="2"/>		
 		<drop event="Destroy" name="drugSteroids"    count="2"/>				
 		<drop event="Destroy" name="ammo9mmBullet"   count="30" />
 	    <drop event="Destroy" name="gunPistol"       count="1" quality="1" /> <!-- how to set quality of gun to low? -->

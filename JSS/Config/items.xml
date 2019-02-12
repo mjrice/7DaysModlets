@@ -2270,10 +2270,10 @@
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="foodGrandpasMoonshine" operation="Equals" value="0"/></property>
+	<property class="Action0"><requirement name="CVarCompare" cvar="drinkJarGrandpasMoonshine" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasMoonshine" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarGrandpasMoonshine" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grandpas Moonshine"/>
 	</effect_group>
 </item>
@@ -2282,10 +2282,10 @@
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="foodGrandpasAwesomeSauce" operation="Equals" value="0"/></property>
+	<property class="Action0"><requirement name="CVarCompare" cvar="drinkJarGrandpasAwesomeSauce" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>	
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasAwesomeSauce" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarGrandpasAwesomeSauce" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grandpas Awesome Sauce"/>
 	</effect_group>
 </item>
@@ -2294,10 +2294,10 @@
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="EconomicValue"    value="1200"/>
 	<property name="CreativeMode" value="Player"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="foodGrandpasLearningElixir" operation="Equals" value="0"/></property>
+	<property class="Action0"><requirement name="CVarCompare" cvar="drinkJarGrandpasLearningElixir" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>	
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodGrandpasLearningElixir" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkJarGrandpasLearningElixir" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grandpas Learning Elixir"/>
 	</effect_group>
 </item>
