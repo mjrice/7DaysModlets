@@ -12,6 +12,7 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='seeds']">
 	<item name="Strawberry Seeds"/>
+	<item name="Wheat Seeds"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='junk']">
@@ -435,6 +436,7 @@
 	<item name="Peanut Butter"    />		
 	<item name="Dried Noodles"    />
 	<item name="Tortillas"  count="1,4" />
+	<item name="Flour" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='brassResource']">

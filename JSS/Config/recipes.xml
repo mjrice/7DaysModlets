@@ -33,6 +33,9 @@
 <!-- MODTAG change chili dog to use wolf meat (haha dog get it?) -->
 <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@name">Wolf Meat</set>
 
+<!-- MODTAG corn meal requires two corns -->
+<set xpath="/recipes/recipe[@name='foodCornMeal']/ingredient[@name='foodCropCorn']/@count">2</set>
+
 <!-- decrease wood needed to make spikes from 20 to 15 -->
 <!-- <set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set> -->
 
@@ -152,7 +155,13 @@
 	</recipe>
 
 	<recipe name="Tortillas" count="2" craft_area="campfire" craft_tool="toolCookingPot">
-		<ingredient name="foodCornMeal" count="5"/>
+		<ingredient name="foodCornMeal" count="5"/> <!-- 10 corn plants = 2 tortillas -->
+		<ingredient name="drinkJarBoiledWater"   count="1"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+	</recipe>
+
+	<recipe name="Tortillas" count="2" craft_area="campfire" craft_tool="toolCookingPot">
+		<ingredient name="Flour" count="1"/> <!-- 10 wheat plants = 2 tortillas -->
 		<ingredient name="drinkJarBoiledWater"   count="1"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
 	</recipe>
@@ -383,6 +392,15 @@
 <!-- MODTAG strawberry seeds -->
 <recipe name="Strawberry Seeds" count="1" craft_time="1" tags="learnable">
 	<ingredient name="Strawberries" count="2"/>
+</recipe>
+
+<recipe name="Wheat Seeds" count="1" craft_time="1">
+	<ingredient name="Wheat" count="2"/>
+</recipe>
+
+<recipe name="Flour" count="1" craft_time="3">
+	<ingredient name="Wheat" count="10"/>
+	<ingredient name="resourceCloth" count="1"/>
 </recipe>
 
 	<recipe name="Strawberry Preserves" count="1" craft_area="campfire" craft_tool="toolCookingPot" > 

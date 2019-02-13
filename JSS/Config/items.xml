@@ -751,6 +751,55 @@
 	</effect_group>
 </item>
 
+<!-- MODTAG Added Wheat -->
+<item name="Wheat">
+	<property name="CustomIcon"    value="Wheat"/> 
+	<property name="HoldType"      value="31"/>
+	<property name="Meshfile"      value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material"      value="MresourceCrop"/>
+	<property name="Stacknumber"   value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="16"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="CraftingIngredientTime" value="8"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="Flour">
+	<property name="CustomIcon"    value="WheatFlour"/> 
+	<property name="CraftingIngredientTime" value="8"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="Group" value="Food/Cooking"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="foodWater"/>
+	<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="20"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="CraftingIngredientTime" value="10"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Resources,Food/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="subtract" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffIllFoodPoisoning0">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+		</triggered_effect>
+		<display_value name="FoodPoisoningRisk" value=".1" />
+	</effect_group>
+</item>
+
 <!-- Strawberry shortcake -->
 <item name="Strawberry Shortcake">
 	<property name="CustomIcon"       value="StrawberryShortcake"/> 

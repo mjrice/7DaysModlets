@@ -157,17 +157,17 @@
 <insertBefore xpath="/blocks/block[@name='plantedChrysanthemum1']">
 <!-- MODTAG Strawberry plants (looks like potato plant) -->
 	<block name="Strawberry Seeds">
-		<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey"/>
-	    <property name="CustomIcon"  value="StrawberrySeeds"/> 
-		<property name="Description" value="Strawberry Seeds"/>
-		<property name="CreativeMode" value="Player"/>
-		<property name="Shape" value="ModelEntity"/>
-		<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
+		<property name="Extends"           value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey"/>
+	    <property name="CustomIcon"        value="StrawberrySeeds"/> 
+		<property name="Description"       value="Strawberry Seedling"/>
+		<property name="CreativeMode"      value="Player"/>
+		<property name="Shape"             value="ModelEntity"/>
+		<property name="Model"             value="Entities/Plants/potato_plant_sproutPrefab"/>
 		<property name="PlantGrowing.Next" value="plantedStrawberry2"/>
-		<property name="Group" value="Food/Cooking"/>
-		<drop event="Destroy" name="Strawberry Seeds" count="1"/>
+		<property name="Group"             value="Food/Cooking"/>
+		<drop     event="Destroy"          name="Strawberry Seeds" count="1"/>
 	</block>
-
+	
 	<block name="plantedStrawberry2">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="Description" value="Strawberry Plant"/>
@@ -178,7 +178,7 @@
 		<property name="PlantGrowing.Next" value="plantedStrawberry3HarvestPlayer"/>
 		<drop event="Destroy" name="Strawberry Seeds" count="1"/>
 	</block>
-
+		
 	<block name="plantedStrawberry3Harvest">
 		<property name="Extends" value="cropsHarvestableMaster"/>
 		<property name="Class" value="CropsGrown"/>
@@ -198,6 +198,66 @@
 		<property name="DowngradeBlock" value="Strawberry Seeds"/>
 	</block>	
 	
+	<!-- Notes about grass textures
+		39 big with purple flowers on top
+		40 tall with white pods on top
+		350,368,369,370,350,368 snowy
+		562 olive green with wide blades
+		563 tall and yellowish green reeds
+		564 kinda pink stems and white flowers, olive leaves
+		565 tall with whispy things on top		
+		364 tall dark green
+		365 tall wiggly green
+		306 brown and whispy
+		371 brown and wiggly
+		201 brown whispy things on top 
+		401 little green sprout
+		-->
+	
+	<block name="Wheat Seeds">
+		<property name="Extends"           value="cropsGrowingMaster" /> 
+		<property name="CustomIcon"        value="WheatSeeds" />		
+		<property name="CreativeMode"      value="Player"/>
+		<property name="DisplayInfo"       value="Name"/> 
+		<property name="Description"       value="Wheat Seedling"/>
+		<property name="Material"          value="Mplants"/> 
+		<property name="Shape"             value="BillboardPlant"/> 
+		<property name="StabilitySupport"  value="false"/>
+		<property name="Mesh"              value="grass"/>
+		<property name="Texture"           value="401" /> 
+		<property name="PlantGrowing.Next" value="plantedWheat2" />
+		<property name="Group"             value="Food/Cooking"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="Collide"           value="melee"/>
+		<property name="Class"             value="PlantGrowing"/>
+		<property name="PlantGrowing.IsRandom"     value="true"/>	
+		<property name="EconomicValue"             value="12"/>
+		<property name="EconomicBundleSize"        value="5"/>
+		<drop     event="Destroy"                  name="Wheat Seeds" count="1"/>
+	</block>
+
+	<block name="plantedWheat2">
+		<property name="Extends" value="cropsGrowingMaster" />
+		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal" />
+		<property name="CustomIconTint" value="B4AE30" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Shape" value="Grass"/>
+		<property name="Texture" value="402" />
+		<property name="PlantGrowing.Next" value="plantedWheat3Harvest" />
+		<property name="Group" value="Food/Cooking"/>
+		<drop event="Destroy" name="Wheat Seeds" count="1"/>
+	</block>
+	
+	<block name="plantedWheat3Harvest">
+		<property name="Extends" value="cropsHarvestableMaster" />
+		<property name="CustomIcon" value="Wheat" />		
+		<property name="Class" value="CropsGrown" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Shape" value="Grass"/>
+		<property name="Texture" value="306" />
+		<drop event="Harvest" name="Wheat" count="3" />
+	</block>
+
 	<block name="hangingMoss">
 		<property name="Material" value="Mcloth"/>
 		<property name="Shape" value="ModelEntity"/>
@@ -303,7 +363,8 @@
 		<drop event="Destroy" name="Cookbook: All About Seeds"    count="1"/>
 		<drop event="Destroy" name="Toolmaking Today: Iron Tools" count="1"/>		
 		<drop event="Destroy" name="meleeToolHoeIron"             count="1" quality="1,2"/>
-		<drop event="Destroy" name="plantedCorn1"                 count="20"/>		
+		<drop event="Destroy" name="plantedCorn1"                 count="10"/>		
+		<drop event="Destroy" name="Wheat Seeds"                  count="10"/>
 	</block>
 
 	<block name="CEO Suitcase">
