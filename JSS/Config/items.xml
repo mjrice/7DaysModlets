@@ -71,7 +71,11 @@
 	<append xpath="/items/item[@name=       'resourceCropCottonPlant']"><property name="SellableToTrader" value="true"/></append>
 	<append xpath="/items/item[@name=           'foodCropBlueberries']"><property name="SellableToTrader" value="true"/></append>
 	<append xpath="/items/item[@name=                  'foodCropCorn']"><property name="SellableToTrader" value="true"/></append>
-	<append xpath="/items/item[@name=                  'foodCornMeal']"><property name="SellableToTrader" value="true"/></append>
+	<append xpath="/items/item[@name=                  'foodCornMeal']">
+		<property name="SellableToTrader" value="true"/>
+		<property name="CustomIcon"       value="WheatFlour"/> 
+		<property name="CustomIconTint"   value="eeee88"/> 
+	</append>
 	<append xpath="/items/item[@name=                'foodCropPotato']"><property name="SellableToTrader" value="true"/></append>
 	<append xpath="/items/item[@name=             'foodCropMushrooms']"><property name="SellableToTrader" value="true"/></append>
 	<set xpath="/items/item[@name=            'foodCropYuccaFruit']/property[@name='SellableToTrader']/@value">true</set>	

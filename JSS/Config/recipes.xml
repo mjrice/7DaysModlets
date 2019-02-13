@@ -33,9 +33,12 @@
 <!-- MODTAG change chili dog to use wolf meat (haha dog get it?) -->
 <set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@name">Wolf Meat</set>
 
-<!-- MODTAG corn meal requires two corns -->
-<set xpath="/recipes/recipe[@name='foodCornMeal']/ingredient[@name='foodCropCorn']/@count">2</set>
-
+<!-- MODTAG corn meal requires five corns and a cloth to make a sack -->
+<set xpath="/recipes/recipe[@name='foodCornMeal']/ingredient[@name='foodCropCorn']/@count">5</set>
+<append xpath="/recipes/recipe[@name='foodCornMeal']">
+	<ingredient name="resourceCloth" count="1"/>
+</append>
+	
 <!-- decrease wood needed to make spikes from 20 to 15 -->
 <!-- <set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">15</set> -->
 
@@ -69,13 +72,13 @@
     <!-- === -->
 	<!-- MODTAG more intermediate recipes for other meat types (comparable benefit to bacon and eggs) -->
 	<recipe name="Chicken Surprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="foodCornMeal" count="2"/>
+		<ingredient name="foodCornMeal" count="1"/>
 		<ingredient name="Moss"         count="1"/>
 		<ingredient name="Raw Chicken"  count="10"/>
 	</recipe>
 
 	<recipe name="Tastes Like Chicken Surprise" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="foodCornMeal" count="2"/>
+		<ingredient name="foodCornMeal" count="1"/>
 		<ingredient name="Moss"         count="1"/>
 		<ingredient name="Snake Meat"   count="10"/>
 	</recipe>
@@ -155,13 +158,13 @@
 	</recipe>
 
 	<recipe name="Tortillas" count="2" craft_area="campfire" craft_tool="toolCookingPot">
-		<ingredient name="foodCornMeal" count="5"/> <!-- 10 corn plants = 2 tortillas -->
+		<ingredient name="foodCornMeal" count="2"/> <!-- 10 corn plants = 2 tortillas -->
 		<ingredient name="drinkJarBoiledWater"   count="1"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
 	</recipe>
 
 	<recipe name="Tortillas" count="2" craft_area="campfire" craft_tool="toolCookingPot">
-		<ingredient name="Flour" count="1"/> <!-- 10 wheat plants = 2 tortillas -->
+		<ingredient name="Flour" count="2"/> <!-- 10 wheat plants = 2 tortillas -->
 		<ingredient name="drinkJarBoiledWater"   count="1"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
 	</recipe>
@@ -287,7 +290,7 @@
 
 	<recipe name="medicalPlasterCast" count="1" craft_area="chemistryStation" tags="learnable" craft_exp_gain="100">
 		<ingredient name="resourceCloth" count="2"/>
-		<ingredient name="foodCornMeal" count="4"/>
+		<ingredient name="foodCornMeal" count="2"/>
 		<ingredient name="resourceCrushedSand" count="2"/>
 		<ingredient name="drinkJarRiverWater" count="1"/>
 	</recipe>
@@ -357,9 +360,9 @@
 <!-- ================================================================
      MODTAG new cornbread recipe
 	 other cornbread greatness in items.xml 
-	 cornbread: two corn meals, an egg, water.  
+	 cornbread: 1 corn meals, an egg, water.  
 	 ================================================================ -->
-	<set xpath="/recipes/recipe[@name='foodCornBread']/ingredient[@name='foodCornMeal']/@count">2</set>
+	<set xpath="/recipes/recipe[@name='foodCornBread']/ingredient[@name='foodCornMeal']/@count">1</set>
 	<append xpath="/recipes/recipe[@name='foodCornBread']">
 		<ingredient name="foodEgg" count="1"/>
 	</append>
@@ -399,7 +402,7 @@
 </recipe>
 
 <recipe name="Flour" count="1" craft_time="3">
-	<ingredient name="Wheat" count="10"/>
+	<ingredient name="Wheat" count="5"/>
 	<ingredient name="resourceCloth" count="1"/>
 </recipe>
 
@@ -414,10 +417,10 @@
 	
 <!-- MODTAG strawberry shortcake -->
 	<recipe name="Strawberry Shortcake" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
-		<ingredient name="Strawberries" count="15"/>
-		<ingredient name="foodEgg" count="1"/>
-		<ingredient name="foodCornMeal" count="1"/>
-		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="Strawberries"        count="15"/>
+		<ingredient name="foodEgg"             count="1"/>
+		<ingredient name="Flour"               count="1"/>
+		<ingredient name="resourceAnimalFat"   count="1"/>
 		<ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
 
@@ -491,43 +494,43 @@
 	<recipe name="Fried Pork" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Raw Pork"          count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	<recipe name="Fried Chicken" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Raw Chicken"       count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	<recipe name="Fried Rabbit" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Rabbit Meat"       count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	<recipe name="Fried Bear" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Bear Meat"         count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	<recipe name="Fried Snake" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Snake Meat"        count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	<recipe name="Fried Venison" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Raw Venison"       count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	<recipe name="Fried Wolf" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
 		<ingredient name="Wolf Meat"         count="5"/>
 		<ingredient name="resourceAnimalFat" count="1"/>
-		<ingredient name="foodCornMeal"      count="2"/>
+		<ingredient name="foodCornMeal"      count="1"/>
 		<ingredient name="foodEgg"           count="1"/>
 	</recipe>
 	
@@ -657,7 +660,7 @@
 	</recipe>
 
 	<recipe name="Encyclopedia Set" count="1" craft_time="5" >
-		<ingredient name="Encyclopedia Volume A" count="1" />
+		<ingredient name="Encyclopedia Volume A" count="1"/>
 		<ingredient name="Encyclopedia Volume B" count="1"/>
 		<ingredient name="Encyclopedia Volume C" count="1"/>
 		<ingredient name="Encyclopedia Volume D" count="1"/>
