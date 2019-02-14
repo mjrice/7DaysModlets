@@ -381,9 +381,24 @@
 <remove xpath="/recipes/recipe[@name='foodBoiledMeat']"/>
 <remove xpath="/recipes/recipe[@name='foodMeatStew']"/>
 
+<append xpath="/recipes/recipe[@name='plantedCorn1']">
+	<ingredient name="resourcePaper" count="1"/>
+</append>
+
+<append xpath="/recipes/recipe[@name='plantedPotato1']">
+	<ingredient name="resourcePaper" count="1"/>
+</append>
+
 <!-- MODTAG any base meat can be made into identical "charred meat" -->
 <set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@name">Raw Pork</set>
 <insertAfter xpath="/recipes/recipe[@name='foodBlueberryPie']">
+
+<recipe name="medicalPlasterCast" count="1" craft_area="chemistryStation" tags="learnable">
+	<ingredient name="resourceCloth" count="2"/>
+	<ingredient name="Flour" count="4"/>
+	<ingredient name="resourceCrushedSand" count="2"/>
+	<ingredient name="drinkJarRiverWater" count="1"/>
+</recipe>
 
 <!-- MODTAG Herbal Tea -->
 <recipe name="Herbal Tea" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable">
@@ -394,11 +409,13 @@
 
 <!-- MODTAG strawberry seeds -->
 <recipe name="Strawberry Seeds" count="1" craft_time="1" tags="learnable">
-	<ingredient name="Strawberries" count="2"/>
+	<ingredient name="Strawberries" count="4"/>
+	<ingredient name="resourcePaper" count="1"/>
 </recipe>
 
-<recipe name="Wheat Seeds" count="1" craft_time="1">
-	<ingredient name="Wheat" count="2"/>
+<recipe name="Wheat Seeds" count="1" craft_time="1" tags="learnable">
+	<ingredient name="Wheat" count="4"/>
+	<ingredient name="resourcePaper" count="1"/>
 </recipe>
 
 <recipe name="Flour" count="1" craft_time="3">

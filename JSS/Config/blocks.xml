@@ -3,45 +3,19 @@
 <!-- ===================================================== -->
 <!-- FOLLOWING MOD TO PICK UP WILD PLANTS IS FROM KhaineGB -->
 <!-- MODTAG Add the E action back to wild plants -->
-	<append xpath="/blocks/block[@name='plantedMushroom3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedYucca3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedCotton3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedCoffee3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedGoldenrod3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedAloe3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedBlueberry3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedPotato3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedChrysanthemum3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedCorn3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedGraceCorn3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedHop3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
-	<append xpath="/blocks/block[@name='plantedSnowberry3Harvest']">
-		<property name="Class" value="CropsGrown"/>
-	</append>
+	<append xpath="/blocks/block[@name='plantedMushroom3Harvest']">		<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedYucca3Harvest']">		<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedCotton3Harvest']">		<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedCoffee3Harvest']">		<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedGoldenrod3Harvest']">	<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedAloe3Harvest']">			<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedBlueberry3Harvest']">	<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedPotato3Harvest']">		<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedChrysanthemum3Harvest']"><property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedCorn3Harvest']">			<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedGraceCorn3Harvest']">	<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedHop3Harvest']">			<property name="Class" value="CropsGrown"/>	</append>
+	<append xpath="/blocks/block[@name='plantedSnowberry3Harvest']">	<property name="Class" value="CropsGrown"/>	</append>
 	
 <!-- Special fixes for player-grown crops so they can't be picked up with E -->
 	<set xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']/property[@name='Extends']/@value">cropsHarvestableMaster</set>
@@ -154,6 +128,14 @@
 
 <remove xpath="/blocks/block[@name='hangingMoss']"/>
 
+<append xpath="/blocks/block[@name='plantedCorn1']">
+	<property name="CustomIcon" value="CornSeeds"/>
+</append>
+
+<append xpath="/blocks/block[@name='plantedPotato1']">
+	<property name="CustomIcon" value="PotatoSeeds"/>
+</append>
+
 <insertBefore xpath="/blocks/block[@name='plantedChrysanthemum1']">
 <!-- MODTAG Strawberry plants (looks like potato plant) -->
 	<block name="Strawberry Seeds">
@@ -163,41 +145,44 @@
 		<property name="CreativeMode"      value="Player"/>
 		<property name="Shape"             value="ModelEntity"/>
 		<property name="Model"             value="Entities/Plants/potato_plant_sproutPrefab"/>
-		<property name="PlantGrowing.Next" value="plantedStrawberry2"/>
+		<property name="PlantGrowing.Next" value="Strawberry Seedling"/>
 		<property name="Group"             value="Food/Cooking"/>
 		<drop     event="Destroy"          name="Strawberry Seeds" count="1"/>
 	</block>
 	
-	<block name="plantedStrawberry2">
+	<block name="Strawberry Seedling">
 		<property name="Extends" value="cropsGrowingMaster"/>
 		<property name="Description" value="Strawberry Plant"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="CustomIcon" value="plantedPotato1"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
-		<property name="PlantGrowing.Next" value="plantedStrawberry3HarvestPlayer"/>
+		<property name="PlantGrowing.Next" value="Strawberry Plant"/>
 		<drop event="Destroy" name="Strawberry Seeds" count="1"/>
 	</block>
 		
-	<block name="plantedStrawberry3Harvest">
+	<block name="Wild Strawberry Plant">
 		<property name="Extends" value="cropsHarvestableMaster"/>
 		<property name="Class" value="CropsGrown"/>
 		<property name="Description" value="Strawberry Plant"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
-		<drop event="Harvest" name="Strawberries" count="3" tag="wildCropsHarvest"/>
+		<drop event="Harvest" name="Strawberries" count="1" tag="wildCropsHarvest"/>
 	</block>
 
-	<block name="plantedStrawberry3HarvestPlayer">
-		<property name="Extends" value="plantedStrawberry3Harvest"/>
-		<property name="Class" value="CropsGrown"/>
-		<property name="Description" value="Strawberry Plant"/>
+	<block name="Strawberry Plant">
+		<property name="Extends" value="cropsHarvestableMaster" param1="CustomIcon,DescriptionKey"/>
+		<property name="DescriptionKey" value="Mature Strawberry Plant"/>
 		<property name="CustomIcon" value="plantedPotato1"/>
 		<property name="CreativeMode" value="None"/>
-		<drop event="Harvest" name="Strawberries" count="3" tag="cropHarvest"/>
-		<property name="DowngradeBlock" value="Strawberry Seeds"/>
+		<drop event="Harvest" name="Strawberries" count="1" tag="cropHarvest"/>
+		<property name="DowngradeBlock" value="Strawberry Seeds"/>		
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
 	</block>	
-	
+
+
+
 	<!-- Notes about grass textures
 		39 big with purple flowers on top
 		40 tall with white pods on top
@@ -205,58 +190,69 @@
 		562 olive green with wide blades
 		563 tall and yellowish green reeds
 		564 kinda pink stems and white flowers, olive leaves
-		565 tall with whispy things on top		
+		565 tall with whispy things on top	kind of brownish	
 		364 tall dark green
 		365 tall wiggly green
 		306 brown and whispy
 		371 brown and wiggly
 		201 brown whispy things on top 
 		401 little green sprout
+		402 kind of bigger than 401
 		-->
 	
 	<block name="Wheat Seeds">
-		<property name="Extends"           value="cropsGrowingMaster" /> 
-		<property name="CustomIcon"        value="WheatSeeds" />		
-		<property name="CreativeMode"      value="Player"/>
-		<property name="DisplayInfo"       value="Name"/> 
-		<property name="Description"       value="Wheat Seedling"/>
-		<property name="Material"          value="Mplants"/> 
-		<property name="Shape"             value="BillboardPlant"/> 
-		<property name="StabilitySupport"  value="false"/>
-		<property name="Mesh"              value="grass"/>
-		<property name="Texture"           value="401" /> 
-		<property name="PlantGrowing.Next" value="plantedWheat2" />
-		<property name="Group"             value="Food/Cooking"/>
-		<property name="ImposterDontBlock" value="true"/>
-		<property name="Collide"           value="melee"/>
-		<property name="Class"             value="PlantGrowing"/>
-		<property name="PlantGrowing.IsRandom"     value="true"/>	
-		<property name="EconomicValue"             value="12"/>
-		<property name="EconomicBundleSize"        value="5"/>
-		<drop     event="Destroy"                  name="Wheat Seeds" count="1"/>
+		<property name="Extends"           		value="cropsGrowingMaster" param1="CustomIcon,DescriptionKey" /> 
+		<property name="CustomIcon"        		value="WheatSeeds" />		
+		<property name="CreativeMode"      		value="Player"/>
+		<property name="DisplayInfo"       		value="Name"/> 
+		<property name="Description"       		value="Wheat Seedling"/>
+		<property name="Material"          		value="Mplants"/> 
+		<property name="Shape"             		value="BillboardPlant"/> 
+		<property name="StabilitySupport"  		value="false"/>
+		<property name="Mesh"              		value="grass"/>
+		<property name="Texture"           		value="401" /> 
+		<property name="PlantGrowing.Next" 		value="Wheat sprouts" />
+		<property name="Group"             		value="Food/Cooking"/>
+		<property name="ImposterDontBlock" 		value="true"/>
+		<property name="Collide"           		value="melee"/>
+		<property name="Class"             		value="PlantGrowing"/>
+		<property name="PlantGrowing.IsRandom"  value="true"/>	
+		<property name="EconomicValue"          value="12"/>
+		<property name="EconomicBundleSize"     value="5"/>
+		<drop     event="Destroy"               name="Wheat Seeds" count="1"/>
 	</block>
 
-	<block name="plantedWheat2">
+	<block name="Wheat sprouts">
 		<property name="Extends" value="cropsGrowingMaster" />
-		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal" />
-		<property name="CustomIconTint" value="B4AE30" />
+		<property name="CustomIcon" value="treeGreenBrownGrassDiagonal" />		
 		<property name="CreativeMode" value="Player"/>
 		<property name="Shape" value="Grass"/>
-		<property name="Texture" value="402" />
-		<property name="PlantGrowing.Next" value="plantedWheat3Harvest" />
+		<property name="Texture" value="364" />
+		<property name="PlantGrowing.Next" value="Wheat Plant" />
 		<property name="Group" value="Food/Cooking"/>
 		<drop event="Destroy" name="Wheat Seeds" count="1"/>
 	</block>
 	
-	<block name="plantedWheat3Harvest">
-		<property name="Extends" value="cropsHarvestableMaster" />
-		<property name="CustomIcon" value="Wheat" />		
-		<property name="Class" value="CropsGrown" />
+	<block name="Wild Wheat Plant">
+		<property name="Extends"      value="cropsHarvestableMaster" />
+		<property name="CustomIcon"   value="Wheat" />		
+		<property name="Class"        value="CropsGrown" />
 		<property name="CreativeMode" value="Player"/>
-		<property name="Shape" value="Grass"/>
-		<property name="Texture" value="306" />
-		<drop event="Harvest" name="Wheat" count="3" />
+		<property name="Shape"        value="Grass"/>
+		<property name="Texture"      value="306" />
+		<drop event="Harvest" name="Wheat" count="1" />
 	</block>
+
+	<block name="Wheat Plant">
+		<property name="Extends"        value="cropsHarvestableMaster" param1="CustomIcon,DescriptionKey"/>
+		<property name="DescriptionKey"    value="Mature Wheat"/>
+		<property name="CustomIcon"     value="Wheat"/>
+		<property name="CreativeMode"   value="None"/>
+		<property name="Shape"          value="Grass"/>
+		<property name="DowngradeBlock" value="Wheat Seeds"/>		
+		<property name="Texture"        value="306,565" />
+		<drop event="Harvest" name="Wheat" count="1" tag="cropHarvest"/>		
+	</block>	
 
 	<block name="hangingMoss">
 		<property name="Material" value="Mcloth"/>

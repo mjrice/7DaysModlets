@@ -73,8 +73,7 @@
 	<append xpath="/items/item[@name=                  'foodCropCorn']"><property name="SellableToTrader" value="true"/></append>
 	<append xpath="/items/item[@name=                  'foodCornMeal']">
 		<property name="SellableToTrader" value="true"/>
-		<property name="CustomIcon"       value="WheatFlour"/> 
-		<property name="CustomIconTint"   value="eeee88"/> 
+		<property name="CustomIcon"       value="CornMeal"/> 		
 	</append>
 	<append xpath="/items/item[@name=                'foodCropPotato']"><property name="SellableToTrader" value="true"/></append>
 	<append xpath="/items/item[@name=             'foodCropMushrooms']"><property name="SellableToTrader" value="true"/></append>
@@ -2381,6 +2380,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedYucca1" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="plantedHop1" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Strawberry Seeds" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Wheat Seeds" operation="set" value="1"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Aloe seeds"/> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Blueberry seeds"/> 		
@@ -2394,6 +2394,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Yucca seeds"/> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Hop seeds"/> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Strawberry seeds"/> 				
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Wheat seeds"/> 				
 	</effect_group>
 </item>
 
