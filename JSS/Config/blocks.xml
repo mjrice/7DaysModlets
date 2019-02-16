@@ -172,13 +172,14 @@
 
 	<block name="Strawberry Plant">
 		<property name="Extends" value="cropsHarvestableMaster" param1="CustomIcon,DescriptionKey"/>
-		<property name="DescriptionKey" value="Mature Strawberry Plant"/>
+		<property name="DescriptionKey" value="Mature Strawberry Plant"/> <!-- this is what the player sees when they look at the plant -->
 		<property name="CustomIcon" value="plantedPotato1"/>
 		<property name="CreativeMode" value="None"/>
 		<drop event="Harvest" name="Strawberries" count="1" tag="cropHarvest"/>
 		<property name="DowngradeBlock" value="Strawberry Seeds"/>		
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+		<!-- <property name="ModelOffset" value="0,-0.00001,0"/> -->
 	</block>	
 
 
