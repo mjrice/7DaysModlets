@@ -1,0 +1,69 @@
+
+<!-- ===================================================================================
+	 FOOD MODS |
+	 ==========+
+	Master plan for food item benefits
+
+	Food item or category				Food gain	Water gain	Health gain	Value	Other effects        Economic Value of Ingredients not counting water
+	=================================== =========== =========== ===========	====== 	==================== =============================
+	Raw meat (all types) 				1			0			1			2		30% chance poisoning
+	Egg 								5 			0 			2 			10		10% chance poisoning
+	Yucca 								1 			2 			0			20 (5)
+	Blueberry 							1			0			0			20 (5)
+	Strawberries 						1			0			0			20 (5)
+	Potato								2 			0			0			20 (5)	30% food poisoning
+	Mushrooms							2			0			1			20 (5)	2%	food poisoning							
+	Corn 								2			0			1			10 (5)	10% food poisoning
+	Wheat 								n/a			n/a			n/a			16 (5) 
+
+	Flour                				2			-10			0			10 (1)	10% food poisoning
+	Corn Meal							2			-10			1			10 (4)	10% food poisoning
+	Animal Fat 							5 			0 			2 			20
+	Dried Noodles 						2 			-15 		0 			40							10 1flr
+
+	Basic foods							===			===			===			===
+		Charred meat					10			-5 			5			20							10
+		Corn on the Cob					5 			0 			2 			10							2.5
+		Tortilla (corn)                 7           0           1           30							12.5 1crnml+1/2fat
+		Tortilla (flour)                7           0           1           30							20   1flour+1/2fat
+		Noodles 						16 			5 			0 			46							40
+		Corn Bread 						14 			0 			4			40							15 2crnml+1egg
+		Baked Potato					4 			0 			0 			16 (2)						4
+		Boiled Egg 						10			0 			5 			40  						10
+		Grilled meat					10			0 			2 			100							10
+		Stewed meat                     8 			10 			2 			100 						10
+		Fried meat						20			0  			5 			140                        	43 5meat+1egg+1crnml+1fat
+	Intermediate meal 					===			===			===			===
+		Meat Stew						47			20			24			200		Hypo Res +10 3min
+		Chili 							50			10			10			184     Hypo Res +10 3min
+		Vegetable Stew 					31			20 			15			102
+		Bacon and Eggs					36 			0 			18			110
+		Enchilada                       30          0           5           120							140 1grimeat+1tort
+	Excellent meal						===			===			===			===
+		Blueberry Pie					42			0 			22 			124 						80 1flr+10blueberry+egg+1fat
+		Strawberry Shortcake			45			0			22			124                         80 1flr+10strawb+egg+1fat
+		Chili Dog 						53 			0  			30 			106 
+		Steak and Potato 				49			0			24			120
+		Hasenpfeffer					50 			0 			18			172                         28 7rab+3pot+2herbs
+		Chicken Surprise 				46 			0 			18			172
+		Tastes Like Chicken Surprise	46 			0 			18			172 
+		Bear Roast						56 			-5 			18			172 
+		Drunken Dog 					38			10			38			192
+		Chicken Noodle Soup             40          34          10          136							54 7chk+2herb+1noodle
+	Beverages							===			===			===			===
+		Dirty water 					0 			10			0			20		10% chance sick
+		Clean water						0			20			0			30      (drinkJarBoiledWater)
+		Coffee							0			24			0			96		staminaAmount=.25,dHypothermalResist=5
+		Goldenrod Tea					0			24			0			48		staminaAmount=.15, heal Dysentery and food poisoning
+		Red Tea 						0			24			0			48		staminaAmount=.15
+		Herbal Tea 						0			24			0			88		heal Dysentery and food poisoning, hypothermia resist
+		Beer							0			0			0			100		EntityDamage 3%, StaminaChangeOT, stun 
+		Snowberry Juice					0			46			0			92
+		Yucca Juice						0			34			0			68
+		Yucca Smoothie					22			78			11			156		Hypertherm res +10 3m
+		Blueberry Smoothie				22			78			11			156		Hypertherm res +10 3m
+		Strawberry Smoothie				22			78			11			156		Hypertherm res +10 3m
+		Mixed Fruit Smoothie			32			98			21			260 	Hypertherm res +10 3m 
+		Herbal Smoothie					12			48			21			260 	Stamina
+	==================================================================================== -->
+	

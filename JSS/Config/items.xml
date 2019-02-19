@@ -52,7 +52,12 @@
 	<set xpath="/items/item[@name='resourceTestosteroneExtract']/property[@name='EconomicBundleSize']/@value">1</set>
 
 	<!-- MODTAG make clean water sellable -->
-	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='SellableToTrader']/@value">true</set>
+	<!-- <set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='SellableToTrader']/@value">true</set> -->
+
+	<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='EconomicValue']/@value">30</set>
+	
+	<!-- decrease value of corn on the cob -->
+	<set xpath="/items/item[@name='foodCornOnTheCob']/property[@name='EconomicValue']/@value">10</set>
 
 	<!-- MODTAG basic tools are not worth much but trader should still buy them because that's what he's there for -->
 	<set xpath="/items/item[@name=           'meleeBoneShiv']/property[@name='SellableToTrader']/@value">true</set>
@@ -94,7 +99,7 @@
 	<set xpath="/items/item[@name=                  'foodCornMeal']/property[@name='EconomicValue']/@value">10</set>
 	<set xpath="/items/item[@name=                'foodCropPotato']/property[@name='EconomicValue']/@value">20</set>
 	<set xpath="/items/item[@name=             'foodCropMushrooms']/property[@name='EconomicValue']/@value">20</set>
-	<set xpath="/items/item[@name=            'foodCropYuccaFruit']/property[@name='EconomicValue']/@value">10</set>	
+	<set xpath="/items/item[@name=            'foodCropYuccaFruit']/property[@name='EconomicValue']/@value">20</set>	
 
 	<!-- establish economic bunldle sizes for resource crops -->
 	<set xpath="/items/item[@name=    'resourceCropGoldenrodPlant']/property[@name='EconomicBundleSize']/@value">5</set>
@@ -200,61 +205,6 @@
 	<append xpath="/items/item[@name=     'foodHoboStew']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
 	<append xpath="/items/item[@name='foodVegetableStew']/property[@class='Action0']"><property name="Create_item" value="drinkJarEmpty"/></append>
 	
-<!-- ===================================================================================
-	 FOOD MODS |
-	 ==========+
-	Master plan for food item benefits
-
-	Food item or category					Food gain	Water gain	Health gain	Value	Other effects
-	======================================= =========== =========== ===========	====== 	====================
-	Raw meat (all types) 					1			0			1			2		30% chance poisoning
-	Egg 									5 			0 			2 			10		10% chance poisoning
-	Yucca 									1 			2 			0			6
-	Blueberry 								1			0			0			20 (5)
-	Strawberries 							1			0			0			20 (5)
-	Potato									2 			0			0			20 (5)	30% food poisoning
-	Corn 									2			0			1			10 (5)	10% food poisoning
-	Mushrooms								2			0			1			20 (5)	2%	food poisoning							
-	Corn Meal								2			-10			1			4 (5)	10% food poisoning
-	Basic foods								===			===			===			===
-		Charred meat						10			-5 			5			20
-		Corn on the Cob						5 			0 			2 			20
-		Corn Bread 							14 			0 			4			40
-		Baked Potato						4 			0 			0 			16 (2)
-		Boiled Egg 							10			0 			5 			40  
-		Grilled meat						10			0 			2 			110		
-		Stewed meat                        	8 			10 			2 			110 
-		Fried meat							16			0  			5 			140
-	Intermediate meal 						===			===			===			===
-		Meat Stew							47			20			24			200		Hypothermal Resist +10 3minutes
-		Chili 								50			10			10			184     Hypothermal Resist +10 3minutes
-		Vegetable Stew 						31			20 			15			102
-		Bacon and Eggs						36 			0 			18			110  
-	Excellent meal							===			===			===			===
-		Blueberry Pie						42			0 			22 			124 
-		Strawberry Shortcake				45			0			22			124
-		Chili Dog 							53 			0  			30 			106 
-		Steak and Potato 					49			0			24			120
-		Hasenpfeffer						50 			0 			18			172
-		Chicken Surprise 					46 			0 			18			172
-		Tastes Like Chicken Surprise		46 			0 			18			172 
-		Bear Roast							56 			-5 			18			172 
-		Drunken Dog 						38			10			38			192
-	Beverages								===			===			===			===
-		Clean water							0			20			0			40
-		Coffee								0			24			0			96		staminaAmount=.25,dHypothermalResist=5
-		Goldenrod Tea						0			24			0			48		staminaAmount=.15, heal Dysentery and food poisoning
-		Red Tea 							0			24			0			48		staminaAmount=.15
-		Herbal Tea 							0			24			0			88		heal Dysentery and food poisoning, hypothermia resist
-		Beer								0			0			0			100		EntityDamage 3%, StaminaChangeOT, stun 
-		Snowberry Juice						0			46			0			92
-		Yucca Juice							0			34			0			68
-		Yucca Smoothie						22			78			11			156		Hyperthermia resist +10 3minutes
-		Blueberry Smoothie					22			78			11			156		Hyperthermia resist +10 3minutes
-		Strawberry Smoothie					22			78			11			156		Hyperthermia resist +10 3minutes
-		Mixed Fruit Smoothie				32			98			21			260 	Hyperthermia resist +10 3minutes 
-		Herbal Smoothie						12			48			21			260 	Stamina
-	==================================================================================== -->
 	
 <!-- MODTAG remove previous meat items that used generic meat and replace with new meat varieties -->
 <remove xpath="/items/item[@name='foodGrilledMeat']"/>
@@ -638,7 +588,7 @@
 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="0"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="subtract" value="15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<display_value name="waterAmount" value="-15" />
@@ -653,7 +603,7 @@
 	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material"      value="MresourceCrop"/>
 	<property name="Stacknumber"   value="500"/> <!-- STK resource -->
-	<property name="EconomicValue" value="20"/>
+	<property name="EconomicValue" value="30"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="CraftingIngredientTime" value="8"/>
 	<property name="SellableToTrader" value="true"/>
@@ -680,7 +630,7 @@
 	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material"      value="MresourceCrop"/>
 	<property name="Stacknumber"   value="50"/> <!-- STK resource -->
-	<property name="EconomicValue" value="90"/>
+	<property name="EconomicValue" value="120"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="CraftingIngredientTime" value="8"/>
 	<property name="SellableToTrader" value="true"/>
@@ -693,7 +643,7 @@
 	<property name="Group" value="Food/Cooking"/>
 
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="27"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -707,7 +657,7 @@
 	<property name="DropMeshfile"  value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material"      value="MresourceCrop"/>
 	<property name="Stacknumber"   value="50"/> <!-- STK resource -->
-	<property name="EconomicValue" value="130"/>
+	<property name="EconomicValue" value="120"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="CraftingIngredientTime" value="8"/>
 	<property name="SellableToTrader" value="true"/>
@@ -720,10 +670,10 @@
 	<property name="Group" value="Food/Cooking"/>
 
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="37"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="me gustan estas enchiladas!"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="me gusta estas enchiladas!"/>
 	</effect_group>
 </item>
 
@@ -780,7 +730,7 @@
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="500"/> <!-- STK resource -->
-	<property name="EconomicValue" value="20"/>
+	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="CraftingIngredientTime" value="10"/>
 	<property class="Action0">
@@ -793,7 +743,7 @@
 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="0"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="subtract" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffIllFoodPoisoning0">
@@ -953,6 +903,7 @@
 	</effect_group>
 </item>
 
+
 <item name="Chicken Noodle Soup">
 	<property name="HoldType" value="3"/>	
 	<property name="CustomIcon"  value="ChickenNoodleSoup"/> <!-- <property name="CustomIconTint" value="ff9f9f"/> -->
@@ -962,7 +913,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="15"/> <!-- STK drink -->
-	<property name="EconomicValue" value="96"/>
+	<property name="EconomicValue" value="136"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -1027,7 +978,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="15"/> <!-- STK drink -->
-	<property name="EconomicValue" value="56"/>
+	<property name="EconomicValue" value="46"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -1038,9 +989,8 @@
 	<property name="Group" value="Food/Cooking"/>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="26"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="16"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
 
@@ -1286,7 +1236,7 @@
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="20"/> <!-- STK food -->
 	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue"          value="110"/>
+	<property name="EconomicValue"          value="100"/>
 	<property name="EconomicBundleSize"     value="1"/>
 	<property name="Group" value="Food/Cooking"/>
 	<property class="Action0">
@@ -1416,7 +1366,7 @@
 	<property name="Material"           value="Morganic"/>
 	<property name="Stacknumber"        value="20"/> <!-- STK food -->
 	<property name="SellableToTrader"   value="true"/>
-	<property name="EconomicValue"      value="110"/>
+	<property name="EconomicValue"      value="100"/>
 	<property name="EconomicBundleSize" value="1"/>
 </item>
 
@@ -1566,7 +1516,7 @@
 		<property name="Create_item" value="drinkJarEmpty"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="16"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="0"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
@@ -2032,6 +1982,7 @@
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Dried Noodles"         operation="set" value="1"/>		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Noodles"               operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Chicken Noodle Soup"   operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Tuna Noodle Casserole" operation="set" value="1"/>
