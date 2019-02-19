@@ -13,6 +13,7 @@ And lastly, you will begin the game by choosing your player's previous career us
 
 * Pork, Bear Meat, Wolf Meat, Snake Meat, Rabbit Meat, Venison, and Chicken meat.
 * Strawberries (can be harvested in the wild in pine forest and cultivated)
+* Wheat (can be ground into flour)
 * Herbs (can be harvested from regular grasses)
 * Moss (harvested from moss in caves and sometimes from tall pine trees)
 * Starter Class paper lets you choose your player's previous proffession.
