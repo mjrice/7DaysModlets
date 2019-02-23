@@ -6,6 +6,8 @@
 <!-- remove the generic meat food items from trader inventory -->
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']/item[@name='foodBoiledMeat']"/>
 <remove xpath="/traders/trader_item_groups/trader_item_group[@name='preparedFood']/item[@name='foodGrilledMeat']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='foodSupplies']/item[@name='foodRawMeat']"/>
+
 <!-- increase trader stock levels -->
 <set xpath="/traders/trader_info[@id='1']/@min_inventory">75</set>
 <set xpath="/traders/trader_info[@id='1']/@max_inventory">100</set>
@@ -145,6 +147,7 @@
 	<item name="Gunny's Guide: Rocket Launcher"    />
 	<item name="Toolmaking Today: Chainsaws"       />
 	<item name="Toolmaking Today: Augers"          />
+	<item name="Toolmaking Today: Crucible"        />
 	<item name="Medical Journal: Zombie Cream"     />
 	<item name="The Armorer: Military"             />
 	<item name="Eugene Explains: Chemistry Stations"   />
@@ -168,7 +171,7 @@
 	<item name="Wheat Seeds"/>
 </append>
 
-<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']/item[@name='preparedFood']"/>
-<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']/item[@name='preparedDrink']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']/item[@group='preparedFood']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group[@name='traderGeneral']/item[@group='preparedDrink']"/>
 
 </configs>

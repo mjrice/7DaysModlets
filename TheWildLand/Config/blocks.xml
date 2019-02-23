@@ -42,6 +42,36 @@ Texture value="1" is mountain rocks
 	<property name="DisplayType" value="blockTerrainFertile" />
 </block>
 
+<block name="terrGravelCoalTrace">
+	<property name="Material" value="MforestGround"/>
+	<property name="Shape" value="Terrain"/>
+	<property name="Mesh" value="terrain"/>
+	<property name="Texture" value="288,570,570,570,570,570"/>
+	<property name="ImposterExclude" value="true"/>
+	<property name="Map.Color" value="55,55,50"/>
+	<property name="PlaceAltBlockValue" value="terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestFromDirt,terrBurntForestWGrass1"/>
+	<property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="terrFertileFarmland"/>
+		<property name="Item" value="meleeToolHoeIron"/>
+		<property name="ItemCount" value="0"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<drop event="Harvest" name="resourceClayLump" count="12" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceCrushedSand" count="3" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="resourceCoal" count="1"/>
+	<drop event="Fall" name="terrBurntForestGround" count="1" prob="0.25" stick_chance="1"/>
+	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="CanMobsSpawnOn" value="true"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="FilterTags" value="fterrain"/>
+	<property name="SortOrder1" value="d0k0"/>
+	<property name="SortOrder2" value="0050"/>
+	<property name="DisplayType" value="blockTerrainFertile" />
+</block>
 
 <block name="treeBirch10m">
 	<property name="Extends" value="treeMaster" />

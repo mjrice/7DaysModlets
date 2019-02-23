@@ -128,7 +128,7 @@
 
 <!-- MODTAG some forest grasses will sometimes drop wheat -->
 <append xpath="/blocks/block[@name='treeBrownGrassDiagonal']">
-	<drop event="Destroy" name="Wheat" count="1" prob="0.02" />
+	<drop event="Destroy" name="Wheat" count="1" prob="0.1" />
 </append>
 
 <remove xpath="/blocks/block[@name='hangingMoss']"/>

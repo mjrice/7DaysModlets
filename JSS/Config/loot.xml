@@ -29,12 +29,12 @@
 	<item name="Toolmaking Today: Steel Tools"  prob=".10" />
 	<item name="Toolmaking Today: Chainsaws"    prob=".08" />
 	<item name="Toolmaking Today: Forges"       prob=".04" />
+	<item name="Toolmaking Today: Crucible"     prob=".03" />
 	<item name="Toolmaking Today: Augers"       prob=".02" />	
 	<item name="Toolmaking Today: Nail Gun"     prob=".02" />
-	<item name="Toolmaking Today: Tablesaw"     prob=".01" />
+	<item name="Toolmaking Today: Tablesaw"     prob=".02" />
 	<item name="Toolmaking Today: Workbench"    prob=".02" />
 	<item name="Toolmaking Today: Cement Mixer" prob=".01" />
-	<item name="Toolmaking Today: Crucible"     prob=".01" />
 </lootgroup>
 
 <lootgroup name="EugeneExplainsScienceBooks">
