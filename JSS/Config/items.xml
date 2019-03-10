@@ -2244,8 +2244,8 @@
 	<property name="EconomicValue"    value="1000"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="foodYuccaJuiceSmoothie" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodYuccaJuiceSmoothie" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3500"/>		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkYuccaJuiceSmoothie" operation="set" value="1"/>		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Blueberry Smoothie" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Strawberry Smoothie" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Mixed Fruit Smoothie" operation="set" value="1"/>
@@ -3157,6 +3157,7 @@
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="3450"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="generatorbank"         operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="batterybank"         operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="electricwirerelay"     operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="switch"                operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ceilingLight01_player" operation="set" value="1"/>
@@ -3164,6 +3165,8 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Electric relay"/> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Switch"/> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Ceiling Light"/> 		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Battery Bank"/> 		
+		
 	</effect_group>
 </item>
 

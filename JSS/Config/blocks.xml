@@ -222,7 +222,7 @@
 		<property name="ImposterDontBlock" 		value="true"/>
 		<property name="Collide"           		value="melee"/>
 		<property name="Class"             		value="PlantGrowing"/>
-		<property name="PlantGrowing.IsRandom"  value="true"/>	
+		<!-- <property name="PlantGrowing.IsRandom"  value="true"/>	 -->
 		<property name="EconomicValue"          value="12"/>
 		<property name="EconomicBundleSize"     value="5"/>
 		<drop     event="Destroy"               name="Wheat Seeds" count="1"/>
