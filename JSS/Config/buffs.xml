@@ -1,9 +1,5 @@
 <configs>
 
-
-
-
-
 <!-- MODTAG Nerf the reload movement penalty -->
 <remove xpath="/buffs/buff[@name='buffReloadMovementPenalty']"/>
 
@@ -67,16 +63,25 @@
 		</effect_group>
 	</buff>			
 	
-	<buff name="buffWarmFood" description="Warmth from food eaten" icon="ui_game_symbol_hot" tags="drug">
+	<buff name="buffWarmFood20" description="Warmth from food eaten" icon="ui_game_symbol_hot" tags="drug">
 		<stack_type value="duration"/>
 		<duration value="180"/>
 		<effect_group>
-			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="20"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Warmth spreads through your body"/> 		
 		</effect_group>
 	</buff>
 	
-	<buff name="buffColdFood" description="Cooling from food eaten" icon="ui_game_symbol_cold" tags="drug">
+	<buff name="buffColdFood20" description="Cooling from food eaten" icon="ui_game_symbol_cold" tags="drug">
+		<stack_type value="duration"/>
+		<duration value="180"/>
+		<effect_group>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="20"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="You feel... cooler"/> 		
+		</effect_group>
+	</buff>
+	
+	<buff name="buffColdFood10" description="Cooling from food eaten" icon="ui_game_symbol_cold" tags="drug">
 		<stack_type value="duration"/>
 		<duration value="180"/>
 		<effect_group>

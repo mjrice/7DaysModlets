@@ -3,26 +3,36 @@
 <append xpath="/ui_display_info/item_display">
 		<item_display_info display_type="coolFoodDrink" display_group="groupConsumables">
 			<display_entry name="$foodAmountAdd"      title_key="statFoodAmount"/> <!-- says "Max samina" on screen -->
-			<display_entry name="$waterAmountAdd"     title_key="statWaterAmount"/>
 			<display_entry name="foodHealthAmount"    title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd"     title_key="statWaterAmount"/>
 			<display_entry name="DysenteryRisk"       title_key="statDysenteryRisk" display_type="Percent" negative_preferred="true"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist"/> <!-- cold food makes you resist hyper-thermia (being too hot) -->
 			<display_entry name="FoodPoisoningRisk"   title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
-			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist"/>
 		</item_display_info>
 
+		<item_display_info display_type="coolFoodDrinkStamina" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd"      title_key="statFoodAmount"/> <!-- says "Max samina" on screen -->
+			<display_entry name="foodHealthAmount"    title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd"     title_key="statWaterAmount"/>
+			<display_entry name="staminaAmount" title_key="statStaminaAmount" display_type="Percent"/>
+			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist"/> <!-- cold food makes you resist hyper-thermia (being too hot) -->
+			<display_entry name="FoodPoisoningRisk"   title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+
+			
 		<item_display_info display_type="warmFoodDrink" display_group="groupConsumables">
 			<display_entry name="$foodAmountAdd"     title_key="statFoodAmount"/>
-			<display_entry name="$waterAmountAdd"    title_key="statWaterAmount"/>
 			<display_entry name="foodHealthAmount"   title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd"    title_key="statWaterAmount"/>
 			<display_entry name="DysenteryRisk"      title_key="statDysenteryRisk" display_type="Percent" negative_preferred="true"/>
+			<display_entry name="dHypothermalResist" title_key="statHypothermalResist"/> <!-- warm food makes you resist hypo-thermia (being too cold) -->
 			<display_entry name="FoodPoisoningRisk"  title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
-			<display_entry name="dHypothermalResist" title_key="statHypothermalResist"/>
 		</item_display_info>
 
 		<item_display_info display_type="cannedFoodDrink" display_group="groupConsumables">
 			<display_entry name="$foodAmountAdd"    title_key="statFoodAmount"/>
-			<display_entry name="$waterAmountAdd"   title_key="statWaterAmount"/>
 			<display_entry name="foodHealthAmount"  title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd"   title_key="statWaterAmount"/>
 			<display_entry name="DysenteryRisk"     title_key="statDysenteryRisk" display_type="Percent" negative_preferred="true"/>
 			<display_entry name="FoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
 		</item_display_info>

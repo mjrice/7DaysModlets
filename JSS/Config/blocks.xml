@@ -113,6 +113,17 @@
 		<property name="FilterTags" value="foutdoor,fcrops"/>
 	</append>	
 
+	<!-- MODTAG make poured concrete (non-reinforced) repaired with simple cement instead of more concrete -->
+	<remove xpath="/blocks/block[@name='pouredConcreteMaster']/property[@class='RepairItems']"/>
+	<remove xpath="/blocks/block[@name='concreteNoUpgradeMaster']/property[@class='RepairItems']"/>
+	<remove xpath="/blocks/block[@name='pouredRConcreteMaster']/property[@class='RepairItems']"/>
+	<append xpath="/blocks/block[@name='pouredConcreteMaster']"><property class="RepairItems"> <property name="resourceCement" value="10"/> </property></append>
+	<append xpath="/blocks/block[@name='concreteNoUpgradeMaster']"><property class="RepairItems"> <property name="resourceCement" value="10"/> </property></append>
+	<append xpath="/blocks/block[@name='pouredRConcreteMaster']"><property class="RepairItems"> <property name="resourceCement" value="10"/> </property></append>
+	
+	
+	
+
 <!-- MODTAG make the pallets of brown boxes lootable the same as garage storage boxes -->
 <append xpath="/blocks/block[@name='palletBrownBoxesBase']">
 	<property name="Class" value="Loot"/>
@@ -484,6 +495,31 @@
 		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
 		<drop event="Destroy" name="Eugene Explains: Bicycles" count="1"/>		
 		<drop event="Destroy" name="resourcePaper" count="50"/>					
+	</block>
+	
+	<block name="adminSuitcase">
+		<property name="DisplayType"         value="blockHardened" />
+		<property name="Material"            value="Mcloth"/>
+		<property name="LightOpacity"        value="0"/>
+		<property name="Shape"               value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="Collide"             value="melee,bullet,arrow,rocket"/>
+		<property name="Shape"               value="ModelEntity"/>
+		<property name="CustomIcon"          value="cntFetchQuestSatchel"/>
+		<property name="Model"               value="Entities/LootContainers/loot_satchelPrefab"/>
+		<property name="Place"               value="TowardsPlacerInverted"/>
+		<property name="MaxDamage"           value="1"/>
+		<property name="CreativeMode"        value="None"/>
+		<property name="StabilityIgnore"     value="true" /> <!-- gravity shmavity -->
+		<drop event="Destroy" name="Blueberry Smoothie" count="1"/>		
+		<drop event="Destroy" name="drinkYuccaJuiceSmoothie" count="1"/>					
+		<drop event="Destroy" name="Strawberry Smoothie" count="1"/>					
+		<drop event="Destroy" name="Mixed Fruit Smoothie" count="1"/>					
+		<drop event="Destroy" name="Herbal Smoothie" count="1"/>					
+		<drop event="Destroy" name="drinkJarYuccaJuice" count="1"/>					
+		<drop event="Destroy" name="Bear Roast" count="1"/>					
+		<drop event="Destroy" name="Hasenpfeffer" count="1"/>					
+		
 	</block>
 	</append>
 	

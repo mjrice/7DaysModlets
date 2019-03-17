@@ -24,5 +24,11 @@
 	<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 </append>
 
+<!-- decrease distance that zombies can jump -->
+<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='JumpMaxDistance']/@value">2</set>   <!-- from value="2.8, 3.9" -->
+<set xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='JumpMaxDistance']/@value">2.5</set>   <!-- from value="4.6, 5" -->
+<set xpath="/entity_classes/entity_class[@name='zombieSpider']/property[@name='JumpMaxDistance']/@value">4.5</set>       <!-- from value="7, 9" -->
+<set xpath="/entity_classes/entity_class[@name='zombieSpiderFeral']/property[@name='JumpMaxDistance']/@value">6</set>    <!-- from value="11, 13" -->
+		
 </configs>
 
