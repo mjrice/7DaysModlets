@@ -75,13 +75,16 @@
 <lootgroup name="WeaponsBooksLootGroupLevel4">
 	<item name="Gunny's Guide: MR-10"            />
 	<item name="Gunny's Guide: Rocket Launcher"  />
+	<item name="Gunny's Guide: Shotgun Turret" />
+	<item name="Gunny's Guide: Auto Turret" />
+	<item name="Gunny's Guide: Dart Trap" />
 </lootgroup>
 
 <lootgroup name="GunnysGuides">
-    <item group="WeaponsBooksLootGroupLevel1"        prob=".53"/>
+    <item group="WeaponsBooksLootGroupLevel1"        prob=".52"/>
     <item group="WeaponsBooksLootGroupLevel2"        prob=".33"/>
     <item group="WeaponsBooksLootGroupLevel3"        prob=".13"/>
-    <item group="WeaponsBooksLootGroupLevel4"        prob=".01"/>
+    <item group="WeaponsBooksLootGroupLevel4"        prob=".02"/>
 </lootgroup>
 
 <lootgroup name="Armorer">
