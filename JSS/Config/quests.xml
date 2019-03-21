@@ -161,24 +161,24 @@ Notes about quests
 
 <!-- experimental trader quest-->
 <insertBefore xpath="/quests/quest_list[@id='trader_quests']">		
-
-	<quest id="tier1_gofetch">
-		<property name="name"              value="Coffee Run" />
+	<quest id="tier1_gogetme">
+		<property name="group_name"        value="AssortedTraderQuests"/>
+		<property name="name"              value="Coffee Run" />		
 		<property name="subtitle"          value="I need some coffee" />
 		<property name="description"       value="Could you find me some fresh coffee beans?" />
+		<property name="subtitle_key"          value="I need some coffee" />
+		<property name="description_key"       value="Could you find me some fresh coffee beans?" />
 		<property name="icon"              value="ui_game_symbol_quest" />
 		<property name="repeatable"        value="true" />
 		<property name="category"          value="quest" />
-		<property name="offer"             value="My supplies are running low.  If you can help me out you'll have my gratitude and a nice reward." />
+		<property name="offer"             value="My supplies are running low.  If you can help me out by foraging some coffee beans you'll have my gratitude and a nice reward." />
 		<property name="difficulty"        value="easy" />
 		<property name="difficulty_tier"   value="1" />
-		<property name="statement"         value="here is my statement" />
-		<property name="response"          value="here is my response" />
 		<property name="login_rally_reset" value="true" />
 		<property name="completiontype"    value="TurnIn" />
 		<property name="completion"        value="completion" />
 
-		<objective type="FetchKeep" id="resourceCropCoffeeBeans" value="20" phase="1">
+		<objective type="Fetch" id="resourceCropCoffeeBeans" value="20" phase="1">
 			<property name="quest_item_ID" value="1" />
 		</objective>
 
@@ -212,9 +212,10 @@ Notes about quests
 	</quest>
 	
 </insertBefore>
+
 <!--
 <append xpath="/quests/quest_list[@id='trader_quests']">	
-		<quest id="tier1_gofetch" />
+		<quest id="tier1_gogetme" />
 </append>
 -->
 
@@ -1238,4 +1239,5 @@ Notes about quests
 
 </insertBefore>
 
+	
 </configs>
