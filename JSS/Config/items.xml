@@ -2011,6 +2011,20 @@
 	</effect_group>
 </item>
 
+<item name="Cookbook: Drunken Dog" >
+	<property name="Extends"      value="recipeBookBase"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="EconomicValue"    value="500"/>
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="Hasenpfeffer" operation="Equals" value="0"/> <!-- Equals 0 -->
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Drunken Dog" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Drunken Dog"/>
+	</effect_group>
+</item>
+
 <item name="Cookbook: Bear Roast" >
 	<property name="Extends"      value="recipeBookBase"/>
 	<property name="CreativeMode" value="Player"/>
@@ -2058,55 +2072,6 @@
 	</effect_group>
 </item>
 
-<!--
-<item name="Cookbook: Stewed Meat">
-	<property name="Extends" value="recipeBookBase"/>
-	<property name="CreativeMode" value="Player"/>
-	<property class="Action0">
-		<requirement name="CVarCompare" cvar="Stewed Pork" operation="Equals" value="0"/>
-	</property>	
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Pork"    operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Chicken" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Rabbit"  operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Bear"    operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Snake"   operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Wolf"    operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Stewed Venison" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Pork"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Chicken"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Rabbit"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Bear"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Snake"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Wolf"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Stewed Venison"/>
-	</effect_group>
-</item>
-
-<item name="Cookbook: Grilled Meat">
-	<property name="Extends" value="recipeBookBase"/>
-	<property name="CreativeMode" value="Player"/>
-	<property class="Action0"><requirement name="CVarCompare" cvar="Grilled Pork" operation="Equals" value="0"/></property>	
-	<effect_group tiered="false">	
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="2500"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Pork"    operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Chicken" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Rabbit"  operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Bear"    operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Snake"   operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Wolf"    operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="Grilled Venison" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Pork"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Chicken"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Rabbit"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Bear"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Snake"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Wolf"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Recipe Unlocked: Grilled Venison"/>
-	</effect_group>
-</item>
--->
 <item name="Cookbook: Fried Meat">
 	<property name="Extends" value="recipeBookBase"/>
 	<property name="CreativeMode" value="Player"/>
@@ -3293,7 +3258,7 @@
 <item name="Eugene Explains: Gyrocopters" >
 	<property name="Extends" value="magazineToolsBase"/>
 	<property name="CustomIcon" value="BookScience"/>
-	<property name="EconomicValue"    value="8800"/>
+	<property name="EconomicValue"    value="10900"/>
 	<property class="Action0"><requirement name="CVarCompare" cvar="vehicleGyroCopterChassis" operation="Equals" value="0"/></property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="8500"/>

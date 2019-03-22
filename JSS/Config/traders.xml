@@ -46,8 +46,7 @@
 			<item name="Chicken Surprise"      	/>
 			<item name="Hasenpfeffer"           />
 			<item name="Bear Roast"             />
-
-
+			<item name="Drunken Dog"             />
 </append>
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='commonBooks']">
@@ -98,6 +97,7 @@
 	<item name="Cookbook: Blueberry Pie"       />
 	<item name="Cookbook: Meat Stew"           />
 	<item name="Cookbook: Vegetable Stew"      />
+	<item name="Cookbook: Drunken Dog"      />
 	<item name="Gunny's Guide: Iron Clubs"     />
 	<item name="Gunny's Guide: Hunting Knives" />
 	<item name="Gunny's Guide: Machetes"       />
