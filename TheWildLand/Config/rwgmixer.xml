@@ -83,7 +83,7 @@
 			
 			<!-- REMOVE THE COMMENT MARKERS AROUND THE FOLLOWING LINE IF YOU HAVE COMPOPACK PREFABS INSTALLED.  
 			     YOU DONT NEED THE RWGMIXER.XML DISTRIBUTED WITH COMPOBACK BUT I DONT THINK IT WILL HURT IF IT IS INSTALLED TOO -->
-			<prefab rule="COMPOPACK"/>  
+			<!-- <prefab rule="COMPOPACK"/>  -->
 			
 			<prefab name="bombshelter_lg_01" max_count="3"/>
 			<prefab name="bombshelter_md_01" max_count="3"/>

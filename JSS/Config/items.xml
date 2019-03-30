@@ -2016,7 +2016,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="EconomicValue"    value="500"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="Hasenpfeffer" operation="Equals" value="0"/> <!-- Equals 0 -->
+		<requirement name="CVarCompare" cvar="Drunken Dog" operation="Equals" value="0"/> <!-- Equals 0 -->
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveSkillExp" target="self" skill="attIntellect" experience="1500"/>
