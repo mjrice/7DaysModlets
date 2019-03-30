@@ -678,6 +678,7 @@
 <remove xpath="/recipes/recipe[@name='ammoCrossbowBoltSteelAP']"/>                                      
 <remove xpath="/recipes/recipe[@name='ammoCrossbowBoltStone']"/>
 <remove xpath="/recipes/recipe[@name='meleeClubIron']"/>
+<remove xpath="/recipes/recipe[@name='gunBlunderbuss']"/>
 <remove xpath="/recipes/recipe[@name='ammoBlunderbuss']"/>
 <remove xpath="/recipes/recipe[@name='resourceForgedIron']"/>
 <remove xpath="/recipes/recipe[@name='resourceArrowHeadIron']"/>
@@ -721,6 +722,13 @@
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
 	</recipe>
+	
+	<recipe name="gunBlunderbuss" count="1" tags="learnable">
+		<ingredient name="resourceMetalPipe" count="4"/>
+		<ingredient name="resourceGlue" count="2"/>
+		<ingredient name="resourceWood" count="6"/>
+	</recipe>
+
 
 	<recipe name="Encyclopedia Set" count="1" craft_time="5" >
 		<ingredient name="Encyclopedia Volume A" count="1"/>
