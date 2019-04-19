@@ -1935,8 +1935,8 @@
 	<property name="Stacknumber"      value="50"/> 
 	<property name="EconomicValue"    value="200"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="FuelValue"        value="2"/>
-	<property name="Weight"           value="2"/>
+	<property name="FuelValue"        value="4"/>
+	<property name="Weight"           value="40"/>
 	<property name="Group"            value="Books"/>
 	<property class="Action0">
 		<property name="Class"                    value="Eat"/> <!-- Eat, UseOther, doesn't work: LearnRecipe? -->
@@ -2344,8 +2344,8 @@
 		<property name="ActionExpBonusMultiplier" value="0"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
-	<property name="FuelValue"        value="2"/>
-	<property name="Weight"           value="2"/>
+	<property name="FuelValue"        value="4"/>
+	<property name="Weight"           value="40"/>
 	<property name="Group"            value="Books"/>
 </item>
 
@@ -2485,8 +2485,8 @@
 		<property name="ActionExpBonusMultiplier" value="1"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
-	<property name="FuelValue"        value="2"/>
-	<property name="Weight"           value="2"/>
+	<property name="FuelValue"        value="4"/>
+	<property name="Weight"           value="40"/>
 	<property name="Group"            value="Books"/>
 </item>
 
@@ -2676,8 +2676,8 @@
 		<property name="ActionExpBonusMultiplier" value="2"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
-	<property name="FuelValue"        value="2"/>
-	<property name="Weight"           value="2"/>
+	<property name="FuelValue"        value="4"/>
+	<property name="Weight"           value="40"/>
 	<property name="Group"            value="Books"/>
 </item>
 
@@ -3008,8 +3008,8 @@
 		<property name="ActionExpBonusMultiplier" value="2"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
-	<property name="FuelValue"        value="2"/>
-	<property name="Weight"           value="2"/>
+	<property name="FuelValue"        value="4"/>
+	<property name="Weight"           value="40"/>
 	<property name="Group"            value="Books"/>
 </item>
 
@@ -3292,8 +3292,8 @@
 		<property name="ActionExpBonusMultiplier" value="0"/> <!-- When first learned the multiplier is applied. After that only the action exp is applied but it's applied for EACH item in the book. -->
 		<property name="Sound_start"              value="recipe_unlocked"/>
 	</property> 
-	<property name="FuelValue"        value="3"/>
-	<property name="Weight"           value="20"/>
+	<property name="FuelValue"        value="4"/>
+	<property name="Weight"           value="40"/>
 	<property name="Group"            value="Special Items"/>
 </item>
 
@@ -3371,7 +3371,7 @@
 	<property name="EconomicValue"    value="7800"/> <!-- set of encyclopedias is worth 3x as much as the sum if its parts -->
 	<property name="SellableToTrader" value="true"/>
 	<property name="FuelValue"        value="30"/>
-	<property name="Weight"           value="20"/>
+	<property name="Weight"           value="500"/>
 	<property name="Group"            value="Special Items"/>
 </item>
 
